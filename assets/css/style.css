@@ -1,0 +1,56 @@
+@import url("mudl-theme.css");
+
+.social-media-bar{
+    width: 100%;
+    height: 30px;
+    background-color: royalblue;
+    padding: 4px 0px;
+    font-size: 13px;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.logo-bar{
+    height:100px;
+    width:100%;
+    background-color: papayawhip;
+}
+
+.menu-bar{
+    height: 30px;
+    width:100%;
+    background-color: red;
+}
+
+.left-side-bar{
+    width:20%;
+    min-height: 497px;
+    background-color: palegreen;
+    float:left;
+} 
+.content{
+    width:80%;
+    min-height:497px;
+    background-color: olive;
+    float:left;
+}
+
+.search-form::placeholder{
+    color:#ded;
+}
+.search-form{
+    border: none;
+    background-color: transparent;
+    color: #ded;
+    border-bottom: 2px solid #ded;
+    margin-top: -10px;
+    text-align:right;
+}
+
+.text{
+    padding-right:30px;
+}
+
+.text .fa, .lang .la{    
+    padding: 0px 5px;
+}
