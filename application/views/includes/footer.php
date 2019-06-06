@@ -1,9 +1,4 @@
 
-                </div>
-            </div>
-        </div>
-
-        <!-- Page Wrapper End -->
 
         <!-- Page Scripts -->
         <script src="<?php echo $assets; ?>js/plugins/jquery.min.js"></script>
