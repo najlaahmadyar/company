@@ -101,7 +101,7 @@
 .content{
     width:80%;
     min-height:497px;
-    background-color: olive;
+    background-color: white;
     float:left;
 }
 
@@ -123,4 +123,11 @@
 
 .text .fa, .lang .la{    
     padding: 0px 5px;
+}
+/* susan styles */
+.collapse_left{
+    float:left;
+}
+.collapse_right{
+    float:right;
 }

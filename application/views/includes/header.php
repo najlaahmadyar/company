@@ -112,5 +112,3 @@
         </div>
             
         <div class="content">
-            content Here
-      
