@@ -5,6 +5,7 @@
 
             <!-- Page Scripts -->
         <script src="<?php echo $assets; ?>js/plugins/jquery.min.js"></script>
+        <script src="<?php echo $assets; ?>js/plugins/popper.min.js"></script>
         <script src="<?php echo $assets; ?>js/plugins/bootstrap.min.js"></script>
         
         <?php 

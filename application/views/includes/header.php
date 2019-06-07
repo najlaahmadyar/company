@@ -52,11 +52,58 @@
     </div>
 
     <div class="logo-bar">
-        Logo here
+        <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
     </div>
 
     <div class="menu-bar">
-        Menus Here
+        <div class="container">
+            <ul>
+                <li><span>صفحه اصلی</span></li>
+                <li class="dropdown">
+                    <span data-toggle="dropdown">درباره ما</span><i class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <span data-toggle="dropdown">اسناد حکومتداری وزارت</span><i class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <span data-toggle="dropdown">پایگاه اطلاعاتی</span><i class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+
+                <li><span>تماس با ما</span></li>
+                <li><span>سکتور شهری</span></li>
+                
+                
+
+
+            </ul>
+
+        </div>
     </div>
 
     <div class="wrapper container">
