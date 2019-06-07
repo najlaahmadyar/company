@@ -58,12 +58,3 @@
     <div class="menu-bar">
         Menus Here
     </div>
-
-    <div class="wrapper container">
-        <div class="left-side-bar">
-            Left Side here
-        </div>
-            
-        <div class="content">
-            content Here
-      
