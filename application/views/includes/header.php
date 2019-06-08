@@ -63,20 +63,28 @@
                 <li class="dropdown first">
                     <span data-toggle="dropdown">درباره ما</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">معرفی وزارت</a></li>
-                        <li><a href="#">هیئت رهبری</a></li>
-                        <li><a href="#">معنیت ها</a></li>
-                        <li><a href="#">ادارت</a></li>
-                        <li><a href="#">ریاست های ولایتی</a></li>
-                        <li><a href="#">ساختار تشکیلاتی</a></li>
+                        <li><a href="<?php echo $url.'about_us'; ?>">معرفی وزارت</a></li>
+                        <li><a href="<?php echo $url.'about_us/leader_board'; ?>">هیئت رهبری</a></li>
+                        <li><a href="#">معنیت ها</a>
+                            <ul class="sub-menu">
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت مسکن</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت شهر سازی</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت امور زمینداری</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت خصوسی سازی</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت پالیسی و پلان</a></li>                               
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo $url.'about_us/presidencies'; ?>">ادارت</a></li>
+                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>">ریاست های ولایتی</a></li>
+                        <li><a href="<?php echo $url.'about_us/organ_structure'; ?>">ساختار تشکیلاتی</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">مصوبات</a></li>
-                        <li><a href="#">تصامیم و فیصله ها</a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d'; ?>">مصوبات</a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d/desicions'; ?>">تصامیم و فیصله ها</a></li>
                     </ul>
                 </li>
 

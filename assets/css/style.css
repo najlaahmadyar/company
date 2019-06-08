@@ -29,6 +29,41 @@
     margin-top: -14px;
 }
 
+
+
+ul.sub-menu>li{
+    padding-top: 4px;
+    list-style-type: none;
+    height:30px;
+    cursor: pointer;  
+    padding-right: 5px; 
+    padding-left: 10px;   
+}
+ul.sub-menu>li>a{
+    color:#000;
+}
+
+ul.sub-menu{
+    position: absolute;
+    background-color: #ecebeb;
+    left: -113px;
+    bottom: -14px;
+    text-align: right;
+    direction: rtl;
+    padding-right:0px;
+}
+ul.sub-menu>li{
+    list-style-type: none;
+    padding:6px 5px;
+}
+
+ul.sub-menu>li:hover{
+    background-color: #c1272d;
+}
+ul.sub-menu>li:hover a{
+    color:#FFF;
+}
+
 .menu-bar>.container>ul>li{
     padding-top: 4px;
     float:right;
