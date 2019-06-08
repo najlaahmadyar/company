@@ -91,8 +91,8 @@
                 <li class="dropdown">
                     <span data-toggle="dropdown">برنامه ها و پروژه ها</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">برنامه ها و پروژه های وزارت</a></li>
-                        <li><a href="#">پروژه های مشترک با نهاد های سکتوری</a></li>
+                        <li><a href="<?php echo $url.'program_project'; ?>">برنامه ها و پروژه های وزارت</a></li>
+                        <li><a href="<?php echo $url.'program_project/sector_p_p'; ?>">پروژه های مشترک با نهاد های سکتوری</a></li>
                     </ul>
                 </li>
 
