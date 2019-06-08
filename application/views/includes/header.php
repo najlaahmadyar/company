@@ -61,38 +61,55 @@
             <ul>
                 <li><span>صفحه اصلی</span></li>
                 <li class="dropdown first">
-                    <span data-toggle="dropdown">درباره ما</span><i class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown">درباره ما</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">معرفی وزارت</a></li>
+                        <li><a href="#">هیئت رهبری</a></li>
+                        <li><a href="#">معنیت ها</a></li>
+                        <li><a href="#">ادارت</a></li>
+                        <li><a href="#">ریاست های ولایتی</a></li>
+                        <li><a href="#">ساختار تشکیلاتی</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">مصوبات</a></li>
+                        <li><a href="#">تصامیم و فیصله ها</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">اسناد حکومتداری وزارت</span><i class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown">برنامه ها و پروژه ها</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">برنامه ها و پروژه های وزارت</a></li>
+                        <li><a href="#">پروژه های مشترک با نهاد های سکتوری</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">پایگاه اطلاعاتی</span><i class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown">اسناد حکومتداری وزارت</span><i data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">قانون</a></li>
+                        <li><a href="#">پالیسی</a></li>
+                        <li><a href="#">ستراتیژی</a></li>
+                        <li><a href="#">مقرره</a></li>
+                        <li><a href="#">طرز العمل</a></li>
+                        <li><a href="#">تفاهمنامه</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <span data-toggle="dropdown">پایگاه اطلاعاتی</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="#">خبر</a></li>
+                        <li><a href="#">اعلامیه مطبوعاتی</a></li>
+                        <li><a href="#">گزارش</a></li>
+                        <li><a href="#">قصه موفق</a></li>
+                        <li><a href="#">نشریه</a></li>
+                        <li><a href="#">عکس</a></li>
+                        <li><a href="#">ویدیو</a></li>
                     </ul>
                 </li>
 
