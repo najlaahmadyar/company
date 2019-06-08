@@ -91,30 +91,30 @@
                 <li class="dropdown">
                     <span data-toggle="dropdown">اسناد حکومتداری وزارت</span><i data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="">قانون</a></li>
-                        <li><a href="#">پالیسی</a></li>
-                        <li><a href="#">ستراتیژی</a></li>
-                        <li><a href="#">مقرره</a></li>
-                        <li><a href="#">طرز العمل</a></li>
-                        <li><a href="#">تفاهمنامه</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/law">قانون</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/policy">پالیسی</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/strategy">ستراتیژی</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/regulation">مقرره</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/instruction">طرز العمل</a></li>
+                        <li><a href="<?php echo $url; ?>gov_doc_m/understanding">تفاهمنامه</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <span data-toggle="dropdown">پایگاه اطلاعاتی</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">خبر</a></li>
-                        <li><a href="#">اعلامیه مطبوعاتی</a></li>
-                        <li><a href="#">گزارش</a></li>
-                        <li><a href="#">قصه موفق</a></li>
-                        <li><a href="#">نشریه</a></li>
-                        <li><a href="#">عکس</a></li>
-                        <li><a href="#">ویدیو</a></li>
+                        <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
+                        <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
+                        <li><a href="<?php echo $url; ?>database/report">گزارش</a></li>
+                        <li><a href="<?php echo $url; ?>database/successful_story">قصه موفق</a></li>
+                        <li><a href="<?php echo $url; ?>database/journal">نشریه</a></li>
+                        <li><a href="<?php echo $url; ?>database/picture">عکس</a></li>
+                        <li><a href="<?php echo $url; ?>database/video">ویدیو</a></li>
                     </ul>
                 </li>
 
-                <li><span>تماس با ما</span></li>
-                <li><span>سکتور شهری</span></li>
+                <li><span><a href="<?php echo $url; ?>home/contact">تماس با ما</a></span></li>
+                <li><span><a href="<?php echo $url; ?>home/urban_sector">سکتور شهری</a></span></li>
                 
                 
 
