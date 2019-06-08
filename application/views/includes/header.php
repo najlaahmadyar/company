@@ -5,7 +5,8 @@
         <title>وزارت شهر سازی و اراضی</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+   
         <link  type="text/css" href="<?php echo $assets; ?>css/plugins/font-awesome.min.css" rel="stylesheet">
         <!-- Style sheet links -->
         <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/plugins/bootstrap.min.css">
@@ -28,7 +29,7 @@
 
                 <div class="col-sm-4 m_l_m_25">
                     <span class="text">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-facebook-f"></i>
                         <i class="fa fa-twitter"></i>
                         <i class="fa fa-linkedin"></i>
                     </span> 
@@ -59,9 +60,9 @@
         <div class="container">
             <ul>
                 <li><span>صفحه اصلی</span></li>
-                <li class="dropdown">
+                <li class="dropdown first">
                     <span data-toggle="dropdown">درباره ما</span><i class="fa fa-plus" ></i>  
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a></li>
                         <li><a href="#">JavaScript</a></li>
@@ -108,7 +109,81 @@
 
     <div class="wrapper container">
         <div class="left-side-bar">
-            Left Side here
+            <div class="card default-card" style="width: 16rem;">
+                <h5 class="card-title">پیام وزیر</h5>            
+                <img class="card-img-top" src="<?php echo $assets;?>images/g1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">                        
+                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
+                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
+                    </p>
+                </div>
+            </div>
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">مرکز معلومات و سمع شکایات</h5> 
+                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">اشتهارات و تبلیغات</h5> 
+                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">ویدیو</h5> 
+                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+            </div>
+
+             <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">اعلان کاریابی</h5> 
+                <div class="card-body">
+                    <p class="card-text">                        
+                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی  
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">اعلان تدارکات</h5> 
+                <div class="card-body">
+                    <p class="card-text">                        
+                        هرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">مصرف بودیجه سال ۱۳۹۸</h5> 
+                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title"> اعلامیه های مطبوعاتی</h5> 
+                <div class="card-body">
+                    <p class="card-text">                        
+                        ها در مجلس نماینده‌گان تا تعیین س
+                    </p>
+                </div>
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">مقاله ها</h5> 
+                <div class="card-body">
+                    <p class="card-text">                        
+                        ها در مجلس ریاست مجلس، معطل قرار گرفته 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card default-card gray-card" style="width: 16rem;">
+                <h5 class="card-title">تقویم سال</h5> 
+                <div class="card-body">
+                    <p class="card-text">                        
+                        ها در مجلس نم مجلس، معطل قرار گرفته 
+                    </p>
+                </div>
+            </div>
+
         </div>
             
         <div class="content">
