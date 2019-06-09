@@ -7,31 +7,31 @@ class Gov_doc_m extends Mudl_controller{
     
     public function law()
     {
-        $this->load->view('law', $this->data);
+        $this->load->view('gov_doc_m/law', $this->data);
     }
 
     public function instruction()
     {
-        $this->load->view('instruction', $this->data);
+        $this->load->view('gov_doc_m/instruction', $this->data);
     }
 
     public function policy()
     {
-        $this->load->view('policy', $this->data);
+        $this->load->view('gov_doc_m/policy', $this->data);
     }
 
-    public function Regulation()
+    public function regulation()
     {
-        $this->load->view('Regulation', $this->data);
+        $this->load->view('gov_doc_m/regulation', $this->data);
     }
 
     public function strategy()
     {
-        $this->load->view('strategy', $this->data);
+        $this->load->view('gov_doc_m/strategy', $this->data);
     }
 
-    public function Understanding()
+    public function understanding()
     {
-        $this->load->view('Understanding', $this->data);
+        $this->load->view('gov_doc_m/understanding', $this->data);
     }
 }
