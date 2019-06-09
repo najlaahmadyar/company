@@ -38,9 +38,9 @@
 
                 <div class="col-sm-4 m_l_m_25">
                     <span class="lang">
-                        <span class="la">En</span>
-                        <span class="la">پشتو‍‍</span>
-                        <span class="la">دری</span>
+                        <a href="<?php echo $url.'home/change_lang/eng'; ?>" class="la">En</a>
+                        <a href="<?php echo $url.'home/change_lang/pashto'; ?>" class="la">پشتو‍‍<a>
+                        <a href="<?php echo $url.'home/change_lang/dari'; ?>" class="la">دری</a>
                     </span>  
                 </div>           
                 
@@ -53,18 +53,24 @@
     </div>
 
     <div class="logo-bar">
-        <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
+        <?php if($_SESSION['lang'] == 'dari') { ?>
+             <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
+        <?php }else if($_SESSION['lang'] == 'pashto'){ ?>
+            <img class="logo-img" src="<?php echo $assets; ?>images/pashto-banner.jpg">
+        <?php }else if($_SESSION['lang'] == 'eng'){ ?>
+            <img class="logo-img" src="<?php echo $assets; ?>images/eng-banner.jpg">
+        <?php } ?>    
     </div>
 
     <div class="menu-bar">
         <div class="container">
             <ul>
-                <li><span>صفحه اصلی</span></li>
+                <li><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
                 <li class="dropdown first">
-                    <span data-toggle="dropdown">درباره ما</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="<?php echo $url.'about_us'; ?>">معرفی وزارت</a></li>
-                        <li><a href="<?php echo $url.'about_us/leader_board'; ?>">هیئت رهبری</a></li>
+                        <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
                         <li><a href="#">معنیت ها</a>
                             <ul class="sub-menu">
                                 <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت مسکن</a></li>                               
