@@ -23,7 +23,7 @@ class Mudl_controller extends CI_Controller {
 
 		
 		if(!isset($_SESSION['lang'])){
-			$_SESSION['lang'] = "eng";
+			$_SESSION['lang'] = "dari";
 		}
 
 		$lang = $this->session->userdata('lang');

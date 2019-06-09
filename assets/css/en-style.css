@@ -3,7 +3,7 @@
 .social-media-bar{
     width: 100%;
     height: 30px;
-    background-color:#25559f;
+    background-color:#2555A1;
     padding: 4px 0px;
     font-size: 13px;
     color: #FFF;
@@ -20,6 +20,46 @@
     height: 100px;
     width: 1340px;
 }
+
+
+
+ul.sub-menu>li{
+    padding-top: 4px;
+    list-style-type: none;
+    height:30px;
+    cursor: pointer;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+ul.sub-menu>li>a{
+    color:#000;
+}
+
+ul.sub-menu{
+    position: absolute;
+    background-color: #ecebeb;
+    left: -120px;
+    bottom: 17px;
+    text-align: right;
+    direction: rtl;
+    padding-right:0px;
+}
+ul.sub-menu>li{
+    list-style-type: none;
+    padding:6px 5px;
+}
+
+ul.sub-menu>li:hover{
+    background-color: #c1272d;
+}
+ul.sub-menu>li:hover a{
+    color:#FFF;
+}
+
+
+.menu-bar span a{
+    color:#FFF !important;
+}
 .menu-bar{
     height: 30px;
     width:100%;
@@ -31,19 +71,20 @@
 
 .menu-bar>.container>ul>li{
     padding-top: 4px;
-    float:left;
+    float: left;
     list-style-type: none;
     display: inline;
-    min-width:100px;
-    height:30px;
-    margin:0px 5px;  
-    cursor: pointer;  
-    padding-right: 5px; 
-    padding-left: 10px;   
+    min-width: 8px;
+    height: 30px;
+    margin: 0px 5px;
+    cursor: pointer;
+    padding-right: 5px;
+    /* padding-left: 10px; */   
 }
 .menu-bar>.container>ul>li>span{
     vertical-align: middle;
     font-weight: 600;   
+    padding-left: 3px;
 }
 .menu-bar>.container>ul>li>i{
     float: right;
@@ -56,11 +97,11 @@
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu{
     position: relative;
     top: 6px !important;
-    left: -30px !important;
-    min-width: 130px;
+    left: 0px !important;
+    min-width: 170px;
     background-color: #ecebeb;
     color: #FFF;
-    text-align: right;
+    text-align:left;
     border:none;
     border-radius: 0px;
     padding:0px;
@@ -68,7 +109,10 @@
 
 
 .menu-bar>.container>ul>li.first .dropdown-menu{
-    left:5px !important;
+    left:107px !important;
+}
+span.lang a{
+    color: #fff;
 }
 
 .menu-bar>.container>ul>li.dropdown:hover{
@@ -168,7 +212,7 @@
 }
 
 .news-icon>i{
-    background-color: #25559f;
+    background-color: #2555A1;
     color:#FFF;
     border-radius: 50%;
     padding:5px;
@@ -179,7 +223,7 @@
 #accordion2 .panel-title a{
     display: block;
     padding: 12px 50px 12px 15px;
-    background:#25559f;
+    background:#2555A1;
     border-radius: 3px;
     font-size: 18px;
     font-weight: 400;
@@ -219,7 +263,7 @@
 }
 
 #accordion2 .panel-body ul li a{
-    color: #25559f;
+    color: #2555A1;
 }
 #accordion2 .panel-body  ul li{ 
     list-style-type: none;
@@ -242,7 +286,7 @@
     border-radius: 3px;
     font-size: 18px;
     font-weight: 400;
-    color: #25559f;
+    color: #2555A1;
     position: relative;
     text-decoration: none;
 }
@@ -256,7 +300,7 @@
     border-radius :50%;
     font-size: 16px;
     font-weight: 900;
-    color: #25559f;
+    color: #2555A1;
     text-align: center;
     text-shadow: none;
     position: absolute;
@@ -277,7 +321,7 @@
     background-color: #f2f2f2;
 }
 #accordioninside .panel-body ul li a{
-    color: #25559f;
+    color: #2555A1;
 }
 
 #accordioninside .panel-body ul li{
@@ -328,7 +372,7 @@
 .footer-bottom{
     width:100%;
     height:30px;
-    background-color: #a56a51;
+    background-color: #AA7239;
     text-align: center;
     direction: rtl;
     font-size: 14px;

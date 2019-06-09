@@ -15,7 +15,11 @@
                 echo '<link href="'.$stylesheet.'" rel="stylesheet" type="text/css">';
             }
         ?>  
-        <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/style.css">
+        <?php if($_SESSION['lang'] == 'eng'){ ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/en-style.css">
+        <?php }else{  ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/style.css">
+        <?php } ?>
         
     </head>
     <body>
@@ -71,51 +75,39 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
-                        <li><a href="#">معنیت ها</a>
-                            <ul class="sub-menu">
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت مسکن</a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت شهر سازی</a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت امور زمینداری</a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت خصوسی سازی</a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت پالیسی و پلان</a></li>                               
-                            </ul>
+                        <li><a href="#"><?php echo lang('m'); ?></a>
+                            <!-- <ul class="sub-menu">
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mm'); ?></a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('ma'); ?></a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mk'); ?></a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mp'); ?></a></li>                               
+                            </ul> -->
                         </li>
-                        <li><a href="<?php echo $url.'about_us/presidencies'; ?>">ادارت</a></li>
-                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>">ریاست های ولایتی</a></li>
-                        <li><a href="<?php echo $url.'about_us/organ_structure'; ?>">ساختار تشکیلاتی</a></li>
+                        <li><a href="<?php echo $url.'about_us/presidencies'; ?>"><?php echo lang('Office'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>"><?php echo lang('rp'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown"><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url.'High_council_u_d'; ?>">مصوبات</a></li>
-                        <li><a href="<?php echo $url.'High_council_u_d/desicions'; ?>">تصامیم و فیصله ها</a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d'; ?>"><?php echo lang('ms'); ?></a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d/desicions'; ?>"><?php echo lang('t_f'); ?></a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">برنامه ها و پروژه ها</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown"><?php echo lang('ministry_project'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url.'program_project'; ?>">برنامه ها و پروژه های وزارت</a></li>
-                        <li><a href="<?php echo $url.'program_project/sector_p_p'; ?>">پروژه های مشترک با نهاد های سکتوری</a></li>
+                        <li><a href="<?php echo $url.'program_project'; ?>">پروژه پلانگذاری شهرک های معلمین </a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <span data-toggle="dropdown">اسناد حکومتداری وزارت</span><i data-toggle="dropdown" class="fa fa-plus" ></i>  
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url; ?>gov_doc_m/law">قانون</a></li>
-                        <li><a href="<?php echo $url; ?>gov_doc_m/policy">پالیسی</a></li>
-                        <li><a href="<?php echo $url; ?>gov_doc_m/strategy">ستراتیژی</a></li>
-                        <li><a href="<?php echo $url; ?>gov_doc_m/regulation">مقرره</a></li>
-                        <li><a href="<?php echo $url; ?>gov_doc_m/instruction">طرز العمل</a></li>
-                        <li><a href="<?php echo $url; ?>gov_doc_m/understanding">تفاهمنامه</a></li>
-                    </ul>
-                </li>
+                <li><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown">پایگاه اطلاعاتی</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
                         <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
@@ -127,8 +119,8 @@
                     </ul>
                 </li>
 
-                <li><span><a href="<?php echo $url; ?>home/contact">تماس با ما</a></span></li>
-                <li><span><a href="<?php echo $url; ?>home/urban_sector">سکتور شهری</a></span></li>
+                <li><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
+                <li><span><a href="<?php echo $url; ?>home/urban_sector"><?php echo lang('city_sector'); ?></a></span></li>
                 
                 
 

@@ -1,13 +1,25 @@
 <?php 
 
 	
-	$lang['property'] = "لیست جایداد ها";
-	$lang['category'] = "نوعیت جایداد ها";
-	$lang['deal'] = "نوعیت معامله";
-	$lang['location'] = "موقعیت";
-	$lang['real'] = "لیست رهنما ها";
-	$lang['feature'] = "جایداد های ویژه";
-	$lang['all_property'] = "لیست تمام جایداد ها";
-	$lang['fea'] = "ویژه";
-	$lang['info'] = "بخاطر معلومات بیشتر با ما به تماس شوید : ۹۹۷ ۹۹۷ ۹۹۷ (۹۳+)";
-	$lang['email'] = "و یا ایمیل کنید به ایمیل آدرس : property@mail.com ";
+	$lang['MAIN'] = "صفحه اصلی";
+	$lang['ABOUT'] = "در باره ما";
+	$lang['ABOUT_MINISTRY'] = "معرفی وزارت";
+	$lang['LEADER_BOARD'] = "هیئت رهبری";
+	$lang['m'] = 'معینیت های';
+	$lang['mm'] = 'معینیت مسکن';
+	$lang['ma'] = 'معینیت امور زمینداری';
+	$lang['mk'] = 'معینیت خصوصی سازی';
+	$lang['mp'] = 'معینیت پالیسی و پلان';
+
+	$lang['Office'] = "ادارت";
+	$lang['rp'] = "ریاست های ولایتی";
+	$lang['organ_structure'] = "ساختار تشکیلاتی";
+	$lang['sh_a_t'] = "شورای عالی توسعه";
+	$lang['ms'] = "مصوبات";
+	$lang['t_f'] = "تصامیم و فیصله ها";
+
+	$lang['ministry_project'] = "پروژه های وزارت";
+	$lang['gov_doc'] = "اسناد حکومتداری وزارت";
+	$lang['info_database'] = "پایگاه اطلاعاتی";
+	$lang['contact'] ="تماس با ما";
+	$lang['city_sector'] = "سکتور شهری ";
