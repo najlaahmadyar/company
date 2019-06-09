@@ -38,9 +38,9 @@
 
                 <div class="col-sm-4 m_l_m_25">
                     <span class="lang">
-                        <span class="la">En</span>
-                        <span class="la">پشتو‍‍</span>
-                        <span class="la">دری</span>
+                        <a href="<?php echo $url.'home/change_lang/eng'; ?>" class="la">En</a>
+                        <a href="<?php echo $url.'home/change_lang/pashto'; ?>" class="la">پشتو‍‍<a>
+                        <a href="<?php echo $url.'home/change_lang/dari'; ?>" class="la">دری</a>
                     </span>  
                 </div>           
                 
@@ -53,38 +53,52 @@
     </div>
 
     <div class="logo-bar">
-        <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
+        <?php if($_SESSION['lang'] == 'dari') { ?>
+             <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
+        <?php }else if($_SESSION['lang'] == 'pashto'){ ?>
+            <img class="logo-img" src="<?php echo $assets; ?>images/pashto-banner.jpg">
+        <?php }else if($_SESSION['lang'] == 'eng'){ ?>
+            <img class="logo-img" src="<?php echo $assets; ?>images/eng-banner.jpg">
+        <?php } ?>    
     </div>
 
     <div class="menu-bar">
         <div class="container">
             <ul>
-                <li><span>صفحه اصلی</span></li>
+                <li><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
                 <li class="dropdown first">
-                    <span data-toggle="dropdown">درباره ما</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">معرفی وزارت</a></li>
-                        <li><a href="#">هیئت رهبری</a></li>
-                        <li><a href="#">معنیت ها</a></li>
-                        <li><a href="#">ادارت</a></li>
-                        <li><a href="#">ریاست های ولایتی</a></li>
-                        <li><a href="#">ساختار تشکیلاتی</a></li>
+                        <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
+                        <li><a href="#">معنیت ها</a>
+                            <ul class="sub-menu">
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت مسکن</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت شهر سازی</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت امور زمینداری</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت خصوسی سازی</a></li>                               
+                                <li><a href="<?php echo $url.'about_us/execution'; ?>">معنیت پالیسی و پلان</a></li>                               
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo $url.'about_us/presidencies'; ?>">ادارت</a></li>
+                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>">ریاست های ولایتی</a></li>
+                        <li><a href="<?php echo $url.'about_us/organ_structure'; ?>">ساختار تشکیلاتی</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <span data-toggle="dropdown">شورای عالی نوسعه شهری</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">مصوبات</a></li>
-                        <li><a href="#">تصامیم و فیصله ها</a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d'; ?>">مصوبات</a></li>
+                        <li><a href="<?php echo $url.'High_council_u_d/desicions'; ?>">تصامیم و فیصله ها</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <span data-toggle="dropdown">برنامه ها و پروژه ها</span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="#">برنامه ها و پروژه های وزارت</a></li>
-                        <li><a href="#">پروژه های مشترک با نهاد های سکتوری</a></li>
+                        <li><a href="<?php echo $url.'program_project'; ?>">برنامه ها و پروژه های وزارت</a></li>
+                        <li><a href="<?php echo $url.'program_project/sector_p_p'; ?>">پروژه های مشترک با نهاد های سکتوری</a></li>
                     </ul>
                 </li>
 

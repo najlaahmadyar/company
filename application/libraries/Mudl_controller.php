@@ -20,6 +20,15 @@ class Mudl_controller extends CI_Controller {
 		$this->data["uploads"] = $this->url.'uploads';
 		$this->data['page'] = null;
 		$this->data['page_title'] = "";
+
+		
+		if(!isset($_SESSION['lang'])){
+			$_SESSION['lang'] = "eng";
+		}
+
+		$lang = $this->session->userdata('lang');
+		
+        $this->lang->load('home/index', $lang);
 		
 		// $this->load->model('employee_model');
 		// $this->load->model('common_model');

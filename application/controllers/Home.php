@@ -22,4 +22,20 @@ class Home extends Mudl_controller{
 	{
 		$this->load->view('urban_sector/urban_sector', $this->data);
 	}
+
+	public function change_lang($lang){
+
+		if($lang == 'dari'){
+			$lang = 'dari';
+		}else if( $lang == 'pashto'){
+			$lang = 'pashto';
+		}else{
+			$lang = 'eng';
+		}
+
+		$this->session->set_userdata('lang',$lang);
+
+		redirect($_SERVER['HTTP_REFERER']);
+
+	}
 }
