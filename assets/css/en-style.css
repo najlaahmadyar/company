@@ -9,6 +9,7 @@
     color: #FFF;
     font-weight: 600;
 }
+
 .logo-bar{
     height:100px;
     width:100%;
@@ -19,53 +20,18 @@
     height: 100px;
     width: 1340px;
 }
-
-ul.sub-menu>li{
-    padding-top: 4px;
-    list-style-type: none;
-    height:30px;
-    cursor: pointer;
-    padding-right: 5px;
-    padding-left: 10px;
-}
-ul.sub-menu>li>a{
-    color:#000;
-}
-
-ul.sub-menu{
-    position: absolute;
-    background-color: #ecebeb;
-    left: -113px;
-    bottom: -14px;
-    text-align: right;
-    direction: rtl;
-    padding-right:0px;
-}
-ul.sub-menu>li{
-    list-style-type: none;
-    padding:6px 5px;
-}
-
-ul.sub-menu>li:hover{
-    background-color: #c1272d;
-}
-ul.sub-menu>li:hover a{
-    color:#FFF;
-}
-
-
 .menu-bar{
     height: 30px;
     width:100%;
     background-color: #c1272d;
     color: #FFF;
-    text-align: right;
+    text-align: left;
     margin-top: -14px;
 }
 
 .menu-bar>.container>ul>li{
     padding-top: 4px;
-    float:right;
+    float:left;
     list-style-type: none;
     display: inline;
     min-width:100px;
@@ -80,10 +46,10 @@ ul.sub-menu>li:hover a{
     font-weight: 600;   
 }
 .menu-bar>.container>ul>li>i{
-    float: left;
+    float: right;
     font-size: 12px;
     margin-top: 6px;
-    margin-right:10px;
+    margin-left:10px;
 }
 
 
@@ -135,32 +101,33 @@ ul.sub-menu>li:hover a{
 .wrapper{
     margin-top:20px;
     width:100%;
-    text-align: right;
-    direction: rtl;
+    text-align: left;
+    direction: ltr;
 }
 
 .left-side-bar{
     width:20%;
     min-height: 497px;
-    float:left;
+    float:right;
 } 
 .content{
     width:78%;
     background-color: white;
-    float:left;    
+    float:right;    
     padding: 0px 0px 0px 20px;
     
 }
 .search-form::placeholder{
     color:#ded;
 }
-.search-form{
+.search-form, .search-form:focus, .search-form:active{
     border: none;
     background-color: transparent;
     color: #ded;
     border-bottom: 2px solid #ded;
     margin-top: -10px;
-    text-align:right;
+    text-align:left;
+    box-shadow: none;
 }
 
 /* Main Page Style Starts here */
@@ -194,6 +161,12 @@ ul.sub-menu>li:hover a{
     text-align: justify;
 }
 
+.top-news .col-sm-7, .top-news .col-sm-5{
+    float:right;
+    direction:ltr;
+    text-align: left;
+}
+
 .news-icon>i{
     background-color: #25559f;
     color:#FFF;
@@ -205,7 +178,7 @@ ul.sub-menu>li:hover a{
 
 #accordion2 .panel-title a{
     display: block;
-    padding: 12px 15px 12px 50px;
+    padding: 12px 50px 12px 15px;
     background:#25559f;
     border-radius: 3px;
     font-size: 18px;
@@ -232,7 +205,7 @@ ul.sub-menu>li:hover a{
     text-shadow: none;
     position: absolute;
     top: 8px;
-    left: 15px;
+    right: 15px;
 }
 #accordion2 .panel-title a.collapsed:before{ content: "\f107"; }
 #accordion2 .panel-body{
@@ -254,7 +227,7 @@ ul.sub-menu>li:hover a{
     padding: 5px;
     border-bottom: 1px solid #ded;
     margin: 0px -45px;
-    margin-left: 0px;
+    margin-right: 0px;
  }
 
  #accordioninside .panel-heading{
@@ -264,7 +237,7 @@ ul.sub-menu>li:hover a{
 
  #accordioninside .panel-title a{
     display: block;
-    padding: 12px 15px 12px 50px;
+    padding:12px 50px 12px 15p;
     background:#f2f2f2;
     border-radius: 3px;
     font-size: 18px;
@@ -288,7 +261,7 @@ ul.sub-menu>li:hover a{
     text-shadow: none;
     position: absolute;
     top: 8px;
-    left: 8px;
+    right: 8px;
     background: none;
     box-shadow: none;
     border: none;
@@ -312,7 +285,7 @@ ul.sub-menu>li:hover a{
     padding: 5px;
     border-bottom: 1px solid #ded;
     margin: 0px -45px;
-    margin-left: -26px;
+    margin-right: -26px;
 }
 
 .default-card {
@@ -340,10 +313,11 @@ ul.sub-menu>li:hover a{
     color:#000;
 }
 
+
 .footer-div{
     padding-top:20px;
-    direction: rtl;
-    text-align: right;
+    direction: ltr;
+    text-align: left;
 }
 
 .footer-div .title{
