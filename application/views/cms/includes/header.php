@@ -38,7 +38,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-list"></i>Ministry Projects </a>
+                        <a href="<?php echo $url.'cms/projects'; ?>"><i class="menu-icon fa fa-list"></i>Ministry Projects </a>
                     </li>
 
                     <li>

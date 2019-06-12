@@ -90,18 +90,11 @@
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown"><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url.'High_council_u_d'; ?>"><?php echo lang('ms'); ?></a></li>
-                        <li><a href="<?php echo $url.'High_council_u_d/desicions'; ?>"><?php echo lang('t_f'); ?></a></li>
-                    </ul>
+                    <span><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown"></i>  
                 </li>
 
                 <li class="dropdown">
-                    <span data-toggle="dropdown"><?php echo lang('ministry_project'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url.'program_project'; ?>">پروژه پلانگذاری شهرک های معلمین </a></li>
-                    </ul>
+                    <span ><?php echo lang('ministry_project'); ?></span>
                 </li>
 
                 <li><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
@@ -120,7 +113,7 @@
                 </li>
 
                 <li><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
-                <li><span><a href="<?php echo $url; ?>home/urban_sector"><?php echo lang('city_sector'); ?></a></span></li>
+                <li><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
                 
                 
 

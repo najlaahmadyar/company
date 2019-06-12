@@ -3,7 +3,7 @@
         <div class="col-sm-12 top-news">
             <span class="col-sm-7">
                 <div class="slider-img">
-                    <img src="<?php echo $assets; ?>images/header-bg.jpg " alt="...">                    
+                    <img src="<?php echo $assets; ?>images/first.jpg" alt="...">                    
                     <div class="news-icon">
                         <i class="fa fa-print"></i>
                         <i class="fa fa-share-alt"></i>
@@ -32,6 +32,7 @@
             <div class="col-sm-4">
                 <div class="mid-image-div">
                     <img src="<?php echo $assets; ?>images/feature2.jpg" alt="..." />
+                    <h2 class="news-tittle">عنوان اول</h2>
                 </div>
                 <p  class="news-text">ایزو پرمختیایي پلانونو د جوړولو په مټ پلي کیږي ، دچاپیریال څرنګوالی
                         او د طرحو د فزیکي څرنګوالي مطالعه، د فضا له لاري د فزیکي طرحو

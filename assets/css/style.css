@@ -380,3 +380,10 @@ span.lang a{
 .about,p{
     padding-bottom: 20px;
 }
+.news-tittle{
+    position: absolute;
+    z-index: 1111111;
+    margin-top: -145px;
+    color: #fff;
+    border-bottom: 5px solid lightgray;
+}

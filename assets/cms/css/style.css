@@ -2504,3 +2504,10 @@ footer.site-footer {
     right: 20px !important; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* our style */
+.project_img,img{
+  height:80px !important;
+  width: 80px !important;
+  border-radius: 50% !important;
+}
