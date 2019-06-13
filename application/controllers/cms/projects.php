@@ -12,6 +12,7 @@ class Projects extends Cms_controller{
 		$this->data['upload'] = $this->upload;
 		$this->data['assets'] = $this->assets;
 		$this->data['page_title'] = "Projects";
+		$this->data['page'] = 'projects';
 		
 		$this->load->model('project_model');
 		
