@@ -1,6 +1,4 @@
 
-                </div>
-            </div><!-- .animated -->
         </div><!-- .content -->
 
 
@@ -15,6 +13,11 @@
     <script src="<?php echo $assets; ?>js/bootstrap.min.js"></script>
     <script src="<?php echo $assets; ?>js/jquery.matchHeight.min.js"></script>
     <script src="<?php echo $assets; ?>js/main.js"></script>
+    <?php 
+        foreach ($scripts as $script) { 
+            echo '<script type="text/javascript" src="'.$script.'"></script>';
+        }
+    ?>
 
 
     <!-- <script src="<?php echo $assets; ?>js/lib/data-table/datatables.min.js"></script>
