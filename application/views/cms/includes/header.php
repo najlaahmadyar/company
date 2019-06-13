@@ -43,7 +43,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-info"></i>About Us</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-info"></i><a href="tables-basic.html">About Ministry</a></li>
-                            <li><i class="fa fa-info"></i><a href="tables-basic.html">Leader Board</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Leader Board</a></li>
                             <li><i class="fa fa-list"></i><a href="tables-basic.html">Executions</a></li>
                             <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Offices</a></li>
                             <li><i class="fa fa-pie-chart"></i><a href="tables-data.html">Provincial Departments</a></li>
