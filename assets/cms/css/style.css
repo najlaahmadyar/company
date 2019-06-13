@@ -825,7 +825,7 @@ aside.left-panel {
   margin-left: 280px;
   margin-top: 55px; }
   .right-panel .top-left {
-    width: 350px;
+    width: 900px;
     float: left; }
   .right-panel .top-rigth {
     float: left; }
@@ -872,7 +872,7 @@ aside.left-panel {
   top: 0;
   z-index: 999; }
 .right-panel .navbar-brand {
-  width: 250px;
+  /* width: 250px; */
   display: inline-block; }
 .right-panel .menutoggle {
   padding-top: 7px; }
@@ -905,7 +905,7 @@ header.fixed-top {
   font-size: 1em;
   height: 40px;
   line-height: 40px;
-  width: 40px;
+  /* width: 40px; */
   display: block;
   text-align: right; }
 
@@ -1197,7 +1197,9 @@ header .form-inline {
 .content {
   float: left;
   padding: 1.875em;
-  width: 100%; }
+  width: 100%; 
+  background-color:#FFF;
+}
 
 .card {
   margin-bottom: 1.875em;
@@ -2487,7 +2489,7 @@ footer.site-footer {
       display: block; }
 
   .right-panel .navbar-brand {
-    width: 220px;
+    /* width: 220px; */
     padding-bottom: 5px; }
   .right-panel .menutoggle {
     width: 20px; } }
@@ -2510,4 +2512,78 @@ footer.site-footer {
   height:80px !important;
   width: 80px !important;
   border-radius: 50% !important;
+}
+
+.header-title{
+    margin-bottom:10px;
+    font-weight:600;
+    display:inline;    
+    padding-left: 10px;
+}
+
+.add-btn, .add-btn:hover, .add-btn:active, .add-btn:focus{
+  margin-bottom:10px;
+  background-color:#2555A1;
+  border: 1px solid #2555A1;
+}
+
+.table thead th{
+  font-size: 14px;
+  padding: .50rem;
+}
+.table td{
+  font-size:14px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+.control-label{
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:-5px;
+}
+
+#file-input{
+    background-color: #ededed;
+    border-radius: 20px;
+    height: 30px;
+    cursor: pointer;
+    padding-top: 2px;
+}
+#file-input .icon{
+  font-size: 12px;
+  background-color: #2555A1;
+  color: #FFF;
+  padding: 8px 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-left: -14px;
+  margin-top: 3px;
+  margin-right: 10px;
+  height: 30px;
+}
+.upload-text{
+  font-size:12px;
+}
+.hidden {
+  display: none!important;
+}
+
+p {
+  color:#000 !important;
 }

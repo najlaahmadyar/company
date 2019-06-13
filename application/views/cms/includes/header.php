@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="<?php echo $assets; ?>css/lib/datatable/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $assets; ?>css/style.css">
 
+    <?php 
+        foreach ($styles as $stylesheet) {
+            echo '<link href="'.$stylesheet.'" rel="stylesheet" type="text/css">';
+        }
+    ?> 
+
 </head>
 <body>
     <!-- Left Panel -->
@@ -89,9 +95,11 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./" style="font-size:14px;">Ministry of Urban Development &amp; Land Admin</a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                    <a class="navbar-brand" href="./" style="font-size:14px;">Ministry of Urban Development &amp; Land</a>
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>   
+                    <h5 class="header-title"><?php echo $page_title; ?></h5>                                     
                 </div>
+                
             </div>
             <div class="top-right">
                 <div class="header-menu">
@@ -103,5 +111,3 @@
         </header>
 
         <div class="content">
-            <div class="animated fadeIn">
-                <div class="row">
