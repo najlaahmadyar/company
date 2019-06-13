@@ -216,27 +216,78 @@
         </div>
     </div>
     <hr>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="col-sm-12">
-                <h4>کارهای مهم وزارت</h4>
-                <p class="news-text">شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ مشخصی
-                    برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته است.
-                شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ
-                    مشخصی برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎
-                    ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                    ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                تا تعیین سرنوشت...
-                </p>
+    <center><h2>کارهای مهم وزارت</h2></center>
+    <div class="row panel-group" id="accordion">
+        <div class="panel panel-default col-xs-6 col-md-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
 
+        <div class="panel panel-default col-xs-6 col-md-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTow">
+                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTow" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default col-xs-6 col-md-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTree">
+                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTree" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default col-xs-6 col-md-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFou">
+                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFou" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <hr>
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="col-sm-12"> با ما به تماس باشید</h3>          
+            <h3 class="col-sm-12">فورم ثبت شکایات</h3>          
             <div class="col-sm-11 mudl-panel">
                 <div class = "panel panel-default">                    
                     <div class = "panel-body">
