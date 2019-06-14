@@ -58,8 +58,8 @@
                         <a href="<?php echo $url.'cms/projects'; ?>"><i class="menu-icon fa fa-list"></i>Ministry Projects </a>
                     </li>
 
-                    <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-file"></i>Governmental Documents </a>
+                    <li class="<?php echo ($page == 'document') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/gov_doc'; ?>"><i class="menu-icon fa fa-file"></i>Governmental Documents </a>
                     </li>
 
                      <li class="menu-item-has-children <?php echo ($page == 'database') ? 'active' : ''; ?> dropdown">

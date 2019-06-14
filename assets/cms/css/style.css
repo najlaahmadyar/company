@@ -2557,7 +2557,13 @@ footer.site-footer {
   font-weight:bold;
   margin-bottom:-5px;
 }
-
+#file-output{
+  background-color: #ededed;
+  border-radius: 20px;
+  height: 30px;
+  cursor: pointer;
+  padding-top: 4px;
+}
 #file-input{
     background-color: #ededed;
     border-radius: 20px;
@@ -2565,7 +2571,7 @@ footer.site-footer {
     cursor: pointer;
     padding-top: 2px;
 }
-#file-input .icon{
+#file-input .icon, #file-output .icon{
   font-size: 12px;
   background-color: #2555A1;
   color: #FFF;
