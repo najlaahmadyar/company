@@ -28,8 +28,7 @@ class High_council_ubran_development extends Cms_controller{
 		
 	
 	}public function add_new(){
-		$this->data['page_title'] = "Add New Project";
-
+		$this->data['page_title'] = "Add New data";
 		$this->data['high_council'] = $this->high_council_ud_model->get_new();
 
 		$this->data["styles"] = array(
@@ -47,15 +46,17 @@ class High_council_ubran_development extends Cms_controller{
 	}
 
 	public function edit($p_id){
-		$this->data['page_title'] = "Add New Project";
+		$this->data['page_title'] = "Edit data";
 
-		$this->data['project'] = $this->high_council_ud_model->get($p_id);
+		$this->data['high_council'] = $this->high_council_ud_model->get($p_id);
 
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
+			$this->assets.'plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
 		);
 
 		$this->data["scripts"] = array(
+			$this->assets . 'plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
 			$this->assets . 'plugins/summernote/dist/summernote.min.js',
 			$this->assets .  'custom/js/project.js'
 		);
@@ -70,11 +71,11 @@ class High_council_ubran_development extends Cms_controller{
 		$file = '';
 		if(!empty($_FILES["h_file"]["name"])){
 			$target_dir = "uploads/high_council_files/";
-			$target_file = $target_dir . basename($_FILES["p_file"]["name"]);
+			$target_file = $target_dir . basename($_FILES["h_file"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["p_file"]["tmp_name"], $target_file)) {
+			if (move_uploaded_file($_FILES["h_file"]["tmp_name"], $target_file)) {
 				$file = $_FILES["h_file"]["name"];		
 			}
 		}

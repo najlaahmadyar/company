@@ -40,7 +40,7 @@ class Projects extends Cms_controller{
 	}
 
 	public function edit($p_id){
-		$this->data['page_title'] = "Add New Project";
+		$this->data['page_title'] = "Edit Project";
 
 		$this->data['project'] = $this->project_model->get($p_id);
 

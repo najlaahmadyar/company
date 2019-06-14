@@ -7,6 +7,7 @@
                 <tr>
                     <th>#</th>
                     <th>Tittle</th>
+                    <th>Date</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
@@ -17,6 +18,7 @@
                     <tr>
                     <td>'.$hc_data->h_id.'</td>
                     <td>'.$hc_data->h_title_eng.'</td>
+                    <td>'.$hc_data->h_date.'</td>
                     <td>'.html_entity_decode($hc_data->h_desc_eng).'</td>
                     <td>
                         <a href="'.$url.'cms/high_council_ubran_development/edit/'.$hc_data->h_id.'" class="fa fa-edit"></a>
