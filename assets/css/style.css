@@ -387,3 +387,7 @@ span.lang a{
     color: #fff;
     border-bottom: 5px solid lightgray;
 }
+.work_img{
+    height: 100px;
+    border-radius: 3px;
+}
