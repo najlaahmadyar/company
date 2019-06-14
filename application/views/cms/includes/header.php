@@ -42,16 +42,16 @@
                     <li class="menu-item-has-children <?php echo ($page == 'about') ? 'active' : ''; ?> dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-info"></i>About Us</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-info"></i><a href="tables-basic.html">About Ministry</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Leader Board</a></li>
-                            <li><i class="fa fa-list"></i><a href="tables-basic.html">Executions</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Offices</a></li>
-                            <li><i class="fa fa-pie-chart"></i><a href="tables-data.html">Provincial Departments</a></li>
+                            <li><i class="fa fa-info"></i><a href="<?php echo $url.'cms/about'; ?>">About Ministry</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.''; ?>">Leader Board</a></li>
+                            <li><i class="fa fa-list"></i><a href="<?php echo $url.''; ?>">Executions</a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="<?php echo $url.''; ?>">Offices</a></li>
+                            <li><i class="fa fa-pie-chart"></i><a href="<?php echo $url.'cms/provincial_presidency'; ?>">Provincial Departments</a></li>
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-file"></i>High Council of U.D </a>
+                    <li class="<?php echo ($page == 'high_council') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/high_council_ubran_development'; ?>"><i class="menu-icon fa fa-file"></i>High Council of U.D </a>
                     </li>
 
                     <li class="<?php echo ($page == 'projects') ? 'active' : ''; ?>">
@@ -62,14 +62,14 @@
                         <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-file"></i>Governmental Documents </a>
                     </li>
 
-                     <li class="menu-item-has-children <?php echo ($page == 'about') ? 'active' : ''; ?> dropdown">
+                     <li class="menu-item-has-children <?php echo ($page == 'database') ? 'active' : ''; ?> dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-database"></i>Data Base</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-newspaper-o"></i><a href="tables-basic.html">News</a></li>
-                            <li><i class="fa fa-audio-description"></i><a href="tables-basic.html">Press release</a></li>
-                            <li><i class="fa fa-sticky-note"></i><a href="tables-basic.html">Reports</a></li>
-                            <li><i class="fa fa-asterisk"></i><a href="tables-basic.html">Success Story</a></li>
-                            <li><i class="fa fa-book"></i><a href="tables-basic.html">Journal</a></li>
+                            <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.''; ?>">News</a></li>
+                            <li><i class="fa fa-audio-description"></i><a href="<?php echo $url.''; ?>">Press release</a></li>
+                            <li><i class="fa fa-sticky-note"></i><a href="<?php echo $url.''; ?>">Reports</a></li>
+                            <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.''; ?>">Success Story</a></li>
+                            <li><i class="fa fa-book"></i><a href="<?php echo $url.''; ?>">Journal</a></li>
                         </ul>
                     </li>
 

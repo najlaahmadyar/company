@@ -1,28 +1,33 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Projects extends Cms_controller{
-
+class High_council_ubran_development extends Cms_controller{
+    
 	function __Construct(){
 		parent::__Construct();
 
-		$this->data['page_title'] = "Projects";
-		$this->data['page'] = 'projects';		
-		$this->load->model('project_model');		
+		$this->data['page_title'] = "High Council of Urban Deveopment";
+		$this->data['page'] = 'high_council';		
+        $this->load->model('high_council_ud_model');		
 	}
 
 	public function index()
 	{
-		$this->data['page_title'] = "List Of Projects";
-		
-		$projects = $this->project_model->get();		
-		$this->data['projects'] = $projects;
-		$this->load->view('cms/projects/index', $this->data);
+        $this->data["styles"] = array(
+			$this->assets.'plugins/summernote/dist/summernote.css',
+		);
+
+		$this->data["scripts"] = array(
+			$this->assets . 'plugins/summernote/dist/summernote.min.js',
+			$this->assets .  'custom/js/project.js'
+        );
+        		
+		$hc_data = $this->high_council_ud_model->get();		
+		$this->data['hc_datas'] = $hc_data;
+		$this->load->view('cms/high_council_ub/index', $this->data);
 		
 	
-	}
-	
-	public function add_new(){
+	}public function add_new(){
 		$this->data['page_title'] = "Add New Project";
 
 		$this->data['project'] = $this->project_model->get_new();
@@ -84,21 +89,6 @@ class Projects extends Cms_controller{
 		}
 		redirect($this->url.'cms/projects');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
