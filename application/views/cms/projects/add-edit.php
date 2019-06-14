@@ -44,7 +44,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label class="control-label">Description Pashto</label>
-                            <textarea name="desc_pashto" id="desc_pashto" class="form-control summernote"><?php echo $project->p_desc_pashto; ?>"</textarea>
+                            <textarea name="desc_pashto" id="desc_pashto" class="form-control summernote"><?php echo $project->p_desc_pashto; ?></textarea>
                         </div>
                     </div>
                 </div>

@@ -30,24 +30,26 @@ class High_council_ubran_development extends Cms_controller{
 	}public function add_new(){
 		$this->data['page_title'] = "Add New Project";
 
-		$this->data['project'] = $this->project_model->get_new();
+		$this->data['high_council'] = $this->high_council_ud_model->get_new();
 
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
+			$this->assets.'plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
 		);
 
 		$this->data["scripts"] = array(
-			$this->assets . 'plugins/summernote/dist/summernote.min.js',
+			$this->assets.'plugins/summernote/dist/summernote.min.js',
+			$this->assets . 'plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
 			$this->assets .  'custom/js/project.js'
 		);
 		
-		$this->load->view('cms/projects/add-edit.php', $this->data);
+		$this->load->view('cms/high_council_ub/add-edit.php', $this->data);
 	}
 
 	public function edit($p_id){
 		$this->data['page_title'] = "Add New Project";
 
-		$this->data['project'] = $this->project_model->get($p_id);
+		$this->data['project'] = $this->high_council_ud_model->get($p_id);
 
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
@@ -58,36 +60,36 @@ class High_council_ubran_development extends Cms_controller{
 			$this->assets .  'custom/js/project.js'
 		);
 		
-		$this->load->view('cms/projects/add-edit.php', $this->data);
+		$this->load->view('cms/high_council_ub/add-edit.php', $this->data);
 	}
 
 	public function save($id = null){
 
-		$project = $this->project_model->array_from_post(array('title_dari', 'title_pashto', 'title_eng', 'desc_dari', 'desc_pashto', 'desc_eng'), 'p_');
+		$hh_data = $this->high_council_ud_model->array_from_post(array('title_dari', 'title_pashto', 'title_eng', 'desc_dari', 'desc_pashto', 'desc_eng','date'), 'h_');
 		
-		$photo = '';
-		if(!empty($_FILES["p_photo"]["name"])){
-			$target_dir = "uploads/projects_image/";
-			$target_file = $target_dir . basename($_FILES["p_photo"]["name"]);
+		$file = '';
+		if(!empty($_FILES["h_file"]["name"])){
+			$target_dir = "uploads/high_council_files/";
+			$target_file = $target_dir . basename($_FILES["p_file"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $target_file)) {
-				$photo = $_FILES["p_photo"]["name"];		
+			if (move_uploaded_file($_FILES["p_file"]["tmp_name"], $target_file)) {
+				$file = $_FILES["h_file"]["name"];		
 			}
 		}
 		
-		$project['p_photo'] = $photo;
-		
-		$this->project_model->save($project, $id);
-		redirect($this->url.'cms/projects');
+		$hh_data['h_file'] = $file;
+        
+		$this->high_council_ud_model->save($hh_data, $id);
+		redirect($this->url.'cms/high_council_ubran_development');
 	}
 
 	public function delete($p_id){
 		if($p_id != null){
-			$this->project_model->delete($p_id);
+			$this->high_council_ud_model->delete($p_id);
 		}
-		redirect($this->url.'cms/projects');
+		redirect($this->url.'cms/high_council_ubran_development');
 	}
 
 
