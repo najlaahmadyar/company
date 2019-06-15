@@ -68,8 +68,8 @@
                             <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.'cms/news'; ?>">News</a></li>
                             <li><i class="fa fa-audio-description"></i><a href="<?php echo $url.'cms/press_release'; ?>">Press release</a></li>
                             <li><i class="fa fa-sticky-note"></i><a href="<?php echo $url.'cms/report'; ?>">Reports</a></li>
-                            <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.''; ?>">Success Story</a></li>
-                            <li><i class="fa fa-book"></i><a href="<?php echo $url.''; ?>">Journal</a></li>
+                            <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.'cms/success_story'; ?>">Success Story</a></li>
+                            <li><i class="fa fa-book"></i><a href="<?php echo $url.'cms/journal'; ?>">Journal</a></li>
                         </ul>
                     </li>
 
