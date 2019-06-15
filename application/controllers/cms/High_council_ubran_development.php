@@ -12,16 +12,7 @@ class High_council_ubran_development extends Cms_controller{
 	}
 
 	public function index()
-	{
-        $this->data["styles"] = array(
-			$this->assets.'plugins/summernote/dist/summernote.css',
-		);
-
-		$this->data["scripts"] = array(
-			$this->assets . 'plugins/summernote/dist/summernote.min.js',
-			$this->assets .  'custom/js/project.js'
-        );
-        		
+	{        		
 		$hc_data = $this->high_council_ud_model->get();		
 		$this->data['hc_datas'] = $hc_data;
 		$this->load->view('cms/high_council_ub/index', $this->data);
