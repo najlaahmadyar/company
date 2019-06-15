@@ -65,7 +65,7 @@
                      <li class="menu-item-has-children <?php echo ($page == 'database') ? 'active' : ''; ?> dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-database"></i>Data Base</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.''; ?>">News</a></li>
+                            <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.'cms/news'; ?>">News</a></li>
                             <li><i class="fa fa-audio-description"></i><a href="<?php echo $url.''; ?>">Press release</a></li>
                             <li><i class="fa fa-sticky-note"></i><a href="<?php echo $url.''; ?>">Reports</a></li>
                             <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.''; ?>">Success Story</a></li>

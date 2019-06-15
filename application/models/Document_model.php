@@ -20,4 +20,8 @@ class Document_model extends Mudl_model{
 		return $document;
 	}
 
+	public function document_category(){
+		return $this->db->get('document_category')->result();
+	}
+
 }

@@ -24,6 +24,20 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
+                            <label class="control-label">Document Category </label>
+                            <select name="cat_id" id="cat_id"  class="form-control">
+                                <option value=" ">Please select document category</option>
+                                <?php 
+                                    foreach($category as $cat){
+                                        $selected = ($cat->cat_id == $document->doc_cat_id) ? 'selected' : '';
+                                        echo "<option ".$selected." value='".$cat->cat_id."'>".$cat->cat_name_eng."</option>";
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
                             <label class="control-label">Upload File</label><br>
                             <label class="col-sm-12 upload_label" for="personal_image" id="file-input"><span class="icon"><i class="fa fa-file"></i></span><span id="upload_text" class="upload-text">Click To Upload The file</span></label>                    
                             <input type="file" name="doc_file" id="personal_image" class="form-control hidden"/>

@@ -70,9 +70,9 @@ class Projects extends Cms_controller{
 			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $target_file)) {
 				$photo = $_FILES["p_photo"]["name"];		
 			}
-		}
-		
 		$project['p_photo'] = $photo;
+	}
+		
 		
 		$this->project_model->save($project, $id);
 		redirect($this->url.'cms/projects');

@@ -78,9 +78,9 @@ class High_council_ubran_development extends Cms_controller{
 			if (move_uploaded_file($_FILES["h_file"]["tmp_name"], $target_file)) {
 				$file = $_FILES["h_file"]["name"];		
 			}
-		}
+			$hh_data['h_file'] = $file;
+	}
 		
-		$hh_data['h_file'] = $file;
         
 		$this->high_council_ud_model->save($hh_data, $id);
 		redirect($this->url.'cms/high_council_ubran_development');

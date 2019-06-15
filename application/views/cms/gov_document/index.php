@@ -7,6 +7,7 @@
                 <tr>
                     <th>#</th>
                     <th>Tittle</th>
+                    <th>Category</th>
                     <th>File</th>
                     <th>Action</th>
                 </tr>
@@ -17,6 +18,7 @@
                     <tr>
                     <td>'.$document->doc_id.'</td>
                     <td>'.$document->doc_title_eng.'</td>
+                    <td>'.$document->cat_name_eng.'</td>
                     <td>
                         <a id="personal_image"  href="'.$uploads.'high_council_files/'.$document->doc_file.'">
                             <div class="col-sm-8">

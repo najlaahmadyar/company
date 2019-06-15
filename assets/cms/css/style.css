@@ -2601,3 +2601,6 @@ footer.site-footer {
 p {
   color:#000 !important;
 }
+select.form-control:not([size]):not([multiple]){
+  height: calc(2.25rem + -4px);
+}
