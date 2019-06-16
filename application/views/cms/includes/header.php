@@ -25,6 +25,9 @@
             echo '<link href="'.$stylesheet.'" rel="stylesheet" type="text/css">';
         }
     ?> 
+    <script>
+        var base_url = "<?php echo $url; ?>";
+    </script>
 
 </head>
 <body>
@@ -44,8 +47,6 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-info"></i><a href="<?php echo $url.'cms/about'; ?>">About Ministry</a></li>
                             <li><i class="fa fa-table"></i><a href="<?php echo $url.''; ?>">Leader Board</a></li>
-                            <li><i class="fa fa-list"></i><a href="<?php echo $url.''; ?>">Executions</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="<?php echo $url.''; ?>">Offices</a></li>
                             <li><i class="fa fa-pie-chart"></i><a href="<?php echo $url.'cms/provincial_presidency'; ?>">Provincial Departments</a></li>
                         </ul>
                     </li>
@@ -58,18 +59,18 @@
                         <a href="<?php echo $url.'cms/projects'; ?>"><i class="menu-icon fa fa-list"></i>Ministry Projects </a>
                     </li>
 
-                    <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-file"></i>Governmental Documents </a>
+                    <li class="<?php echo ($page == 'document') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/gov_doc'; ?>"><i class="menu-icon fa fa-file"></i>Governmental Documents </a>
                     </li>
 
                      <li class="menu-item-has-children <?php echo ($page == 'database') ? 'active' : ''; ?> dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-database"></i>Data Base</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.''; ?>">News</a></li>
-                            <li><i class="fa fa-audio-description"></i><a href="<?php echo $url.''; ?>">Press release</a></li>
-                            <li><i class="fa fa-sticky-note"></i><a href="<?php echo $url.''; ?>">Reports</a></li>
-                            <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.''; ?>">Success Story</a></li>
-                            <li><i class="fa fa-book"></i><a href="<?php echo $url.''; ?>">Journal</a></li>
+                            <li><i class="fa fa-newspaper-o"></i><a href="<?php echo $url.'cms/news'; ?>">News</a></li>
+                            <li><i class="fa fa-audio-description"></i><a href="<?php echo $url.'cms/press_release'; ?>">Press release</a></li>
+                            <li><i class="fa fa-sticky-note"></i><a href="<?php echo $url.'cms/report'; ?>">Reports</a></li>
+                            <li><i class="fa fa-asterisk"></i><a href="<?php echo $url.'cms/success_story'; ?>">Success Story</a></li>
+                            <li><i class="fa fa-book"></i><a href="<?php echo $url.'cms/journal'; ?>">Journal</a></li>
                         </ul>
                     </li>
 
@@ -81,8 +82,8 @@
                         <a href="<?php echo $url.'cms/partners/index'; ?>"><i class="menu-icon fa fa-handshake-o"></i>Partner Offices</a>
                     </li>
 
-                    <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
+                    <li class="<?php echo ($page == 'contact_us') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/contact_us'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
                     </li>
 
                     

@@ -1,26 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class High_council_ubran_development extends Cms_controller{
+class Press_release extends Cms_controller{
     
 	function __Construct(){
 		parent::__Construct();
 
-		$this->data['page_title'] = "High Council of Urban Deveopment";
-		$this->data['page'] = 'high_council';		
-        $this->load->model('high_council_ud_model');		
+		$this->data['page_title'] = "Press Release";
+		$this->data['page'] = 'database';		
+        $this->load->model('press_release_model');		
 	}
 
 	public function index()
-	{        		
-		$hc_data = $this->high_council_ud_model->get();		
-		$this->data['hc_datas'] = $hc_data;
-		$this->load->view('cms/high_council_ub/index', $this->data);
+	{
+		$press_release = $this->press_release_model->get();		
+		$this->data['press_releases'] = $press_release;
+		$this->load->view('cms/press_release/index', $this->data);
 		
 	
 	}public function add_new(){
 		$this->data['page_title'] = "Add New data";
-		$this->data['high_council'] = $this->high_council_ud_model->get_new();
+		$this->data['press_release'] = $this->press_release_model->get_new();
 
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
@@ -33,13 +33,13 @@ class High_council_ubran_development extends Cms_controller{
 			$this->assets .  'custom/js/project.js'
 		);
 		
-		$this->load->view('cms/high_council_ub/add-edit.php', $this->data);
+		$this->load->view('cms/press_release/add-edit.php', $this->data);
 	}
 
 	public function edit($p_id){
 		$this->data['page_title'] = "Edit data";
 
-		$this->data['high_council'] = $this->high_council_ud_model->get($p_id);
+		$this->data['press_release'] = $this->press_release_model->get($p_id);
 
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
@@ -52,40 +52,40 @@ class High_council_ubran_development extends Cms_controller{
 			$this->assets .  'custom/js/project.js'
 		);
 		
-		$this->load->view('cms/high_council_ub/add-edit.php', $this->data);
+		$this->load->view('cms/press_release/add-edit.php', $this->data);
 	}
 
 	public function save($id = null){
 
-		$hh_data = $this->high_council_ud_model->array_from_post(array('title_dari', 'title_pashto', 'title_eng', 'desc_dari', 'desc_pashto', 'desc_eng','date'), 'h_');
+		$hh_data = $this->press_release_model->array_from_post(array('title_dari', 'title_pashto', 'title_eng','date'), 'pr_');
 		
 		$file = '';
-		if(!empty($_FILES["h_file"]["name"])){
-			$target_dir = "uploads/high_council_files/";
-			$target_file = $target_dir . basename($_FILES["h_file"]["name"]);
+		if(!empty($_FILES["pr_file"]["name"])){
+			$target_dir = "uploads/press_release/";
+			$target_file = $target_dir . basename($_FILES["pr_file"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			$temp = explode(".", $_FILES["h_file"]["name"]);
-			$newfilename = 'council_approval_'.round(microtime(true)).'.'.end($temp);
+			$temp = explode(".", $_FILES["pr_file"]["name"]);
+			$newfilename = 'publication_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
-			if (move_uploaded_file($_FILES["h_file"]["tmp_name"], $path)) {
+			if (move_uploaded_file($_FILES["pr_file"]["tmp_name"], $path)) {
 				$file = $newfilename;		
 			}
 
-			$hh_data['h_file'] = $file;
+			$hh_data['pr_file'] = $file;
 	}
 		
         
-		$this->high_council_ud_model->save($hh_data, $id);
-		redirect($this->url.'cms/high_council_ubran_development');
+		$this->press_release_model->save($hh_data, $id);
+		redirect($this->url.'cms/press_release');
 	}
 
 	public function delete($p_id){
 		if($p_id != null){
-			$this->high_council_ud_model->delete($p_id);
+			$this->press_release_model->delete($p_id);
 		}
-		redirect($this->url.'cms/high_council_ubran_development');
+		redirect($this->url.'cms/press_release');
 	}
 
 

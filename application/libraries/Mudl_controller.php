@@ -17,7 +17,7 @@ class Mudl_controller extends CI_Controller {
 				
 		$this->data['url'] = $this->url;
 		$this->data["assets"] = $this->assets;
-		$this->data["uploads"] = $this->url.'uploads';
+		$this->data["uploads"] = $this->url.'uploads/';
 		$this->data['page'] = null;
 		$this->data['page_title'] = "";
 

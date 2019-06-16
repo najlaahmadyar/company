@@ -40,7 +40,7 @@ class Projects extends Cms_controller{
 	}
 
 	public function edit($p_id){
-		$this->data['page_title'] = "Add New Project";
+		$this->data['page_title'] = "Edit Project";
 
 		$this->data['project'] = $this->project_model->get($p_id);
 
@@ -66,13 +66,16 @@ class Projects extends Cms_controller{
 			$target_file = $target_dir . basename($_FILES["p_photo"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-			
-			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $target_file)) {
-				$photo = $_FILES["p_photo"]["name"];		
+
+			$temp = explode(".", $_FILES["p_photo"]["name"]);
+			$newfilename = 'project_'.round(microtime(true)).'.'.end($temp);
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $path)) {
+				$photo = $newfilename;		
 			}
-		}
-		
 		$project['p_photo'] = $photo;
+	}
+		
 		
 		$this->project_model->save($project, $id);
 		redirect($this->url.'cms/projects');
