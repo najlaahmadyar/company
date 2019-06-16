@@ -67,7 +67,7 @@ class Press_release extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["pr_file"]["name"]);
-			$newfilename = 'publication_'.round(microtime(true));
+			$newfilename = 'publication_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["pr_file"]["tmp_name"], $path)) {
 				$file = $newfilename;		

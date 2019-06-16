@@ -53,7 +53,7 @@ class Gov_doc extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["doc_file"]["name"]);
-			$newfilename = 'document_'.round(microtime(true));
+			$newfilename = 'document_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["doc_file"]["tmp_name"], $path)) {
 				$file = $newfilename;		

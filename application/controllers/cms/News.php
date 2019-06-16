@@ -66,7 +66,7 @@ class News extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["n_photo"]["name"]);
-			$newfilename = 'news_'.round(microtime(true));
+			$newfilename = 'news_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["n_photo"]["tmp_name"], $path)) {
 				$photo = $newfilename;		

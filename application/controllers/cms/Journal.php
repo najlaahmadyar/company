@@ -65,7 +65,7 @@ class Journal extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["j_file"]["name"]);
-			$newfilename = 'journal_'.round(microtime(true));
+			$newfilename = 'journal_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["j_file"]["tmp_name"], $path)) {
 				$file = $newfilename;		

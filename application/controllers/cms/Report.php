@@ -67,7 +67,7 @@ class Report extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["rep_image"]["name"]);
-			$newfilename = 'report_'.round(microtime(true));
+			$newfilename = 'report_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["rep_image"]["tmp_name"], $path)) {
 				$file = $newfilename;		

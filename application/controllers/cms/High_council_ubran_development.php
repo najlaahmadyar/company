@@ -67,7 +67,7 @@ class High_council_ubran_development extends Cms_controller{
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
 			$temp = explode(".", $_FILES["h_file"]["name"]);
-			$newfilename = 'council_approval_'.round(microtime(true));
+			$newfilename = 'council_approval_'.round(microtime(true)).'.'.end($temp);
 			$path = $target_dir .$newfilename;
 			if (move_uploaded_file($_FILES["h_file"]["tmp_name"], $path)) {
 				$file = $newfilename;		
