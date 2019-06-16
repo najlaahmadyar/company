@@ -19,7 +19,7 @@
                     <td>'.$s_story->ss_id.'</td>
                     <td calss="s_story_img">imgae</td>
                     <td>'.$s_story->ss_title_eng.'</td>
-                    <td>'.html_entity_decode($s_story->ss_desc_eng).'</td>
+                    <td>'.substr(html_entity_decode($s_story->ss_desc_eng), 0, 100).'...</td>
                     <td>
                         <a href="'.$url.'cms/success_story/edit/'.$s_story->ss_id.'" class="fa fa-edit"></a>
                         <span> | </span>

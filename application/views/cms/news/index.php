@@ -19,7 +19,7 @@
                     <td>'.$new->n_id.'</td>
                     <td>'.$new->n_title_eng.'</td>
                     <td>'.$new->n_datetime.'</td>
-                    <td>'.html_entity_decode($new->n_desc_eng).'</td>
+                    <td>'.substr(html_entity_decode($new->n_desc_eng),0 ,100).'...</td>
                     <td>
                         <a href="'.$url.'cms/news/edit/'.$new->n_id.'" class="fa fa-edit"></a>
                         <span> | </span>

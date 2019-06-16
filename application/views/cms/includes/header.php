@@ -25,6 +25,9 @@
             echo '<link href="'.$stylesheet.'" rel="stylesheet" type="text/css">';
         }
     ?> 
+    <script>
+        var base_url = "<?php echo $url; ?>";
+    </script>
 
 </head>
 <body>
@@ -44,8 +47,6 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-info"></i><a href="<?php echo $url.'cms/about'; ?>">About Ministry</a></li>
                             <li><i class="fa fa-table"></i><a href="<?php echo $url.''; ?>">Leader Board</a></li>
-                            <li><i class="fa fa-list"></i><a href="<?php echo $url.''; ?>">Executions</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="<?php echo $url.''; ?>">Offices</a></li>
                             <li><i class="fa fa-pie-chart"></i><a href="<?php echo $url.'cms/provincial_presidency'; ?>">Provincial Departments</a></li>
                         </ul>
                     </li>
@@ -81,8 +82,8 @@
                         <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-handshake-o"></i>Partner Offices</a>
                     </li>
 
-                    <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
+                    <li class="<?php echo ($page == 'contact_us') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/contact_us'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
                     </li>
 
                     

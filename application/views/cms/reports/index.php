@@ -19,7 +19,7 @@
                     <td>'.$report->rep_id.'</td>
                     <td calss="report_img">imgae</td>
                     <td>'.$report->rep_title_eng.'</td>
-                    <td>'.html_entity_decode($report->rep_desc_eng).'</td>
+                    <td>'.substr(html_entity_decode($report->rep_desc_eng),0,100).'...</td>
                     <td>
                         <a href="'.$url.'cms/report/edit/'.$report->rep_id.'" class="fa fa-edit"></a>
                         <span> | </span>
