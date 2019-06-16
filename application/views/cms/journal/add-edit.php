@@ -7,7 +7,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label class="control-label">Journal Category </label>
-                            <select name="category" id="category"  class="form-control">
+                            <select required name="category" id="category"  class="form-control">
                                 <option value=" ">Please select journal category</option>
                                 <?php 
                                     foreach($category as $cat){
@@ -22,14 +22,14 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label class="control-label">Date</label>
-                            <input name="date" id="date" type="text" readonly value="<?php echo $journal->j_date; ?>" class="form-control"/>
+                            <input required name="date" id="date" type="text" readonly value="<?php echo $journal->j_date; ?>" class="form-control"/>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label class="control-label">Upload File</label><br>
                             <label class="col-sm-12 upload_label" for="personal_image" id="file-input"><span class="icon"><i class="fa fa-file"></i></span><span id="upload_text" class="upload-text">Click To Upload The file</span></label>                    
-                            <input type="file" name="j_file" id="personal_image" class="form-control hidden"/>
+                            <input required type="file" name="j_file" id="personal_image" class="form-control hidden"/>
                         </div>
                     </div>
                 </div>
