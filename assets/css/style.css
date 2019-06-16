@@ -391,3 +391,14 @@ span.lang a{
     height: 100px;
     border-radius: 3px;
 }
+
+.title{
+    font-weight:bold;
+    font-size:24px;
+    color: #3d3d3e;   
+    text-shadow: 0px 1px 1px;
+}
+
+.description{
+    font-size:17px;
+}

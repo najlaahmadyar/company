@@ -84,7 +84,7 @@
                             </ul> -->
                         </li>
                         <li><a href="<?php echo $url.'about_us/presidencies'; ?>"><?php echo lang('Office'); ?></a></li>
-                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>"><?php echo lang('rp'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/provincial_profile'; ?>"><?php echo lang('rp'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
                     </ul>
                 </li>
