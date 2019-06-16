@@ -66,9 +66,12 @@ class Projects extends Cms_controller{
 			$target_file = $target_dir . basename($_FILES["p_photo"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-			
-			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $target_file)) {
-				$photo = $_FILES["p_photo"]["name"];		
+
+			$temp = explode(".", $_FILES["p_photo"]["name"]);
+			$newfilename = 'project_'.round(microtime(true));
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["p_photo"]["tmp_name"], $path)) {
+				$photo = $newfilename;		
 			}
 		$project['p_photo'] = $photo;
 	}

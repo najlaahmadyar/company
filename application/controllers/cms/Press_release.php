@@ -66,9 +66,13 @@ class Press_release extends Cms_controller{
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["pr_file"]["tmp_name"], $target_file)) {
-				$file = $_FILES["pr_file"]["name"];		
+			$temp = explode(".", $_FILES["pr_file"]["name"]);
+			$newfilename = 'publication_'.round(microtime(true));
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["pr_file"]["tmp_name"], $path)) {
+				$file = $newfilename;		
 			}
+
 			$hh_data['pr_file'] = $file;
 	}
 		

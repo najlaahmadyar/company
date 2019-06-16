@@ -66,9 +66,13 @@ class Success_story extends Cms_controller{
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["ss_image"]["tmp_name"], $target_file)) {
-				$file = $_FILES["ss_image"]["name"];		
+			$temp = explode(".", $_FILES["ss_image"]["name"]);
+			$newfilename = 'ss_image_'.round(microtime(true));
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["ss_image"]["tmp_name"], $path)) {
+				$file = $newfilename;		
 			}
+
 			$s_story['ss_image'] = $file;
 	}
 		
