@@ -6,6 +6,7 @@ class About_us extends Mudl_controller{
 	function __Construct(){
         parent::__Construct();
         $this->load->model('common_model');
+        $this->data['page'] = "about";
 	}
 
 	public function index(){

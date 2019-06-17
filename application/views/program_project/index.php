@@ -23,10 +23,6 @@
                                     ' ...</p>
                                 </div>
                                 <div class="clearfix"></div>
-                                <div class="col-sm-12>
-                                    <a>See More</a>
-                                </div>
-                                <div class="clearfix"></div>
                             </div>                    
                     ';
                 }

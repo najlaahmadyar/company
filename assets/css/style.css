@@ -85,15 +85,21 @@ ul.sub-menu>li:hover a{
     margin-top: 6px;
     margin-right:10px;
 }
-
-.menu-bar span a{
-    color:#FFF !important;
+.menu-bar span:hover a{
+    color:#c1272d;
 }
 
 span.lang a{
     color: #fff;
 }
 
+.menu-bar a{
+    color:#FFF;
+}
+
+.menu-bar .active a{
+    color:#c1272d;
+}
 
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu{
     position: relative;
@@ -101,7 +107,7 @@ span.lang a{
     left: -30px !important;
     min-width: 130px;
     background-color: #ecebeb;
-    color: #FFF;
+    color: #FFF ;
     text-align: right;
     border:none;
     border-radius: 0px;
@@ -109,13 +115,10 @@ span.lang a{
 }
 
 
+
+
 .menu-bar>.container>ul>li.first .dropdown-menu{
     left:5px !important;
-}
-
-.menu-bar>.container>ul>li.dropdown:hover{
-    background-color: #fff;
-    color:#c1272d;
 }
 
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu>li{
@@ -139,6 +142,11 @@ span.lang a{
     text-decoration: none;  
     color:#fff;  
 }
+.menu-bar>.container>ul>li.dropdown:hover, .active, 
+.menu-bar>.container>ul>li:hover{
+    background-color: #fff;
+    color:#c1272d !important;
+}
 
 .wrapper{
     margin-top:20px;
@@ -153,11 +161,11 @@ span.lang a{
     float:left;
 } 
 .content{
-    width:78%;
+    width: 77%;
     background-color: white;
-    float:left;    
+    float: left;
     padding: 0px 0px 0px 20px;
-    
+    margin-left: 3%;
 }
 .search-form::placeholder{
     color:#ded;
@@ -435,4 +443,16 @@ span.lang a{
     position: absolute;
     top: 20px;
     right: 10px;
+}
+.image{
+    border: 1px solid #00000008;
+    border-radius: 10px;
+    padding: 20px;
+    width:100%;
+    text-align: center;
+}
+
+.image>img{
+    height: auto;
+    width: inherit;
 }

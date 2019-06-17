@@ -3,6 +3,8 @@ class Database extends Mudl_controller{
 
     function __Construct(){
         parent::__Construct();
+        $this->data['page'] = "database";
+
     }
     
     public function journal()

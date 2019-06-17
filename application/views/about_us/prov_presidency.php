@@ -1,5 +1,5 @@
 <?php $this->load->view('includes/header'); ?>
-<div class="row">
+<div class="row about">
     <div class="col-sm-12">
         <?php 
             $title = 'pp_title_'.$_SESSION['lang'];

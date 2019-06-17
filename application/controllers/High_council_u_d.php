@@ -5,6 +5,8 @@ class High_council_u_d extends Mudl_controller{
 
 	function __Construct(){
 		parent::__Construct();
+        $this->data['page'] = "h_c_ud";
+
 	}
 
 	public function index()

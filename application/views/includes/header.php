@@ -69,8 +69,8 @@
     <div class="menu-bar">
         <div class="container">
             <ul>
-                <li><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
-                <li class="dropdown first">
+                <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
+                <li class="dropdown first <?php echo ($page == 'about') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
@@ -89,18 +89,18 @@
                     </ul>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown <?php echo ($page == 'h_c_ud') ? 'active': ''; ?>">
                     <span><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown"></i>  
                 </li>
 
                 
-                <li>
+                <li class="<?php echo ($page == 'project') ? 'active': ''; ?>">
                     <span><a href="<?php echo $url.'program_project'; ?>"><?php echo lang('ministry_project'); ?></a></span>
                 </li>
 
-                <li><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
+                <li class="<?php echo ($page == 'document') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
 
-                <li class="dropdown">
+                <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
@@ -113,8 +113,8 @@
                     </ul>
                 </li>
 
-                <li><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
-                <li><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
+                <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
+                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
                 
                 
 

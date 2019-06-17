@@ -3,6 +3,8 @@ class Gov_doc_m extends Mudl_controller{
 
     function __Construct(){
         parent::__Construct();
+        $this->data['page'] = "document";
+
     }
     
     public function law()
