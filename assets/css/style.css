@@ -198,8 +198,13 @@ span.lang a{
 }
 
 .news-text{
-    /* padding:10px; */
     text-align: justify;
+    padding: 0px 15px;
+    margin-top: -30px;
+    color: #000 !important;
+    height: 161px;
+    overflow: hidden;
+
 }
 
 .news-icon>i{
@@ -401,4 +406,33 @@ span.lang a{
 
 .description{
     font-size:17px;
+}
+
+.project-card{
+    overflow: hidden;
+    height: 375px;
+    border-radius: 10px;
+    border: 1px solid #0000001c;
+    float:right;
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    padding:0px !important;
+    margin:10px;
+    flex: 0 0 30.333333%;
+    max-width: 30.333333%;
+}
+.project-title{
+    padding-right: 10px;
+    padding-top: 32px;
+    color: #FFF;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.border-white{
+    min-width: 104px;
+    border: 2px solid #FFF;
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }

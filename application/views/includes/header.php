@@ -93,8 +93,9 @@
                     <span><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown"></i>  
                 </li>
 
-                <li class="dropdown">
-                    <span ><?php echo lang('ministry_project'); ?></span>
+                
+                <li>
+                    <span><a href="<?php echo $url.'program_project'; ?>"><?php echo lang('ministry_project'); ?></a></span>
                 </li>
 
                 <li><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
