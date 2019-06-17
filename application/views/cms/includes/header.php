@@ -75,11 +75,11 @@
                     </li>
 
                      <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-comments"></i>Message of leadership</a>
+                        <a href="<?php echo $url.'cms/leader_board/index'; ?>"><i class="menu-icon fa fa-comments"></i>Message of leadership</a>
                     </li>
 
                     <li>
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-handshake-o"></i>Partner Offices</a>
+                        <a href="<?php echo $url.'cms/partners/index'; ?>"><i class="menu-icon fa fa-handshake-o"></i>Partner Offices</a>
                     </li>
 
                     <li class="<?php echo ($page == 'contact_us') ? 'active' : ''; ?>">
