@@ -4,36 +4,13 @@ class Gov_doc_m extends Mudl_controller{
     function __Construct(){
         parent::__Construct();
         $this->data['page'] = "document";
+        $this->load->model('document_model');
 
     }
     
-    public function law()
+    public function index()
     {
-        $this->load->view('gov_doc_m/law', $this->data);
-    }
-
-    public function instruction()
-    {
-        $this->load->view('gov_doc_m/instruction', $this->data);
-    }
-
-    public function policy()
-    {
-        $this->load->view('gov_doc_m/policy', $this->data);
-    }
-
-    public function regulation()
-    {
-        $this->load->view('gov_doc_m/regulation', $this->data);
-    }
-
-    public function strategy()
-    {
-        $this->load->view('gov_doc_m/strategy', $this->data);
-    }
-
-    public function understanding()
-    {
-        $this->load->view('gov_doc_m/understanding', $this->data);
+        $this->data['categories'] = $this->document_model->document_category();
+        $this->load->view('gov_doc_m/index', $this->data);
     }
 }

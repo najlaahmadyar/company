@@ -24,4 +24,5 @@
 	$lang['contact'] ="Contact Us";
 	$lang['city_sector'] = "Urban Sector ";
 	$lang['read_more'] = "Read More";
-	
+	$lang['click_download'] = "Click to download the file.";
+

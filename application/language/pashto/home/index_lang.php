@@ -24,4 +24,4 @@
 	$lang['contact'] ="اړیکه نیول";
 	$lang['city_sector'] = "ښاري سکتور";
 	$lang['read_more'] = "بیشتر بخوانید";
-	
+	$lang['click_download'] = "بخاطر دانلود فایل لطفا کلیک کنید.";

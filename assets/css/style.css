@@ -501,3 +501,24 @@ span.lang a{
     max-width: 46%;
 
 }
+
+.document_title{
+    /* font-weight:bold; */
+    font-size:20px;
+    color: #3d3d3e;   
+    text-shadow: 0px 1px 1px;
+    padding-bottom:10px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+.document-text{
+    height: 40px;
+}
+.doc_name{
+    font-size:18px;
+}
+.btn_council{
+    padding-left: 0px;
+}
+.date_council{
+    color:#2555A1; 
+}

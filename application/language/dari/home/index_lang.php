@@ -24,3 +24,4 @@
 	$lang['contact'] ="تماس با ما";
 	$lang['city_sector'] = "سکتور شهری ";
 	$lang['read_more'] = "بیشتر بخوانید";
+	$lang['click_download'] = "بخاطر دانلود فایل لطفا کلیک کنید.";
