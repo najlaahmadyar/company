@@ -7,7 +7,13 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label class="control-label">Name Dari</label>
-                            <input name="fullname" id="fullname" type="text" value="<?php echo $messages->l_fullname; ?>" class="form-control"/>
+                            <input name="fullname_dari" id="fullname_dari" type="text" value="<?php echo $messages->l_fullname_dari; ?>" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label">Name English</label>
+                            <input name="fullname_eng" id="fullname_eng" type="text" value="<?php echo $messages->l_fullname_eng; ?>" class="form-control"/>
                         </div>
                     </div>
                     <div class="col-sm-3">

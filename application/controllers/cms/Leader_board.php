@@ -30,7 +30,7 @@ class Leader_board extends Cms_controller{
 
     public function save($id = null){
 
-		$messages = $this->leader_board_model->array_from_post(array('fullname', 'bio_dari', 'bio_pashto', 'bio_eng'), 'l_');
+		$messages = $this->leader_board_model->array_from_post(array('fullname_dari', 'fullname_eng', 'bio_dari', 'bio_pashto', 'bio_eng'), 'l_');
 		
 		$photo = '';
 		if(!empty($_FILES["l_photo"]["name"])){
@@ -39,12 +39,15 @@ class Leader_board extends Cms_controller{
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["l_photo"]["tmp_name"], $target_file)) {
-				$photo = $_FILES["l_photo"]["name"];		
+			$temp = explode(".", $_FILES["l_photo"]["name"]);
+			$newfilename = 'leader_'.round(microtime(true)).'.'.end($temp);
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["l_photo"]["tmp_name"], $path)) {
+				$photo = $newfilename;		
+				$messages['l_photo'] = $photo;				
 			}
 		}
 		
-		$messages['l_photo'] = $photo;
 		
 		$this->leader_board_model->save($messages, $id);
 		redirect($this->url.'cms/leader_board');

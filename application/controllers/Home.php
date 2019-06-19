@@ -6,6 +6,8 @@ class Home extends Mudl_controller{
 	function __Construct()
 	{
 		parent::__Construct();
+        $this->data['page'] = "home";
+
 	}
 
 	public function index()

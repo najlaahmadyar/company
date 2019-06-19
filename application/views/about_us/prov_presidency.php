@@ -1,7 +1,14 @@
 <?php $this->load->view('includes/header'); ?>
-<div class="row">
+<div class="row about">
     <div class="col-sm-12">
-        Prov Presidnecy page
+        <?php 
+            $title = 'pp_title_'.$_SESSION['lang'];
+            $text = 'pp_desc_'.$_SESSION['lang'];
+            echo '
+                <h2 class="title">'.$pp_data->$title.'</h2>
+                <p class="description">'.html_entity_decode($pp_data->$text).'</p>
+            ';
+        ?>
     </div>
 </div>
 

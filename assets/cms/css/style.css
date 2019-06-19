@@ -2509,8 +2509,8 @@ footer.site-footer {
 
 /* our style */
 .project_img,img{
-  height:80px !important;
-  width: 80px !important;
+  height:30px !important;
+  width: 30px !important;
   border-radius: 50% !important;
 }
 

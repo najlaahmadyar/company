@@ -17,7 +17,7 @@
                 echo '
                     <tr>
                     <td>'.$project->p_id.'</td>
-                    <td calss="project_img">imgae</td>
+                    <td calss="project_img"><img src="'.$uploads.'projects_image/'.$project->p_photo.'"></td>
                     <td>'.$project->p_title_eng.'</td>
                     <td>'.substr(html_entity_decode($project->p_desc_eng), 0, 100).'...</td>
                     <td>

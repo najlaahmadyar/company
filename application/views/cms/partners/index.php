@@ -16,7 +16,7 @@
                 echo '
                     <tr>
                     <td>'.$partner->po_id.'</td>
-                    <td calss="project_img">image</td>
+                    <td calss="project_img"><img src="'.$uploads.'partners_image/'.$partner->po_image.'"></td>                    
                     <td>'.$partner->po_name_eng.'</td>
                     <td>
                         <a href="'.$url.'cms/partners/edit/'.$partner->po_id.'" class="fa fa-edit"></a>

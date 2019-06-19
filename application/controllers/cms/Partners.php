@@ -56,12 +56,14 @@ class Partners extends Cms_controller{
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			
-			if (move_uploaded_file($_FILES["po_image"]["tmp_name"], $target_file)) {
-				$photo = $_FILES["po_image"]["name"];		
+			$temp = explode(".", $_FILES["po_image"]["name"]);
+			$newfilename = 'partner_'.round(microtime(true)).'.'.end($temp);
+			$path = $target_dir .$newfilename;
+			if (move_uploaded_file($_FILES["po_image"]["tmp_name"], $path)) {
+				$photo = $newfilename;		
+				$partner['po_image'] = $photo;				
 			}
 		}
-		
-		$partner['po_image'] = $photo;
 		
 		$this->partners_model->save($partner, $id);
 		redirect($this->url.'cms/partners');

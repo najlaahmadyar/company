@@ -69,8 +69,8 @@
     <div class="menu-bar">
         <div class="container">
             <ul>
-                <li><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
-                <li class="dropdown first">
+                <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
+                <li class="dropdown first <?php echo ($page == 'about') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
@@ -84,22 +84,22 @@
                             </ul> -->
                         </li>
                         <li><a href="<?php echo $url.'about_us/presidencies'; ?>"><?php echo lang('Office'); ?></a></li>
-                        <li><a href="<?php echo $url.'about_us/prov_presidencies'; ?>"><?php echo lang('rp'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/provincial_profile'; ?>"><?php echo lang('rp'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
                     </ul>
                 </li>
-
-                <li>
+                <li  class="<?php echo ($page == 'h_c_ud') ? 'active': ''; ?>">
                     <span><a href="<?php echo $url.'h_council_u_d/index'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
                 </li>
 
-                <li>
-                    <span ><?php echo lang('ministry_project'); ?></span>
+                
+                <li class="<?php echo ($page == 'project') ? 'active': ''; ?>">
+                    <span><a href="<?php echo $url.'program_project'; ?>"><?php echo lang('ministry_project'); ?></a></span>
                 </li>
 
-                <li><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
+                <li class="<?php echo ($page == 'document') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>gov_doc_m/law"><?php echo lang('gov_doc'); ?></a></span></li>
 
-                <li class="dropdown">
+                <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
@@ -112,8 +112,8 @@
                     </ul>
                 </li>
 
-                <li><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
-                <li><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
+                <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
+                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
                 
                 
 
@@ -122,16 +122,18 @@
 
         </div>
     </div>
-
+    <?php 
+        $name = 'l_fullname_'.$_SESSION['lang'];
+        $bio = 'l_bio_'.$_SESSION['lang'];
+    ?>
     <div class="wrapper container">
         <div class="left-side-bar">
             <div class="card default-card" style="width: 16rem;">
-                <h5 class="card-title"><?php echo $message->l_fullname;?></h5>            
-                <img class="card-img-top" src="<?php echo $assets;?>images/g1.jpg" alt="Card image cap">
+                <h5 class="card-title"><?php echo $leader->$name;?></h5>            
+                <img class="card-img-top" src="<?php echo $uploads.'leader_board_image/'.$leader->l_photo; ?>" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">                        
-                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
+                    <p class="card-text">  
+                        <?php echo substr(html_entity_decode($leader->$bio), 0, 600); ?>                   
                     </p>
                 </div>
             </div>

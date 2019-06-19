@@ -381,3 +381,28 @@ span.lang a{
     color:#FFF;
     padding-top:5px;
 }
+.about,p{
+    padding-bottom: 20px;
+}
+.news-tittle{
+    position: absolute;
+    z-index: 1111111;
+    margin-top: -145px;
+    color: #fff;
+    border-bottom: 5px solid lightgray;
+}
+.work_img{
+    height: 100px;
+    border-radius: 3px;
+}
+
+.title{
+    font-weight:bold;
+    font-size:24px;
+    color: #3d3d3e;   
+    text-shadow: 0px 1px 1px;
+}
+
+.description{
+    font-size:17px;
+}
