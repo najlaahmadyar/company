@@ -89,7 +89,7 @@
                     </ul>
                 </li>
                 <li  class="<?php echo ($page == 'h_c_ud') ? 'active': ''; ?>">
-                    <span><a href="<?php echo $url.'h_council_u_d/index'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
+                    <span><a href="<?php echo $url.'high_council_u_d'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
                 </li>
 
                 

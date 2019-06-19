@@ -23,3 +23,5 @@
 	$lang['info_database'] = "Database";
 	$lang['contact'] ="Contact Us";
 	$lang['city_sector'] = "Urban Sector ";
+	$lang['read_more'] = "Read More";
+	

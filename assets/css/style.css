@@ -444,6 +444,7 @@ span.lang a{
     font-weight: 600;
 }
 
+
 .border-white{
     min-width: 104px;
     border: 2px solid #FFF;
@@ -462,4 +463,41 @@ span.lang a{
 .image>img{
     height: auto;
     width: inherit;
+}
+.council_tittle{
+    color: #232323 !important;
+    /* padding: 5px 5px !important; */
+    font-size: 21px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ded;
+}
+.council_description{
+    color: #232323;
+    opacity: 70% !important;
+    padding: 0px 10px !important;
+    height: 175px;
+}
+.council_btn{
+    color: #2555A1 !important;
+    border: 0px !important;
+    border-radius: 5px !important;
+    padding: 7px;
+    background-color: rgba(37, 85, 161, 0.3) !important;
+    margin-left: 10px;
+}
+.high-card{
+    overflow: hidden;
+    height: 322px;
+    border-radius: 10px;
+    border: 1px solid #0000001c;
+    float:right;
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    padding:15px !important;
+    padding-bottom: 0px;
+    margin:10px;
+    flex: 0 0 46%;
+    max-width: 46%;
+
 }

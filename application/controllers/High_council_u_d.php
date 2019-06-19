@@ -5,17 +5,20 @@ class High_council_u_d extends Mudl_controller{
 
 	function __Construct(){
 		parent::__Construct();
-        $this->data['page'] = "h_c_ud";
+		$this->load->model('high_council_ud_model');
+    $this->data['page'] = "councils";
 
 	}
 
 	public function index()
 	{
-		$this->load->view('h_council_u_d/approval', $this->data);
-    }
-    
-    public function desicions(){
-		$this->load->view('h_council_u_d/desicions', $this->data);
-        
-    }
+		$this->data['councils'] = $this->high_council_ud_model->get();
+		$this->load->view('h_council_u_d/index', $this->data);
+	}
+
+	public function single($h_id){
+		$this->data['councils'] = $this->high_council_ud_model->get($h_id);
+		$this->load->view('h_council_u_d/single', $this->data);
+	}
 }
+

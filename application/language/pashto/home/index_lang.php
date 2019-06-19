@@ -23,3 +23,5 @@
 	$lang['info_database'] = "ډاټا";
 	$lang['contact'] ="اړیکه نیول";
 	$lang['city_sector'] = "ښاري سکتور";
+	$lang['read_more'] = "بیشتر بخوانید";
+	
