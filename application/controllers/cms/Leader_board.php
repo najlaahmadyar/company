@@ -15,18 +15,6 @@ class Leader_board extends Cms_controller{
     public function index()
 	{
 		$this->data['page_title'] = "Leadership Message";
-		
-		$messages = $this->leader_board_model->get();		
-		$this->data['messages'] = $messages;
-		$this->load->view('cms/leader_board/index', $this->data);
-    }
-
-    
-	public function edit($l_id){
-		$this->data['page_title'] = "Edit the leadership Message";
-
-		$this->data['messages'] = $this->leader_board_model->get($l_id);
-
 		$this->data["styles"] = array(
 			$this->assets.'plugins/summernote/dist/summernote.css',
 		);
@@ -35,10 +23,11 @@ class Leader_board extends Cms_controller{
 			$this->assets . 'plugins/summernote/dist/summernote.min.js',
 			$this->assets .  'custom/js/project.js'
 		);
-		
-		$this->load->view('cms/leader_board/edit.php', $this->data);
+		$messages = $this->leader_board_model->get(null, true);		
+		$this->data['messages'] = $messages;
+		$this->load->view('cms/leader_board/edit', $this->data);
     }
-    
+
     public function save($id = null){
 
 		$messages = $this->leader_board_model->array_from_post(array('fullname', 'bio_dari', 'bio_pashto', 'bio_eng'), 'l_');

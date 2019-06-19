@@ -75,7 +75,7 @@
                     </li>
 
                      <li>
-                        <a href="<?php echo $url.'cms/leader_board/index'; ?>"><i class="menu-icon fa fa-comments"></i>Message of leadership</a>
+                        <a href="<?php echo $url.'cms/leader_board'; ?>"><i class="menu-icon fa fa-comments"></i>Message of leadership</a>
                     </li>
 
                     <li>

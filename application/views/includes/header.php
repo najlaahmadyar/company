@@ -89,11 +89,11 @@
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <span><?php echo lang('sh_a_t'); ?></span><i  data-toggle="dropdown"></i>  
+                <li>
+                    <span><a href="<?php echo $url.'h_council_u_d/index'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
                 </li>
 
-                <li class="dropdown">
+                <li>
                     <span ><?php echo lang('ministry_project'); ?></span>
                 </li>
 
@@ -126,7 +126,7 @@
     <div class="wrapper container">
         <div class="left-side-bar">
             <div class="card default-card" style="width: 16rem;">
-                <h5 class="card-title">پیام وزیر</h5>            
+                <h5 class="card-title"><?php echo $message->l_fullname;?></h5>            
                 <img class="card-img-top" src="<?php echo $assets;?>images/g1.jpg" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">                        

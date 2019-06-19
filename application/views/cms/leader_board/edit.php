@@ -13,8 +13,8 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label class="control-label">Upload Leadership Image</label><br>
-                            <label class="col-sm-12 upload_label" for="personal_image" id="file-input"><span class="icon"><i class="fa fa-photo"></i></span><span id="upload_text" class="upload-text">Click To Upload Partner Photo </span></label>                    
-                            <input type="file" name="م_photo" id="personal_image" class="form-control hidden"/>
+                            <label class="col-sm-12 upload_label" for="personal_image" id="file-input"><span class="icon"><i class="fa fa-photo"></i></span><span id="upload_text" class="upload-text">Click To Upload Leader Photo </span></label>                    
+                            <input type="file" name="l_photo" id="personal_image" class="form-control hidden"/>
                         </div>
                     </div>
                 </div>
