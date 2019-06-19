@@ -23,3 +23,4 @@
 	$lang['info_database'] = "ډاټا";
 	$lang['contact'] ="اړیکه نیول";
 	$lang['city_sector'] = "ښاري سکتور";
+	$lang['click_download'] = "بخاطر دانلود فایل لطفا کلیک کنید.";

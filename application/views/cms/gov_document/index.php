@@ -22,7 +22,7 @@
                     <td>
                         <a id="personal_image"  href="'.$uploads.'high_council_files/'.$document->doc_file.'">
                             <div class="col-sm-8">
-                                <label class="col-sm-12 upload_label" for="personal_image" id="file-output"><span class="icon"><i class="fa fa-file"></i></span><span id="upload_text" class="upload-text">Click To Download The file</span></label>                    
+                                <label class="col-sm-12 upload_label" for="personal_image" id="file-output"><span class="icon"><i class="fa fa-file"></i></span><span id="upload_text" class="upload-text">Click To Download</span></label>                    
                             </div>
                         </a>
                     </td>

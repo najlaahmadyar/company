@@ -463,3 +463,18 @@ span.lang a{
     height: auto;
     width: inherit;
 }
+
+.document_title{
+    /* font-weight:bold; */
+    font-size:20px;
+    color: #3d3d3e;   
+    text-shadow: 0px 1px 1px;
+    padding-bottom:10px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+.document-text{
+    height: 40px;
+}
+.doc_name{
+    font-size:18px;
+}
