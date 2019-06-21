@@ -17,6 +17,8 @@ class Home extends Mudl_controller{
 
 	public function contact()
 	{
+        $this->data['page'] = "contact";
+
 		$this->load->view('contact/contact', $this->data);
 	}
 

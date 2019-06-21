@@ -9,3 +9,10 @@ function get_document($cat_id){
     $ci->db->where('doc_cat_id = '.$cat_id);
     return $ci->db->get('official_documents')->result();
 }
+
+
+function get_journal($cat_id){
+    $ci =& get_instance();
+    $ci->db->where('j_category = '.$cat_id);
+    return $ci->db->get('journal')->result();
+}

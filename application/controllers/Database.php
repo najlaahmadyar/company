@@ -9,6 +9,8 @@ class Database extends Mudl_controller{
     
     public function journal()
     {
+        $this->load->model('journal_model');
+        $this->data['categories'] = $this->journal_model->journal_category();
         $this->load->view('database/journal', $this->data);
     }
     
@@ -16,6 +18,7 @@ class Database extends Mudl_controller{
     {
         $this->load->view('database/news', $this->data);
     }
+    
 
     public function picture()
     {
@@ -32,9 +35,18 @@ class Database extends Mudl_controller{
         $this->load->view('database/report', $this->data);
     }
 
-    public function successful_story()
+    public function success_story()
     {
+        $this->load->model('success_story_model');
+        $this->data['stories'] = $this->success_story_model->get();
         $this->load->view('database/successful_story', $this->data);
+    }
+
+    public function single_success_story($ss_id){        
+        $this->load->model('success_story_model');
+        $this->data['story'] = $this->success_story_model->get($ss_id);
+
+        $this->load->view('database/single_success_story', $this->data);
     }
 
     public function video()

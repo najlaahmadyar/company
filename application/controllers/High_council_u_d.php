@@ -6,7 +6,7 @@ class High_council_u_d extends Mudl_controller{
 	function __Construct(){
 		parent::__Construct();
 		$this->load->model('high_council_ud_model');
-    $this->data['page'] = "councils";
+    	$this->data['page'] = "councils";
 
 	}
 

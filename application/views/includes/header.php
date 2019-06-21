@@ -88,7 +88,7 @@
                         <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
                     </ul>
                 </li>
-                <li  class="<?php echo ($page == 'h_c_ud') ? 'active': ''; ?>">
+                <li  class="<?php echo ($page == 'councils') ? 'active': ''; ?>">
                     <span><a href="<?php echo $url.'high_council_u_d'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
                 </li>
 
@@ -105,7 +105,7 @@
                         <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
                         <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
                         <li><a href="<?php echo $url; ?>database/report">گزارش</a></li>
-                        <li><a href="<?php echo $url; ?>database/successful_story">قصه موفق</a></li>
+                        <li><a href="<?php echo $url; ?>database/success_story">قصه موفق</a></li>
                         <li><a href="<?php echo $url; ?>database/journal">نشریه</a></li>
                         <li><a href="<?php echo $url; ?>database/picture">عکس</a></li>
                         <li><a href="<?php echo $url; ?>database/video">ویدیو</a></li>
