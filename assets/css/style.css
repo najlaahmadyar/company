@@ -599,3 +599,10 @@ span.lang a{
     color: #FFF;
     font-weight:600;
 }
+.date_news{
+    color: #2555A1;
+    margin-bottom: 18px;
+    padding-right: 15px;
+    font-size: 12px;
+    margin-top: -8px;
+}
