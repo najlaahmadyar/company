@@ -522,3 +522,11 @@ span.lang a{
 .date_council{
     color:#2555A1; 
 }
+
+.date_news{
+    color: #2555A1;
+    margin-bottom: 18px;
+    padding-right: 15px;
+    font-size: 12px;
+    margin-top: -8px;
+}
