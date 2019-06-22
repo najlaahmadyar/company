@@ -508,6 +508,7 @@ span.lang a{
     padding: 7px;
     background-color: rgba(37, 85, 161, 0.3) !important;
     margin-left: 10px;
+    float: left;
 }
 .high-card{
     overflow: hidden;
@@ -830,4 +831,12 @@ ul.submenu li ul.sub_sub_menu li:hover a{
 
 .social_media_link a:hover i.fa-facebook{
     color:#3b5998;
+}
+
+.doc_name{
+    float:right;
+}
+
+.journal-div{
+    float:right;
 }

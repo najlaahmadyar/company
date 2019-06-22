@@ -100,4 +100,9 @@ class Home extends Mudl_controller{
 		redirect($_SERVER['HTTP_REFERER']);
 
 	}
+
+	public function coming_soon(){
+		$this->data['page'] = "sector";
+ 		echo "<center><h4>Coming soon....</h4></center>";
+	}
 }

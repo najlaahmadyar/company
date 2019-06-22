@@ -15,11 +15,11 @@
                 echo '<link href="'.$stylesheet.'" rel="stylesheet" type="text/css">';
             }
         ?>  
+        <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/style.css">
+
         <?php if($_SESSION['lang'] == 'eng'){ ?>
             <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/en-style.css">
-        <?php }else{  ?>
-            <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/style.css">
-        <?php } ?>
+        <?php }?>
         
     </head>
     <body>
@@ -134,7 +134,7 @@
                 </li>
 
                 <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
-                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/"><?php echo lang('city_sector'); ?></a></span></li>
+                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a target="_blank" href="<?php echo $url; ?>home/coming_soon"><?php echo lang('city_sector'); ?></a></span></li>
                 
                 
 
@@ -144,7 +144,7 @@
         </div>
     </div>
     <?php 
-        $name = 'l_fullname_'.$_SESSION['lang'];
+        $name = ($_SESSION['lang'] == 'eng') ? 'l_fullname_eng' : 'l_fullname_dari';
         $bio = 'l_bio_'.$_SESSION['lang'];
     ?>
     <div class="wrapper container">

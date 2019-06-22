@@ -10,10 +10,10 @@
             ';
             foreach(get_journal($category->jc_id) as $j){
                 echo '
-                    <div class="col-sm-2 pull-right">
+                    <div class="col-sm-2 journal-div">
                         <a href="'.$uploads.'journals/'.$j->j_file.'" title="Click to download">
                             <div class="black_cover" id="image_'.$j->j_id.'"></div>
-                            <div class="journal_date" id="date_'.$j->j_id.'">'.$j->j_date.'</div>
+                            <div class="journal_date" id="date_'.$j->j_id.'">'.show_date($j->j_date).'</div>
                             <div class="journal_image" id="'.$j->j_id.'" >    
                                 <img src="'.$assets.'images/month.jpg">
                             </div>

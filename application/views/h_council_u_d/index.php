@@ -17,7 +17,7 @@
                                     .substr(html_entity_decode($council->$desc), 0,905).
                                 '</p>
                             </div>
-                            <a href="'.$url.'high_council_u_d/single/'.$council->h_id.'" class="council_btn pull-left">'.lang('read_more').'</a>
+                            <a href="'.$url.'high_council_u_d/single/'.$council->h_id.'" class="council_btn">'.lang('read_more').'</a>
                             <div class="clearfix"></div>
                         </div>                    
                     ';

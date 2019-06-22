@@ -11,7 +11,7 @@
                 <div class="col-sm-12 description">'.html_entity_decode($councils->$text).'</div>
                 <div class="clearfix"></div>                
                 <hr>
-                <div class="col-sm-2 pull-right date_council">'.show_date($councils->h_date).'</div>
+                <div class="col-sm-2 date_council">'.show_date($councils->h_date).'</div>
                 <div class="col-sm-10">
                     <a id="personal_image"  href="'.$uploads.'high_council_files/'.$councils->h_file.'">
                         <div class="col-sm-6 btn_council">
