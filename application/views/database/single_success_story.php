@@ -7,7 +7,7 @@
             echo '
                
                 <h2 class="title">'.$story->$title.'</h2>
-                <h6>'.$story->ss_date.'</h6>
+                <h6>'.show_date($story->ss_date).'</h6>
 
                 <div class="col-sm-12 image">
                     <img class="img img-responsive" src="'.$uploads.'stories_images/'.$story->ss_image.'">

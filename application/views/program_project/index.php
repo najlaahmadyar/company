@@ -17,7 +17,7 @@
                                     <img src="'.$uploads.'projects_image/'.$project->p_photo.'" alt="..." />
                                 
                                 </div>
-                                <div class="news-text">
+                                <div class="project_text">
                                     <p>'
                                         .substr(html_entity_decode($project->$desc), 0, 600).
                                     ' ...</p>

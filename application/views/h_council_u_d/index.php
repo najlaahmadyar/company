@@ -10,7 +10,7 @@
                         <div class="col-sm-6 high-card">
                             <div class="">
                                 <h2 class="council_tittle">'.$council->$title.'</h2>
-                                <div class="date_council">'.$council->h_date.'</div>
+                                <div class="date_council">'.show_date($council->h_date).'</div>
                             </div>
                             <div class="council_description">
                                 <p>'

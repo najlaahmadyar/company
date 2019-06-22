@@ -7,7 +7,7 @@
                 echo '  
                     <h2 class="title">'.$press->$title.'</h2>              
                     <hr>
-                    <div class="col-sm-2 pull-right date_council">'.$press->pr_date.'</div>
+                    <div class="col-sm-2 pull-right date_council">'.show_date($press->pr_date).'</div>
                     <div class="col-sm-10">
                         <a id="personal_image"  href="'.$uploads.'press_release/'.$press->pr_file.'">
                             <div class="col-sm-6 btn_council">
