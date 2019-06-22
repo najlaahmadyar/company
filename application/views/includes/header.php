@@ -28,14 +28,14 @@
         <div class="container">
             <div class="col-sm-6">
                 <div class="col-sm-4 m_l_m_25">
-                    <span class="text">+93 788 788 788 </span> <span class="p-dash"> | </span>
+                    <span class="text"><?php echo $link->l_hr_phone; ?> </span> <span class="p-dash"> | </span>
                 </div>  
 
                 <div class="col-sm-4 m_l_m_25">
                     <span class="text">
-                        <i class="fa fa-facebook-f"></i>
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-linkedin"></i>
+                        <a href="<?php echo $link->l_facebook; ?>"  class="la" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                        <a href="<?php echo $link->l_twitter; ?>"  class="la" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="<?php echo $link->l_linkedin; ?>"  class="la" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </span> 
                     <span class="p-dash"> | </span> 
                 </div> 
@@ -75,15 +75,36 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
-                        <li><a href="#"><?php echo lang('m'); ?></a>
-                            <!-- <ul class="sub-menu">
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mm'); ?></a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('ma'); ?></a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mk'); ?></a></li>                               
-                                <li><a href="<?php echo $url.'about_us/execution'; ?>"><?php echo lang('mp'); ?></a></li>                               
-                            </ul> -->
+                        <li class="execution"><a href="javascript:void(0);"><?php echo lang('m'); ?></a>
+                            <ul class="submenu" id="execution_submenu">
+                                <?php
+                                    foreach($executions as $execution){
+                                        $exe_title = 'exe_name_'.$_SESSION['lang'];
+                                        echo '
+                                            <li class="execution_sub" exe_id = "'.$execution->exe_id.'"><a href="javascript:void(0);">'.$execution->$exe_title.'</a>';
+                                                echo '<ul class="sub_sub_menu" id="pre_'.$execution->exe_id.'">';                                                
+                                                foreach(get_presidency($execution->exe_id) as $pr) {
+                                                    $title = 'pr_title_'.$_SESSION['lang'];
+                                                    echo '<li><a href="'.$url.'about_us/presidency/'.$pr->pr_id.'">'.$pr->$title.'</a></li> ';
+                                                }
+                                      echo '
+                                                </ul>                                                
+                                            </li>';
+                                    }  
+                                ?>
+
+                            </ul>
                         </li>
-                        <li><a href="<?php echo $url.'about_us/presidencies'; ?>"><?php echo lang('Office'); ?></a></li>
+                        <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
+                            <ul class="submenu" id="offices_submenu">
+                                <?php 
+                                    foreach($offices as $office){
+                                        $name = 'off_title_'.$_SESSION['lang'];
+                                        echo '<li><a href="'.$url.'about_us/office/'.$office->off_id.'">'.$office->$name.'</a></li>';
+                                    }
+                                ?>
+                            </ul>
+                        </li>
                         <li><a href="<?php echo $url.'about_us/provincial_profile'; ?>"><?php echo lang('rp'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
                     </ul>
@@ -139,7 +160,7 @@
             </div>
             <div class="card default-card gray-card" style="width: 16rem;">
                 <h5 class="card-title">مرکز معلومات و سمع شکایات</h5> 
-                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+                <img class="card-img-top" src="<?php echo $assets;?>images/complain-center.jpg" alt="Card image cap">                
             </div>
 
             <div class="card default-card gray-card" style="width: 16rem;">
@@ -187,17 +208,40 @@
             <div class="card default-card gray-card" style="width: 16rem;">
                 <h5 class="card-title">مقاله ها</h5> 
                 <div class="card-body">
-                    <p class="card-text">                        
-                        ها در مجلس ریاست مجلس، معطل قرار گرفته 
+                    <p class="card-text"> 
+                        <?php
+                            foreach($reports as $report){ 
+                                $title = "rep_title_".$_SESSION['lang'];                      
+                                echo '<a class="col-sm-12" href="'.$url.'database/report/single/'.$report->rep_id.'">'.$report->$title.'</a>';
+                            }
+                        ?>
                     </p>
                 </div>
             </div>
 
             <div class="card default-card gray-card" style="width: 16rem;">
-                <h5 class="card-title">تقویم سال</h5> 
+                <h5 class="card-title"><?php echo  lang('social_media_link'); ?></h5> 
                 <div class="card-body">
-                    <p class="card-text">                        
-                        ها در مجلس نم مجلس، معطل قرار گرفته 
+                    <p class="social_media_link">    
+                        <a class="col-sm-12" href="<?php echo $link->l_facebook; ?>" target="_blank">
+                            <i class="fa fa-facebook-square icon"></i> <span classs="icon-text"><?php echo lang('facebook');?></span>
+                        </a> 
+                        
+                        <a class="col-sm-12" href="<?php echo $link->l_linkedin; ?>" target="_blank">
+                            <i class="fa fa-linkedin-square icon"></i> <span classs="icon-text"><?php echo lang('linkedin');?></span>
+                        </a>  
+
+                        <a class="col-sm-12" href="<?php echo $link->l_twitter; ?>" target="_blank">
+                            <i class="fa fa-twitter-square icon"></i> <span classs="icon-text"><?php echo lang('twitter');?></span>
+                        </a>  
+
+                        <a class="col-sm-12" href="<?php echo $link->l_youtube; ?>" target="_blank">
+                            <i class="fa fa-youtube-square icon"></i> <span classs="icon-text"><?php echo lang('youtube');?></span>
+                        </a>  
+
+                        <a class="col-sm-12" href="<?php echo $link->l_instagram; ?>" target="_blank">
+                            <i class="fa fa-instagram icon"></i> <span classs="icon-text"><?php echo lang('instagram');?></span>
+                        </a>  
                     </p>
                 </div>
             </div>

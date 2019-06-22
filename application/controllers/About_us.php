@@ -19,12 +19,16 @@ class About_us extends Mudl_controller{
   $this->load->view('about_us/leader_board', $this->data);        
   }
 
-  public function execution(){
-  $this->load->view('about_us/execution', $this->data);        
+  public function presidency($pr_id){
+    $this->load->model('presidency_model');
+    $this->data['presidency'] = $this->presidency_model->get($pr_id);
+    $this->load->view('about_us/presidency', $this->data);        
   }
 
-  public function presidencies(){
-  $this->load->view('about_us/presidency', $this->data);      
+  public function office($off_id){
+    $this->load->model('office_model');
+    $this->data['office'] = $this->office_model->get($off_id);
+    $this->load->view('about_us/office', $this->data);      
   }
 
     public function provincial_profile(){

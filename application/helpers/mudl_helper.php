@@ -16,3 +16,9 @@ function get_journal($cat_id){
     $ci->db->where('j_category = '.$cat_id);
     return $ci->db->get('journal')->result();
 }
+
+function get_presidency($cat_id){
+    $ci =& get_instance();
+    $ci->db->where('pr_exe_id = '.$cat_id);
+    return $ci->db->get('presidencies')->result();
+}

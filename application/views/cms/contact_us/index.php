@@ -5,6 +5,7 @@
                 <tr>
                     <th>#</th>
                     <th>Fullname</th>
+                    <th>Province</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Message</th>
@@ -17,6 +18,7 @@
                     <tr>
                     <td>'.$contact->cu_id.'</td>
                     <td>'.$contact->cu_fullname.'</td>
+                    <td>'.$contact->cu_province.'</td>
                     <td>'.$contact->cu_email.'</td>
                     <td>'.$contact->cu_phone.'</td>
                     <td>'.substr($contact->cu_message, 0, 100).'...</td>
