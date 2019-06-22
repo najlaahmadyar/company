@@ -540,6 +540,7 @@ span.lang a{
 }
 .document-text{
     height: 40px;
+    margin-bottom: 10px;
 }
 .doc_name{
     font-size:18px;
