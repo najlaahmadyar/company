@@ -13,10 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($documents as $document){
+            <?php 
+            $count = 1;
+                foreach($documents as $document){
                 echo '
                     <tr>
-                    <td>'.$document->doc_id.'</td>
+                    <td>'.$count.'</td>
                     <td>'.$document->doc_title_eng.'</td>
                     <td>'.$document->cat_name_eng.'</td>
                     <td>
@@ -33,6 +35,7 @@
                     </td>
                     </tr>
                 ';
+                $count++;
             }?>
             </tbody>
         </table>

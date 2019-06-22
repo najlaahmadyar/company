@@ -21,7 +21,7 @@
                     <td>'.$count.'</td>
                     <td calss="project_img"><img src="'.$uploads.'major_work_image/'.$work->mw_image.'"></td>
                     <td>'.$work->mw_title_eng.'</td>
-                    <td>'.html_entity_decode($work->mw_desc_eng).'...</td>
+                    <td>'.implode(' ', array_slice(explode(' ',html_entity_decode($work->mw_desc_eng)), 0, 20)).'...</td>
                     <td>
                         <a href="'.$url.'cms/major_work/edit/'.$work->mw_id.'" class="fa fa-edit"></a>
                         <span> | </span>

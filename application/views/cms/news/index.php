@@ -13,13 +13,15 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($news as $new){
+            <?php 
+                $count = 1;
+            foreach($news as $new){
                 echo '
                     <tr>
-                    <td>'.$new->n_id.'</td>
+                    <td>'.$count.'</td>
                     <td>'.$new->n_title_eng.'</td>
                     <td>'.$new->n_datetime.'</td>
-                    <td>'.substr(html_entity_decode($new->n_desc_eng),0 ,100).'...</td>
+                    <td>'.implode(' ', array_slice(explode(' ',html_entity_decode($new->n_desc_eng)), 0, 25)).'...</td>
                     <td>
                         <a href="'.$url.'cms/news/edit/'.$new->n_id.'" class="fa fa-edit"></a>
                         <span> | </span>
@@ -27,6 +29,7 @@
                     </td>
                     </tr>
                 ';
+                $count++;
             }?>
             </tbody>
         </table>

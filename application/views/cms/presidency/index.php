@@ -18,15 +18,15 @@
                 foreach($presidencies as $pr){
                     echo '
                         <tr>
-                        <td>'.$count.'</td>
-                        <td>'.$pr->pr_title_eng.'</td>
-                        <td>'.$pr->exe_name_eng.'</td>
-                        <td>'.html_entity_decode($pr->pr_desc_eng).'</td>
-                        <td>
-                            <a href="'.$url.'cms/presidency/edit/'.$pr->pr_id.'" class="fa fa-edit"></a>
-                            <span> | </span>
-                            <a href="'.$url.'cms/presidency/delete/'.$pr->pr_id.'" class="fa fa-trash-o"></a>
-                        </td>
+                            <td>'.$count.'</td>
+                            <td>'.$pr->pr_title_eng.'</td>
+                            <td>'.$pr->exe_name_eng.'</td>
+                            <td>'.implode(' ', array_slice(explode(' ', html_entity_decode($pr->pr_desc_eng)), 0, 20)).'...</td>
+                            <td>
+                                <a href="'.$url.'cms/presidency/edit/'.$pr->pr_id.'" class="fa fa-edit"></a>
+                                <span> | </span>
+                                <a href="'.$url.'cms/presidency/delete/'.$pr->pr_id.'" class="fa fa-trash-o"></a>
+                            </td>
                         </tr>
                     ';
                     $count++;

@@ -21,7 +21,7 @@
                     <td>'.$contact->cu_province.'</td>
                     <td>'.$contact->cu_email.'</td>
                     <td>'.$contact->cu_phone.'</td>
-                    <td>'.substr($contact->cu_message, 0, 100).'...</td>
+                    <td>'.implode(' ', array_slice(explode(' ',$contact->cu_message), 0, 10)).'...</td>
                     <td>
                         <a class="fa fa-eye show-message" cu_id="'.$contact->cu_id.'"  data-toggle="modal" data-target="#basicModal"></a>
                     </td>

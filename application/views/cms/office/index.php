@@ -17,7 +17,7 @@
                     <tr>
                     <td>'.$office->off_id.'</td>
                     <td>'.$office->off_title_eng.'</td>
-                    <td>'.html_entity_decode($office->off_desc_eng).'</td>
+                    <td>'.implode(' ', array_slice(explode(' ', html_entity_decode($office->off_desc_eng)), 0, 30)).'...</td>
                     <td>
                         <a href="'.$url.'cms/offices/edit/'.$office->off_id.'" class="fa fa-edit"></a>
                         <span> | </span>

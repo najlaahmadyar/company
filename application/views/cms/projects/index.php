@@ -13,13 +13,15 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($projects as $project){
+            <?php 
+                $count = 1;
+                foreach($projects as $project){
                 echo '
                     <tr>
-                    <td>'.$project->p_id.'</td>
+                    <td>'.$count.'</td>
                     <td calss="project_img"><img src="'.$uploads.'projects_image/'.$project->p_photo.'"></td>
                     <td>'.$project->p_title_eng.'</td>
-                    <td>'.substr(html_entity_decode($project->p_desc_eng), 0, 100).'...</td>
+                    <td>'.implode(' ', array_slice(explode(' ', html_entity_decode($project->p_desc_eng)), 0, 25)).'"...</td>
                     <td>
                         <a href="'.$url.'cms/projects/edit/'.$project->p_id.'" class="fa fa-edit"></a>
                         <span> | </span>
@@ -27,6 +29,7 @@
                     </td>
                     </tr>
                 ';
+                $count++;
             }?>
             </tbody>
         </table>
