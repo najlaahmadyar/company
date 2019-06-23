@@ -17,9 +17,9 @@
                 echo '
                     <tr>
                     <td>'.$report->rep_id.'</td>
-                    <td calss="project_img"><img src="'.$uploads.'report_images/'.$report->rep_image.'"></td>                    
+                    <td calss="project_img"><img src="'.$uploads.'report_images/'.$report->rep_image.'"></td>
                     <td>'.$report->rep_title_eng.'</td>
-                    <td>'.substr(html_entity_decode($report->rep_desc_eng),0,100).'</td>
+                    <td>'.implode(' ', array_slice(explode(' ',html_entity_decode($report->rep_desc_eng)), 0, 20)).'...</td>
                     <td>
                         <a href="'.$url.'cms/report/edit/'.$report->rep_id.'" class="fa fa-edit"></a>
                         <span> | </span>

@@ -13,13 +13,15 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($hc_datas as $hc_data){
+            <?php
+                $count = 1;
+                 foreach($hc_datas as $hc_data){
                 echo '
                     <tr>
-                    <td>'.$hc_data->h_id.'</td>
+                    <td>'.$count.'</td>
                     <td>'.$hc_data->h_title_eng.'</td>
                     <td>'.$hc_data->h_date.'</td>
-                    <td>'.html_entity_decode($hc_data->h_desc_eng).'</td>
+                    <td>'.implode(' ', array_slice(explode(' ',html_entity_decode($hc_data->h_desc_eng)), 0, 25)).'...</td>
                     <td>
                         <a href="'.$url.'cms/high_council_ubran_development/edit/'.$hc_data->h_id.'" class="fa fa-edit"></a>
                         <span> | </span>
@@ -27,6 +29,7 @@
                     </td>
                     </tr>
                 ';
+                $count++;
             }?>
             </tbody>
         </table>

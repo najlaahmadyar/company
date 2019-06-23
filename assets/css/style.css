@@ -65,15 +65,15 @@ ul.sub-menu>li:hover a{
 
 .menu-bar>.container>ul>li{
     padding-top: 4px;
-    float:right;
+    float: right;
     list-style-type: none;
     display: inline;
-    min-width:100px;
-    height:30px;
-    margin:0px 5px;  
-    cursor: pointer;  
-    padding-right: 5px; 
-    padding-left: 10px;   
+    min-width: 100px;
+    height: 30px;
+    margin: 0px 0px;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;  
 }
 .menu-bar>.container>ul>li>span{
     vertical-align: middle;
@@ -85,7 +85,7 @@ ul.sub-menu>li:hover a{
     margin-top: 6px;
     margin-right:10px;
 }
-.menu-bar span:hover a{
+.menu-bar li:hover a{
     color:#c1272d;
 }
 
@@ -103,15 +103,25 @@ span.lang a{
 
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu{
     position: relative;
-    top: 6px !important;
+    top: 1px !important;
     left: -30px !important;
-    min-width: 130px;
+    min-width: 155px;
     background-color: #ecebeb;
     color: #FFF ;
     text-align: right;
     border:none;
     border-radius: 0px;
     padding:0px;
+    z-index: 9999999999999;
+}
+
+.project_text{
+    text-align: justify;
+    padding: 0px 15px;
+    margin-top: 0px;
+    color: #000 !important;
+    height: 161px;
+    overflow: hidden;
 }
 
 
@@ -134,6 +144,10 @@ span.lang a{
     background-color: #c1272d;
 }
 
+.menu-bar>.container>ul>li.dropdown>.dropdown-menu>li:hover ul.submenu{
+    background-color: #cecdcd;
+}
+
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu>li:hover>a{
     color:#FFF;
 }
@@ -146,6 +160,10 @@ span.lang a{
 .menu-bar>.container>ul>li:hover{
     background-color: #fff;
     color:#c1272d !important;
+}
+
+.menu-bar>.container *{
+    font-size:16px;
 }
 
 .wrapper{
@@ -190,7 +208,7 @@ span.lang a{
 }
 
 .slider-img{
-    /* height:500px; */
+    height:330px;
     width:450px;
 }
 .slider-img>img{
@@ -335,10 +353,15 @@ span.lang a{
 }
 
 .default-card .card-body {
+    background-color: #cac5c533;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 0;
+}
+.card-text{
+    padding:3px 10px;
+    text-align:justify;
 }
 .default-card .card-title{
     margin-bottom: 0px;
@@ -350,7 +373,7 @@ span.lang a{
     padding:10px;
 }
 .gray-card .card-title{
-    background-color: #e4e4e4;
+    background-color: #cac5c57d;
     color:#000;
 }
 .about{
@@ -481,6 +504,7 @@ span.lang a{
     padding: 7px;
     background-color: rgba(37, 85, 161, 0.3) !important;
     margin-left: 10px;
+    float: left;
 }
 .high-card{
     overflow: hidden;
@@ -512,6 +536,7 @@ span.lang a{
 }
 .document-text{
     height: 40px;
+    margin-bottom: 10px;
 }
 .doc_name{
     font-size:18px;
@@ -619,4 +644,214 @@ span.lang a{
     flex: 0 0 46%;
     max-width: 30%;
     margin:10px;
+}
+
+.contact_title{
+    color: #2555A1;
+    font-size:20px;
+    font-weight: 600;
+    border-bottom:1px solid #ded;
+    padding-bottom:10px;
+    margin-top:40px;
+}
+
+.contact-text{
+    font-size:16px;
+    margin-bottom:40px;
+}
+
+.latest_news_text{
+    color:#3d3d3eab;
+    font-size:20px;
+}
+
+.latest_news_title{
+    font-weight:600;
+    font-size:25px;
+}
+
+.latest_news_desc{
+    font-size:16px;
+    text-align:justify;
+}
+
+.news_btn {
+    text-align: left;
+    direction: ltr;
+}
+
+.news_btn a{
+    margin-top: -17px;
+    margin-left: 13px;
+    padding: 5px;
+}
+
+.graph{
+    height: 230px;
+    width: 50%;
+    display: inline;
+    float: left;
+    margin-right: 27px;
+    margin-bottom: 27px;
+}
+.graph>img{
+    height:inherit;
+    width:100%;
+}
+
+.close-panel{
+    height: 30px;
+    width: 30px;
+    border: 1px solid #ded;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 4px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+
+
+.work_image{
+    width:inherit;
+    height:280px;
+}
+.work_image img{
+    width:auto;
+    height:inherit;
+}
+
+.work_grad {
+    position: absolute;
+    height: 280px;
+    width: 93.3%;;
+    background: #2555A1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#2555A1, transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2555A1, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2555A1, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2555A1, transparent); /* Standard syntax */
+}
+
+.partner_image{
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline;
+}
+
+.partner_image img{
+    width: 60px;
+    height: auto;
+}
+
+.news_link{    
+    font-size: 18px;
+    color: #222;
+    display: block;
+}
+
+.f_title{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom:1px solid #ded;
+    padding-bottom:10px;
+}
+
+.la, .la:hover{
+    color:#FFF;
+}
+.l_title{
+    font-weight: 600;
+}
+
+p{
+    text-align: right;
+    direction: rtl;
+}
+ul.submenu{
+    padding: 0 !important;
+    background-color: #ecebeb !important;
+    margin: -5px;
+    margin-top: 7px;
+    margin-bottom: -7px;
+    border-top: 1px solid #cecdcd;
+    border-bottom: 1px solid #cecdcd;
+}
+ul.submenu>li{
+    list-style-type: none;
+    direction: ltr;
+    text-align: right;
+    max-height: 30px;
+    padding: 7px;
+    margin: 0px;
+    padding-right: 20px;
+}
+
+
+ul.submenu li a{
+    color: #000 !important;
+}
+
+ul.submenu li:hover a{
+    color: #c1272d!important;
+}
+
+ul.submenu li:hover .sub_sub_menu a{
+    color: #000 !important;
+}
+ul.submenu li:hover{
+    background-color: #FFF;
+    /* max-width:inherit; */
+}
+
+ul.sub_sub_menu{
+    position: relative;
+    background-color: #ecebeb;
+    right: 135px;
+    bottom: 28px;
+    /* z-index: -1; */
+    padding: 0px;
+}
+
+ul.sub_sub_menu li{
+    list-style-type: none;
+    direction: ltr;
+    text-align: right;
+    padding: 7px;
+    margin: 0px;
+    padding-right: 5px;
+}
+
+ul.submenu li ul.sub_sub_menu li:hover a{
+    color: #c1272d !important;
+}
+
+.social_media_link{
+    padding: 5px 0px;
+    direction:rtl;
+}
+
+.icon{
+    font-size: 25px;
+    margin-left: 10px;
+}
+.social_media_link a{
+    color:#333;
+}
+
+.social_media_link span{
+    font-size: 18px !important;
+    color:#333;
+}
+
+.social_media_link a:hover i.fa-facebook{
+    color:#3b5998;
+}
+
+.doc_name{
+    float:right;
+}
+
+.journal-div{
+    float:right;
 }

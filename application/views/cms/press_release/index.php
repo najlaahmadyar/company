@@ -12,10 +12,12 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($press_releases as $press_release){
+            <?php 
+                $count = 1;
+            foreach($press_releases as $press_release){
                 echo '
                     <tr>
-                    <td>'.$press_release->pr_id.'</td>
+                    <td>'.$count.'</td>
                     <td>'.$press_release->pr_title_eng.'</td>
                     <td>'.$press_release->pr_date.'</td>
                     <td>
@@ -25,6 +27,7 @@
                     </td>
                     </tr>
                 ';
+                $count++;
             }?>
             </tbody>
         </table>

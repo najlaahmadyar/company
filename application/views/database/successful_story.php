@@ -12,8 +12,8 @@
 
                         <div class="col-sm-8">
                             <div class="story_title">
-                                <p>'.$story->$title.'</p>
-                                <p class="date">'.$story->ss_date.'</p>
+                                <h4>'.$story->$title.'</h4>
+                                <p class="date">'.show_date($story->ss_date).'</p>
                             </div>
                             <div class="description">'.substr(html_entity_decode($story->$description), 0, 995).'</div>
                         </div>            

@@ -7,7 +7,7 @@
             echo '
                
                 <h2 class="title">'.$news->$title.'</h2>
-                <div class="news_council">'.$news->n_datetime.'</div>
+                <div class="news_council">'.show_date_time($news->n_datetime).'</div>
                 <div class="col-sm-12 image">
                     <img class="img img-responsive" src="'.$uploads.'news_image/'.$news->n_photo.'">
                 </div>

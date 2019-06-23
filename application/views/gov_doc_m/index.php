@@ -10,7 +10,7 @@
                 echo '<ul>';
                     foreach(get_document($category->cat_id) as $doc){
                         echo '<li class="document-text">
-                                <div class="col-sm-7 pull-right doc_name">'.$doc->doc_title_eng.'</div>
+                                <div class="col-sm-7 doc_name">'.$doc->doc_title_eng.'</div>
                                 <div class="col-sm-5">
                                     <a id="personal_image"  href="'.$uploads.'document_files/'.$doc->doc_file.'">
                                         <div class="col-sm-10">

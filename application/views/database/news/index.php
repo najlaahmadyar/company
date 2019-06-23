@@ -18,7 +18,7 @@
                         
                         </div>
                         <div class="clearfix"></div>                        
-                        <div class="date_news">'.$news->n_datetime.'</div>
+                        <div class="date_news">'.show_date_time($news->n_datetime).'</div>
                         <div class="news-text">
                             <p>'
                                 .substr(html_entity_decode($news->$desc), 0, 600).

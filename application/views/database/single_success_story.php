@@ -5,10 +5,8 @@
             $title = 'ss_title_'.$_SESSION['lang'];
             $text = 'ss_desc_'.$_SESSION['lang'];
             echo '
-               
-                <h2 class="title">'.$story->$title.'</h2><br><br>
-                <h6>'.$story->ss_date.'</h6>
-
+                <h2 class="title">'.$story->$title.'</h2>
+                <h6>'.show_date($story->ss_date).'</h6>
                 <div class="col-sm-12 image">
                     <img class="img img-responsive" src="'.$uploads.'stories_images/'.$story->ss_image.'">
                 </div>

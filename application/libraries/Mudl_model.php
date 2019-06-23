@@ -54,10 +54,6 @@ class Mudl_model extends CI_Model{
 			$mehtod = 'result';
 		}
 
-		// if(!count($this->db->order_by($this->_order_by))){
-		// 	$this->db->order_by($this->_order_by);
-		// }
-
 		if($properties){
 			$this->db->select($properties);
 		}
@@ -65,6 +61,8 @@ class Mudl_model extends CI_Model{
 		if($limit){
 			$this->db->limit($limit);
 		}
+		
+		$this->db->order_by($this->_primary_key, 'desc');
 
 		$data = $this->db->get($this->_table_name)->$mehtod();
 

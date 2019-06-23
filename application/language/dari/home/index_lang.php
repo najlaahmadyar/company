@@ -25,3 +25,13 @@
 	$lang['city_sector'] = "سکتور شهری ";
 	$lang['read_more'] = "بیشتر بخوانید";
 	$lang['click_download'] = "بخاطر دانلود فایل لطفا کلیک کنید.";
+	$lang['information_center_1012']= "مرکز معلومات ۱۰۱۲";
+	$lang['speaker_office'] = "دفتر سخنگو";
+	$lang['latest_news'] = "آخرین خبر";
+	$lang['major_work'] = "وظایف عمده وزارت";
+	$lang['social_media_link'] = "رسانه های اجتماعی";
+	$lang['facebook'] = "فیسبوک";
+	$lang['linkedin'] = "لینکدین";
+	$lang['twitter'] = "تویتر";
+	$lang['instagram'] = "انستاگرام";
+	$lang['youtube'] = "یوتیوب";

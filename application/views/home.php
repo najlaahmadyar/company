@@ -1,9 +1,11 @@
 <?php $this->load->view('includes/header'); ?>
+
+    <!-- Latest News Part -->
     <div class="row ">
         <div class="col-sm-12 top-news">
             <span class="col-sm-7">
                 <div class="slider-img">
-                    <img src="<?php echo $assets; ?>images/first.jpg" alt="...">                    
+                    <img src="<?php echo $uploads.'news_image/'.$news[0]->n_photo; ?>" alt="...">                    
                     <div class="news-icon">
                         <i class="fa fa-print"></i>
                         <i class="fa fa-share-alt"></i>
@@ -12,111 +14,66 @@
             </span>
 
             <span class="col-sm-5">
-                <h6>اخرین اخبار</h6>
-                <h4>عنوان اخرین اخبار روز</h4>
-                <p class="news-text">شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ مشخصی
-                 برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته است.
-                شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ
-                 مشخصی برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎
-                 ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                 ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                تا تعیین سرنوشت...
-                </p>
+                <h6 class="latest_news_text"><?php echo lang('latest_news'); ?></h6>
+                <h4 class="latest_news_title"><?php
+                    $title = 'n_title_'.$_SESSION['lang'];
+                    echo $news[0]->$title;
+                ?></h4>
+                <div class="latest_news_desc">
+                    <?php 
+                        $desc= 'n_desc_'.$_SESSION['lang'];
+                        echo substr(html_entity_decode($news[0]->$desc),0, 1055) .'...';
+                    ?>
+                </div>
+                <div class="row news_btn"><a class="council_btn" href="<?php echo $url.'database/news_single/'.$news[0]->n_id; ?>"><?php echo lang('read_more'); ?></a></div>
             </span>
         </div>        
     </div>
+    
     <hr>
     
+    <!-- 3 Latest News Part -->
     <div class="row">
         <div class="col-sm-12">
-            <div class="col-sm-4">
-                <div class="mid-image-div">
-                    <img src="<?php echo $assets; ?>images/feature2.jpg" alt="..." />
-                    <h2 class="news-tittle">عنوان اول</h2>
-                </div>
-                <p  class="news-text">ایزو پرمختیایي پلانونو د جوړولو په مټ پلي کیږي ، دچاپیریال څرنګوالی
-                        او د طرحو د فزیکي څرنګوالي مطالعه، د فضا له لاري د فزیکي طرحو
-                        وړاندې کول او د ښاري فزیکي کیفیت پیژندنه هغه څه دي چې د فزیکي
-                        تولګو د را منځ ته کیدو سبب ګرځي په دغه برخه کې تر ډیره د فضا يي
-                        او فزیکي څرنګوالي طرحو ته پاملرنه کیږي</p>
-                <p><?php date('y/m/d'); ?></p>
-            </div>
-            <div class="col-sm-4">
-                <div class="mid-image-div">
-                    <img src="<?php echo $assets; ?>images/feature1.jpg" alt="..." />
-                </div>
-                <p  class="news-text">ایزو پرمختیایي پلانونو د جوړولو په مټ پلي کیږي ، دچاپیریال څرنګوالی
-                        او د طرحو د فزیکي څرنګوالي مطالعه، د فضا له لاري د فزیکي طرحو
-                        وړاندې کول او د ښاري فزیکي کیفیت پیژندنه هغه څه دي چې د فزیکي
-                        تولګو د را منځ ته کیدو سبب ګرځي په دغه برخه کې تر ډیره د فضا يي
-                        او فزیکي څرنګوالي طرحو ته پاملرنه کیږي</p>
-                <p><?php date('y/m/d'); ?></p>
-            </div>
-            <div class="col-sm-4">
-                <div class="mid-image-div">
-                    <img src="<?php echo $assets; ?>images/feature.jpg" alt="..." />
-                </div>
-                <p  class="news-text">ایزو پرمختیایي پلانونو د جوړولو په مټ پلي کیږي ، دچاپیریال څرنګوالی
-                        او د طرحو د فزیکي څرنګوالي مطالعه، د فضا له لاري د فزیکي طرحو
-                        وړاندې کول او د ښاري فزیکي کیفیت پیژندنه هغه څه دي چې د فزیکي
-                        تولګو د را منځ ته کیدو سبب ګرځي په دغه برخه کې تر ډیره د فضا يي
-                        او فزیکي څرنګوالي طرحو ته پاملرنه کیږي</p>
-                <p><?php date('y/m/d'); ?></p>
-            </div>
+            <?php
+                 if($news){
+                    for($i = 1; $i < count($news); $i++){
+                        $title = 'n_title_'.$_SESSION['lang'];
+                        $desc = 'n_desc_'.$_SESSION['lang'];
+                        echo '    
+                        <a href="'.$url.'database/news_single/'.$news[$i]->n_id.'" title="Click to view more">                
+                        <div class="col-sm-4 project-card">
+                            <div class="grad">
+                                <div class="border-white"></div>
+                                <h3 class="project-title">'.$news[$i]->$title.'</h3>
+                            </div>
+                            <div class="mid-image-div">
+                                <img src="'.$uploads.'news_image/'.$news[$i]->n_photo.'" alt="..." />
+                            
+                            </div>
+                            <div class="clearfix"></div>                        
+                            <div class="date_news">'.show_date_time($news[$i]->n_datetime).'</div>
+                            <div class="news-text">
+                                <p>'
+                                    .substr(html_entity_decode($news[$i]->$desc), 0, 600).
+                                '</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>    
+                        </a>              
+                        ';
+                    }
+                }
+
+            ?>
         </div>
     </div>   
     <hr>  
 
     <div class="row">         
-        <div class="col-md-12">           
-
-            <div class="col-md-6">
-                <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne2">
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne3"  aria-controls="collapseOne3">
-                                    برنامه / پروژه های مشترک دولتی
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne3" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne2">
-                            <div class="panel-body">
-                            <ul>
-                                <li><a href="#">پروژه انکشاف شهری</a></li>
-                                <li><a href="#">پروژه اول</a></li>
-                                <li><a href="#">پروژه دوم</a></li>
-                                <li><a href="#">پروژه سوم</a></li>
-                            </ul>
-                            <div class="panel-group" id="accordioninside" role="tablist" aria-multiselectable="true">
-                                    <div class="panel inside-panel">
-                                        <div class="panel-heading" role="tab" id="headingOne2">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordioninside" href="#insideaccordine5"  aria-controls="insideaccordine5">
-                                                    برنامه/‍‍ پروژه های وزارت
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="insideaccordine5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
-                                            <div class="panel-body">
-                                                <ul>
-                                                    <li><a href="#">پروژه انکشاف شهری</a></li>
-                                                    <li><a href="#">پروژه اول</a></li>
-                                                    <li><a href="#">پروژه دوم</a></li>
-                                                    <li><a href="#">پروژه سوم</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-sm-12">  
             
-            <div class="col-md-6">
+            <div class="col-sm-12">
                 <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne2">
@@ -128,49 +85,16 @@
                         </div>
                         <div id="collapseOne2" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne2">
                             <div class="panel-body">
-                                <div class="panel-group" id="accordioninside" role="tablist" aria-multiselectable="true">
-                                    <div class="panel inside-panel">
-                                        <div class="panel-heading" role="tab" id="headingOne2">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordioninside" href="#insideaccordine"  aria-controls="insideaccordine">
-                                                    برنامه/‍‍ پروژه های شهر سازی
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="insideaccordine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
-                                            <div class="panel-body">
-                                                <ul>
-                                                    <li><a href="#">پروژه انکشاف شهری</a></li>
-                                                    <li><a href="#">پروژه اول</a></li>
-                                                    <li><a href="#">پروژه دوم</a></li>
-                                                    <li><a href="#">پروژه سوم</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="panel-group" id="accordioninside" role="tablist" aria-multiselectable="true">
-                                    <div class="panel inside-panel">
-                                        <div class="panel-heading" role="tab" id="headingOne2">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordioninside" href="#insideaccordine1"  aria-controls="insideaccordine1">
-                                                    برنامه/‍‍ پروژه های اراضی
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="insideaccordine1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
-                                            <div class="panel-body">
-                                                <ul>
-                                                    <li><a href="#">پروژه انکشاف شهری</a></li>
-                                                    <li><a href="#">پروژه اول</a></li>
-                                                    <li><a href="#">پروژه دوم</a></li>
-                                                    <li><a href="#">پروژه سوم</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <?php 
+                                        if($projects){
+                                            foreach($projects as $project){
+                                                $title = 'p_title_'.$_SESSION['lang'];
+                                                echo '<li><a href="javascript:void(0);" class="project_details" proj_id="'.$project->p_id.'">'.$project->$title.'</a></li>';
+                                            }
+                                        }
+                                    ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -179,133 +103,102 @@
 
         </div> 
     </div>
-    <hr>
     
-    <div class="row">
+    <div class="row panel-project">
+        <hr>
+
         <div class="col-sm-12">
             <div class="col-sm-11 mudl-panel">
                 <div class = "panel panel-default">
                     <div class = "panel-heading">
-                        <h4 class = "panel-title">
-                            پروژه انکشاف شهر های افغانستان (UDSP)
+                        <i class="fa fa-close close-panel"></i>
+                        <h4 class = "panel-title" id="pro_title">
                         </h4>
                     </div>
                     
                     <div class = "panel-body">
-                        <span class="col-sm-5">
+                        <span class="col-sm-12">
                             <div class="graph">
-                                <img src="<?php echo $assets; ?>images/header-bg.jpg " alt="...">  
+                                <img id="pro_image" src="" alt="...">  
                             </div>
-                        </span>
-
-                        <span class="col-sm-7">
-                            <p class="news-text">شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ مشخصی
-                            برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته است.
-                            شماری از اعضای مجلس نماینده‌گان می‌گویند که امروز شنبه هژدهم جوزا موضوعِ
-                            مشخصی برای بحث در این مجلس ندارند. به گفته آن‌ها، تمامی اقدامات و بحث‌‎
-                            ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                            ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                            ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                            ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                            تا تعیین سرنوشت...
-                            </p>
+                            <p class="latest_news_desc" id="pro_desc"></p>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <hr>
-    <center><h2>کارهای مهم وزارت</h2></center>
-    <div class="row panel-group" id="accordion">
-        <div class="panel panel-default col-xs-6 col-md-3">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default col-xs-6 col-md-3">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTow">
-                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTow" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default col-xs-6 col-md-3">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTree">
-                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTree" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default col-xs-6 col-md-3">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFou">
-                        <img class="work_img" src="<?php echo $assets; ?>images/header-bg.jpg" alt="works">
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseFou" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </div>
-
 
     <hr>
+
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="col-sm-12">فورم ثبت شکایات</h3>          
-            <div class="col-sm-11 mudl-panel">
+            <h6 class="latest_news_title"><?php echo lang('major_work'); ?></h6>
+
+            <div class="panel-group" id="accordion">
+                <?php 
+                    $i = 1;
+                    foreach($works as $work){
+                        $desc = 'mw_desc_'.$_SESSION['lang'];
+                        $title = 'mw_title_'.$_SESSION['lang'];
+                        echo '
+                            <div class="panel panel-default col-xs-6 col-md-6 col-sm-12">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
+                                            <div class="work_grad">
+                                                <div class="border-white"></div>
+                                                <h3 class="project-title">'.$work->$title.'</h3>
+                                            </div>
+                                            <div class="work_image">
+                                                <img src="'.$uploads.'major_work_image/'.$work->mw_image.'" alt="works">
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse'.$i.'" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>'.html_entity_decode($work->$desc).'</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ';
+                        $i++;
+                    }
+                ?>
+                
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+        <h6 class="latest_news_title"><?php echo lang('contact'); ?></h6>
+
+            <div class="mudl-panel">
                 <div class = "panel panel-default">                    
                     <div class = "panel-body">
-                        <form action="">
+                        <form method="post" action="<?php echo $url.'home/send'; ?>">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name"class="form-control" placeholder="اسم مکمل"/>
+                                        <input type="text" name="fullname" id="fullname"class="form-control" placeholder="اسم مکمل"/>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name"class="form-control" placeholder="شماره تماس"/>
+                                        <input type="text" name="province" id="province" class="form-control" placeholder="ولایت"/>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name"class="form-control" placeholder="ایمیل"/>
+                                        <input type="text" name="phone" id="phone"class="form-control" placeholder="شماره تماس"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <input type="text" name="email" id="email"class="form-control" placeholder="ایمیل"/>
                                     </div>
                                 </div> 
                             </div>
@@ -313,12 +206,12 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea name="name" id="name" class="form-control textarea-control" rows="4" placeholder="اسم مکمل"/></textarea>
+                                        <textarea name="message" id="message" class="form-control textarea-control" rows="4" placeholder="موضوع"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="">
-                                <input type="button" class="btn btn-md btn-primary" value="ارسال">
+                                <input type="submit" class="btn btn-md btn-primary" value="ارسال">
                             </div>
                         </form>
                     </div>
@@ -329,3 +222,33 @@
 
             
 <?php $this->load->view('includes/footer'); ?>
+
+<script>
+    base_url = "<?php echo $url; ?>";
+    lang = "<?php echo $_SESSION['lang']; ?>"
+
+    $(document).ready(function(){
+        $(".panel-project").hide();
+
+        $(".project_details").click(function(){
+            $(".panel-project").slideUp();
+
+            pro_id = $(this).attr("proj_id");
+
+            $.get(base_url+'program_project/get_project',{proj_id: pro_id}, function(project){
+                    proj = JSON.parse(project);
+
+                    $("#pro_title").html(proj.title);
+                    $("#pro_desc").html(proj.desc);
+                    $("#pro_image").attr("src", base_url+'uploads/projects_image/'+proj.image);
+                    $(".panel-project").slideDown();
+                }
+            );
+
+        });
+
+        $(".close-panel").click(function(){
+            $(".panel-project").slideUp();
+        });
+    });
+</script>

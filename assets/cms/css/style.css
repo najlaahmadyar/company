@@ -2604,3 +2604,13 @@ p {
 select.form-control:not([size]):not([multiple]){
   height: calc(2.25rem + -4px);
 }
+/* 
+table tr td.text-description{
+    overflow: hidden;
+    height: 14px;
+    white-space: nowrap;
+}
+
+.text-description{
+  width:300px;
+} */

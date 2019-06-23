@@ -46,8 +46,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-info"></i>About Us</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-info"></i><a href="<?php echo $url.'cms/about'; ?>">About Ministry</a></li>
-                            <li><i class="fa fa-table"></i><a href="<?php echo $url.''; ?>">Leader Board</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.'cms/'; ?>">Leader Board</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.'cms/deputy_minister'; ?>">Deputy Minister</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.'cms/presidency'; ?>">Presedencies</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.'cms/offices'; ?>">Offices</a></li>
                             <li><i class="fa fa-pie-chart"></i><a href="<?php echo $url.'cms/provincial_presidency'; ?>">Provincial Departments</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo $url.''; ?>">Organizational Charts</a></li>
                         </ul>
                     </li>
 
@@ -74,17 +78,34 @@
                         </ul>
                     </li>
 
-                     <li>
+                    <li  class="<?php echo ($page == 'major_work') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/major_work'; ?>"><i class="menu-icon fa fa-comments"></i>Ministry Major Work</a>
+                    </li>
+
+                     <li  class="<?php echo ($page == 'leader_board') ? 'active' : ''; ?>">
                         <a href="<?php echo $url.'cms/leader_board'; ?>"><i class="menu-icon fa fa-comments"></i>Message of leadership</a>
                     </li>
 
-                    <li>
+                    <li  class="<?php echo ($page == 'partners') ? 'active' : ''; ?>">
                         <a href="<?php echo $url.'cms/partners/index'; ?>"><i class="menu-icon fa fa-handshake-o"></i>Partner Offices</a>
                     </li>
 
                     <li class="<?php echo ($page == 'contact_us') ? 'active' : ''; ?>">
                         <a href="<?php echo $url.'cms/contact_us'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
                     </li>
+
+                    <li class="<?php echo ($page == 'connection_link') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/connection_links'; ?>"><i class="menu-icon fa fa-hashtag"></i>Website Connection Links</a>
+                    </li>
+
+                    <li class="<?php echo ($page == 'job_annoucement') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/job_annoucement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Job Announcements</a>
+                    </li>
+
+                    <li class="<?php echo ($page == 'procurement_annoucement') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/procurement_annoucement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Procurement Announcements</a>
+                    </li>
+
 
                     
                 </ul>

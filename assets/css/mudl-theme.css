@@ -1,8 +1,23 @@
+@font-face{
+    font-family : 'mudlfontheader';
+    src: url('../fonts/Bahij Roya-Bold.ttf');
+}
+
+@font-face{
+	font-family : 'mudlnormalfont';
+    src: url('../fonts/Bahij Roya-Regular.ttf');
+}
+
 html, body{
     margin:0;
     padding:0;
     font-size:14px;
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: 'mudlfontheader' !important;
+}
+
+p, div, span{
+    font-family: 'mudlnormalfont' !important;
+    font-size: 14px;
 }
 
 .pull-right{
@@ -69,15 +84,8 @@ a:hover, a:active, a:focus{
 }
 .mudl-panel .panel-title{
     color:#25559f;
-}
-
-.graph{
-    height:200px;
-    width:280px;
-}
-.graph>img{
-    height:inherit;
-    width:inherit;
+    display: inline;
+    margin-right: 10px;
 }
 .textarea-control{
     resize: none;
