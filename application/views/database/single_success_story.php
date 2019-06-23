@@ -6,7 +6,7 @@
             $text = 'ss_desc_'.$_SESSION['lang'];
             echo '
                
-                <h2 class="title">'.$story->$title.'</h2>
+                <h2 class="title">'.$story->$title.'</h2><br><br>
                 <h6>'.$story->ss_date.'</h6>
 
                 <div class="col-sm-12 image">

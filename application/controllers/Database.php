@@ -36,15 +36,18 @@ class Database extends Mudl_controller{
 		$this->data['presses'] = $this->press_release_model->get();       
         $this->load->view('database/press_release', $this->data);
     }
-
-    public function picture()
-    {
-        $this->load->view('database/picture', $this->data);
-    }
-
     public function report()
     {
+        $this->load->model('report_model');   
+        $this->data['reports'] = $this->report_model->get();             
         $this->load->view('database/report', $this->data);
+    }
+
+    public function single_report($rep_id){        
+        $this->load->model('report_model');
+        $this->data['reports'] = $this->report_model->get($rep_id);
+
+        $this->load->view('database/single_report', $this->data);
     }
 
     public function success_story()
@@ -61,8 +64,4 @@ class Database extends Mudl_controller{
         $this->load->view('database/single_success_story', $this->data);
     }
 
-    public function video()
-    {
-        $this->load->view('database/video', $this->data);
-    }
 }

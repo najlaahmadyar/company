@@ -188,13 +188,6 @@ span.lang a{
 .text .fa, .lang .la{    
     padding: 0px 5px;
 }
-/* susan styles */
-
-
-/* .border{
-    border-bottom: 1px solid #000;
-    width:100%;
-} */
 
 .slider-img{
     /* height:500px; */
@@ -417,6 +410,9 @@ span.lang a{
     font-size:24px;
     color: #3d3d3e;   
     text-shadow: 0px 1px 1px;
+    float: right;
+    /* background-color: #2555A1;
+    padding: 10px ,10px; */
 }
 
 .description{
@@ -522,6 +518,7 @@ span.lang a{
 }
 .btn_council{
     padding-left: 0px;
+    padding-right: 0px;
 }
 .date_council{
     color:#2555A1; 
@@ -605,4 +602,21 @@ span.lang a{
     padding-right: 15px;
     font-size: 12px;
     margin-top: -8px;
+}
+.title_prov{
+    margin-bottom: 0px;
+}
+.press_card{
+    height: 160px;
+    margin:0px;
+    border: 0px;
+    overflow: hidden;
+    border-radius: 10px;
+    float: right;
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    padding: 15px !important;
+    padding-bottom: 0px;
+    flex: 0 0 46%;
+    max-width: 30%;
+    margin:10px;
 }

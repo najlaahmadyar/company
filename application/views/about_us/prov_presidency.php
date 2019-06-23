@@ -5,7 +5,7 @@
             $title = 'pp_title_'.$_SESSION['lang'];
             $text = 'pp_desc_'.$_SESSION['lang'];
             echo '
-                <h2 class="title">'.$pp_data->$title.'</h2>
+                <h2 class="title title_prov">'.$pp_data->$title.'</h2><br>
                 <p class="description">'.html_entity_decode($pp_data->$text).'</p>
             ';
         ?>
