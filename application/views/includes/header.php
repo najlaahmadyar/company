@@ -20,6 +20,9 @@
         <?php if($_SESSION['lang'] == 'eng'){ ?>
             <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/en-style.css">
         <?php }?>
+
+        <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/responsive.css">
+
         
     </head>
     <body>
@@ -149,7 +152,7 @@
     ?>
     <div class="wrapper container">
         <div class="left-side-bar">
-            <div class="card default-card" style="width: 16rem;">
+            <div class="card default-card">
                 <h5 class="card-title"><?php echo $leader->$name;?></h5>            
                 <img class="card-img-top" src="<?php echo $uploads.'leader_board_image/'.$leader->l_photo; ?>" alt="Card image cap">
                 <div class="card-body">
@@ -158,45 +161,61 @@
                     </p>
                 </div>
             </div>
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">مرکز معلومات و سمع شکایات</h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/complain-center.jpg" alt="Card image cap">                
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">اشتهارات و تبلیغات</h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">ویدیو</h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
             </div>
 
-             <div class="card default-card gray-card" style="width: 16rem;">
+             <div class="card default-card gray-card">
                 <h5 class="card-title">اعلان کاریابی</h5> 
                 <div class="card-body">
-                    <p class="card-text">                        
-                        ها در مجلس نماینده‌گان تا تعیین سرنوشت کرسی  
-                    </p>
+                    <ul>
+                        <?php foreach($job_anns as $job){
+                            echo '<li class="link-text">'.$job->ja_title.'</li>';
+                        } ?>
+                    </ul>
+
+                    <div class="row news_btn">
+                        <a class="load_btn" href="<?php echo $url.'database/news_single/'.$news[0]->n_id; ?>">
+                        <?php echo lang('load_more'); ?></a>
+                    </div>
+
                 </div>
             </div>
             
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">اعلان تدارکات</h5> 
                 <div class="card-body">
-                    <p class="card-text">                        
-                        هرنوشت کرسی ریاست مجلس، معطل قرار گرفته 
-                    </p>
+                    <ul>
+                        <?php foreach($pro_anns as $pro){
+                            echo '<li class="link-text">'.$pro->ja_title.'</li>';
+                        } ?>
+                    </ul>
+                    <?php if($pro_anns){ ?>
+                        <div class="row news_btn">
+                            <a class="load_btn" href="<?php echo $url.'database/news_single/'.$news[0]->n_id; ?>">
+                            <?php echo lang('load_more'); ?></a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">مصرف بودیجه سال ۱۳۹۸</h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title"> اعلامیه های مطبوعاتی</h5> 
                 <div class="card-body">
                     <p class="card-text">                        
@@ -205,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">مقاله ها</h5> 
                 <div class="card-body">
                     <p class="card-text"> 
@@ -219,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="card default-card gray-card" style="width: 16rem;">
+            <div class="card default-card gray-card">
                 <h5 class="card-title"><?php echo  lang('social_media_link'); ?></h5> 
                 <div class="card-body">
                     <p class="social_media_link">    

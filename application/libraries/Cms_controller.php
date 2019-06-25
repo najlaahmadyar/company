@@ -8,6 +8,10 @@ class Cms_controller extends Mudl_Controller {
         $this->error = $this->url .'error/index';
         
 		$this->data["assets"] = $this->assets;
+
+		if($this->log_lib->loggedin() == false){
+            redirect($this->url.'home/login');           
+        }
 	}
 
 }

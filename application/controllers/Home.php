@@ -105,15 +105,19 @@ class Home extends Mudl_controller{
 		$this->load->view('login', $this->data);
 	}
 
-	public function user_login(){		
+	public function user_login(){	
+		$this->load->model('user_model');	
 
 		$username = $this->input->post("username");
 		$password = $this->user_model->hash($this->input->post("password"));
 
+		echo $username;
+		echo '<br>'.$password.'<br>';
+
 		$where = array("username" => $username, "password" => $password);
 		$user = $this->user_model->get_by($where, true);
 
-		if(count($user)){
+		if(!empty($user)){
 			$this->log_lib->login($user);
 			redirect($this->url.'cms/home');
 

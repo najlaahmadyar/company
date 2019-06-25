@@ -38,9 +38,12 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="<?php echo ($page == 'home') ? 'active' : ''; ?>">
-                        <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
+
+                <li class="<?php echo ($page == 'home') ? 'active' : ''; ?>">
+                    <a href="<?php echo $url.'cms/home'; ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                </li>
+                
+                 <?php if($_SESSION['role'] == 1){ ?>
 
                     <li class="menu-item-has-children <?php echo ($page == 'about') ? 'active' : ''; ?> dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-info"></i>About Us</a>
@@ -79,7 +82,7 @@
                     </li>
 
                     <li  class="<?php echo ($page == 'major_work') ? 'active' : ''; ?>">
-                        <a href="<?php echo $url.'cms/major_work'; ?>"><i class="menu-icon fa fa-comments"></i>Ministry Major Work</a>
+                        <a href="<?php echo $url.'cms/major_work'; ?>"><i class="menu-icon fa fa-list"></i>Ministry Major Work</a>
                     </li>
 
                      <li  class="<?php echo ($page == 'leader_board') ? 'active' : ''; ?>">
@@ -97,14 +100,17 @@
                     <li class="<?php echo ($page == 'connection_link') ? 'active' : ''; ?>">
                         <a href="<?php echo $url.'cms/connection_links'; ?>"><i class="menu-icon fa fa-hashtag"></i>Website Connection Links</a>
                     </li>
+                    <?php } else if($_SESSION['role'] == 2){ ?>
 
-                    <li class="<?php echo ($page == 'job_annoucement') ? 'active' : ''; ?>">
-                        <a href="<?php echo $url.'cms/job_annoucement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Job Announcements</a>
+                    <li class="<?php echo ($page == 'job_ann') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/job_announcement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Job Announcements</a>
                     </li>
+                    <?php } else if($_SESSION['role'] == 3){ ?>
 
-                    <li class="<?php echo ($page == 'procurement_annoucement') ? 'active' : ''; ?>">
-                        <a href="<?php echo $url.'cms/procurement_annoucement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Procurement Announcements</a>
+                    <li class="<?php echo ($page == 'proc_ann') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/procurement_announcement'; ?>"><i class="menu-icon fa fa-bullhorn"></i>Procurement Announcements</a>
                     </li>
+                    <?php } ?>
 
 
                     
@@ -132,7 +138,7 @@
             <div class="top-right">
                 <div class="header-menu">
                     <div class="user-area dropdown float-right">
-                        <a class="nav-link" href="#" title="Logout"><i class="fa fa-power-off"></i></a>
+                        <a class="nav-link" href="<?php echo $url.'home/logout'; ?>" title="Logout"><i class="fa fa-power-off"></i></a>
                     </div>
                 </div>
             </div>
