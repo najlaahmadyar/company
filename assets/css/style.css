@@ -855,3 +855,13 @@ ul.submenu li ul.sub_sub_menu li:hover a{
 .journal-div{
     float:right;
 }
+.press_card{
+    max-width: 30%;
+    height: 185px;
+}
+.press_file{
+    margin-top: 20px;
+}
+.press_upload_file{
+    padding-right: 0px;
+}
