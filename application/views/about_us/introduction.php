@@ -5,7 +5,7 @@
             $title = 'a_title_'.$_SESSION['lang'];
             $text = 'a_text_'.$_SESSION['lang'];
             echo '
-                <h2 class="title">'.$about->$title.'</h2>
+                <h2 class="title">'.$about->$title.'</h2><br><br>
                 <p class="description">'.html_entity_decode($about->$text).'</p>
             ';
         ?>

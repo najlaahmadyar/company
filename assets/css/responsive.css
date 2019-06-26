@@ -54,9 +54,28 @@
     }
 }
 
-@media (min-width: 1920px){
-    .logo-bar>.logo-img {
-        height: 100px;
-        width: 1024px;
+@media (min-width: 1024px){
+    .slider-img {
+        height: 330px;
+        width: 380px;
     }
+
+    .slider-img>img {
+        height: 300px;
+        width: inherit;
+    }
+    .work_image img {
+        width: 326px;
+        height: inherit;
+    }
+    .content{
+        margin-left:0%;
+    }
+    .left-side-bar {
+        width: 23%;
+    }
+    .title {
+        width: 100%;
+    }
+
 }

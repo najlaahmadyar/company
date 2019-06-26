@@ -22,6 +22,37 @@
         <?php }?>
 
         <link rel="stylesheet" type="text/css" href="<?php echo $assets; ?>css/responsive.css">
+        <style>
+             @media (min-width: 1920px){
+                .logo-bar{
+                    height:120px;
+                    background-image: url(<?php echo $assets.'/images/banner_1920_'.$_SESSION['lang'].'.jpg'; ?>);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            @media (min-width: 1360px){
+                .logo-bar{
+                    background-image: url(<?php echo $assets.'/images/banner_1360_'.$_SESSION['lang'].'.jpg'; ?>);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            @media (min-width: 1024px){
+                .logo-bar{
+                    background-image: url(<?php echo $assets.'/images/banner_1024_'.$_SESSION['lang'].'.jpg'; ?>);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            @media (min-width: 768px){
+                .logo-bar{
+                    background-image: url(<?php echo $assets.'/images/banner_768_'.$_SESSION['lang'].'.jpg'; ?>);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        </style>
 
         
     </head>
@@ -60,13 +91,6 @@
     </div>
 
     <div class="logo-bar">
-        <?php if($_SESSION['lang'] == 'dari') { ?>
-             <img class="logo-img" src="<?php echo $assets; ?>images/dari-banner.jpg">
-        <?php }else if($_SESSION['lang'] == 'pashto'){ ?>
-            <img class="logo-img" src="<?php echo $assets; ?>images/pashto-banner.jpg">
-        <?php }else if($_SESSION['lang'] == 'eng'){ ?>
-            <img class="logo-img" src="<?php echo $assets; ?>images/eng-banner.jpg">
-        <?php } ?>    
     </div>
 
     <div class="menu-bar">
