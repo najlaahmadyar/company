@@ -3,15 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends Mudl_controller{
 
-	function __Construct()
-	{
+	function __Construct(){
 		parent::__Construct();
         $this->data['page'] = "home";
 
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->model('news_model');
 		$this->load->model('project_model');
 		$this->load->model('major_work_model');
@@ -30,8 +28,7 @@ class Home extends Mudl_controller{
 		$this->load->view('home', $this->data);
 	}
 
-	public function contact()
-	{
+	public function contact(){
         $this->data['page'] = "contact";
 
 		$this->load->view('contact/contact', $this->data);
@@ -80,8 +77,7 @@ class Home extends Mudl_controller{
 	}
 
 
-	public function urban_sector()
-	{
+	public function urban_sector(){
 		$this->load->view('urban_sector/urban_sector', $this->data);
 	}
 
@@ -100,11 +96,41 @@ class Home extends Mudl_controller{
 		redirect($_SERVER['HTTP_REFERER']);
 
 	}
+
+	public function login(){
+		$this->load->view('login', $this->data);
+	}
+
+	public function user_login(){	
+		$this->load->model('user_model');	
+
+		$username = $this->input->post("username");
+		$password = $this->user_model->hash($this->input->post("password"));
+
+		echo $username;
+		echo '<br>'.$password.'<br>';
+
+		$where = array("username" => $username, "password" => $password);
+		$user = $this->user_model->get_by($where, true);
+
+		if(!empty($user)){
+			$this->log_lib->login($user);
+			redirect($this->url.'cms/home');
+
+		}else{
+			redirect($this->url ."home/login?msg=fail");
+		}
+	}
+
+	public function logout(){
+		if($this->log_lib->loggedin()){
+
+			$this->log_lib->logout();
+			redirect($this->url .'home/login');
+		}
+	}
 	public function coming_soon(){
 		$this->data['page'] = "sector";
  		echo "<center><h4>Coming soon....</h4></center>";
-	}
-	public function login(){
-		$this->load->view('login', $this->data);
 	}
 }

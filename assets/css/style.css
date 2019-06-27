@@ -865,3 +865,23 @@ ul.submenu li ul.sub_sub_menu li:hover a{
 .press_upload_file{
     padding-right: 0px;
 }
+
+.card{
+    width:16rem;
+}
+.link-text{
+    font-size:16px;
+    list-style-type: none;
+    padding-top:10px;
+    margin-right: -20px;
+}
+
+.load_btn{
+    background-color: #007bff4d;
+    margin-top: -25px !important;
+    margin-left: 21px !important;
+    margin-bottom: 8px !important;
+    padding: 0px 8px !important;
+    border-radius: 5px !important;
+    color: #FFF !important;
+}

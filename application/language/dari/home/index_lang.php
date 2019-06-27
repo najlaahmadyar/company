@@ -35,3 +35,4 @@
 	$lang['twitter'] = "تویتر";
 	$lang['instagram'] = "انستاگرام";
 	$lang['youtube'] = "یوتیوب";
+	$lang['load_more'] = "بیشتر";
