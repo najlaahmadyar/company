@@ -55,7 +55,7 @@ class Procurement_announcement extends Cms_controller{
 
 	public function save($id = null){
 
-		$announcement = $this->procurement_announcement_model->array_from_post(array('subject', 'start_date', 'end_date', 'email','phone'), 'pa_');
+		$announcement = $this->procurement_announcement_model->array_from_post(array('subject','office_name', 'start_date', 'end_date', 'email','phone'), 'pa_');
 		
 		$file = '';
 		if(!empty($_FILES["pa_attachment"]["name"])){

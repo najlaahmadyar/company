@@ -7,6 +7,7 @@
                 <tr>
                     <th>#</th>
                     <th>Tittle</th>
+                    <th>Office Name<th>
                     <th>Start date</th>
                     <th>End date</th>
                     <th>Action</th>
@@ -20,6 +21,7 @@
                     <tr>
                     <td>'.$count.'</td>
                     <td>'.$announcement->pa_subject.'</td>
+                    <td>'.$announcement->pa_office_name.'</td>
                     <td>'.$announcement->pa_start_date.'</td>
                     <td>'.$announcement->pa_end_date	.'</td>
                     <td>

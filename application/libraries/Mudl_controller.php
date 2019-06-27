@@ -58,6 +58,9 @@ class Mudl_controller extends CI_Controller {
 		$this->load->model('procurement_announcement_model');
 		$this->data['pro_anns'] = $this->procurement_announcement_model->get();
 
+		$this->db->limit(5);
+		$this->load->model('press_release_model');
+		$this->data['presses'] = $this->press_release_model->get();
 
 		$lang = $this->session->userdata('lang');
 		

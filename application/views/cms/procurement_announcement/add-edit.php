@@ -12,6 +12,12 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
+                            <label class="control-label">Office Name</label>
+                            <input required name="office_name"  type="text" value="<?php echo $announcement->pa_office_name; ?>" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
                             <label class="control-label">Start Date</label>
                             <input required name="start_date" readonly type="text" value="<?php echo $announcement->pa_start_date; ?>" class="form-control date"/>
                         </div>

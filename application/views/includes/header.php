@@ -272,7 +272,7 @@
                 <iframe src="https://www.youtube.com/embed/DTlK-Dzo-4Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>               
             </div>
 
-             <div class="card default-card gray-card hidden">
+             <div class="card default-card gray-card">
                 <h5 class="card-title">اعلان کاریابی</h5> 
                 <div class="card-body">
                     <ul>
@@ -289,12 +289,12 @@
                 </div>
             </div>
             
-            <div class="card default-card gray-card hidden">
+            <div class="card default-card gray-card">
                 <h5 class="card-title">اعلان تدارکات</h5> 
                 <div class="card-body">
                     <ul>
                         <?php foreach($pro_anns as $pro){
-                            echo '<li class="link-text">'.$pro->ja_title.'</li>';
+                            echo '<li class="link-text">'.$pro->pa_subject.'</li>';
                         } ?>
                     </ul>
                     <?php if($pro_anns){ ?>
@@ -316,9 +316,11 @@
                 <div class="card-body">
                     <p class="card-text">                        
                         <?php
-                            foreach($presses as $press){ 
-                                $title = "pr_title_".$_SESSION['lang'];                      
-                                echo '<a class="col-sm-12" href="'.$url.'database/press_release/'.$press->pr_id.'"> - '.$press->$title.'</a>';
+                            if($presses){
+                                foreach($presses as $press){ 
+                                    $title = "pr_title_".$_SESSION['lang'];                      
+                                    echo '<a class="col-sm-12" href="'.$url.'database/press_release/'.$press->pr_id.'"> - '.$press->$title.'</a>';
+                                }
                             }
                         ?>                    
                     </p>

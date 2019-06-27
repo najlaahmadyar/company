@@ -13,6 +13,7 @@ class Procurement_announcement_model extends Mudl_model{
 
 		$announcement->pa_id = null;
 		$announcement->pa_subject = null;
+		$announcement->pa_office_name = null;
 		$announcement->pa_start_date = null;
 		$announcement->pa_end_date = null;
 		$announcement->pa_email = null;
