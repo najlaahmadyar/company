@@ -3,15 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends Mudl_controller{
 
-	function __Construct()
-	{
+	function __Construct(){
 		parent::__Construct();
         $this->data['page'] = "home";
 
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->model('news_model');
 		$this->load->model('project_model');
 		$this->load->model('major_work_model');
@@ -30,8 +28,7 @@ class Home extends Mudl_controller{
 		$this->load->view('home', $this->data);
 	}
 
-	public function contact()
-	{
+	public function contact(){
         $this->data['page'] = "contact";
 
 		$this->load->view('contact/contact', $this->data);
@@ -80,8 +77,7 @@ class Home extends Mudl_controller{
 	}
 
 
-	public function urban_sector()
-	{
+	public function urban_sector(){
 		$this->load->view('urban_sector/urban_sector', $this->data);
 	}
 

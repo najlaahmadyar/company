@@ -261,15 +261,15 @@
                 <h5 class="card-title">مرکز معلومات و سمع شکایات</h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/complain-center.jpg" alt="Card image cap">                
             </div>
-
+            
             <div class="card default-card gray-card">
                 <h5 class="card-title">اشتهارات و تبلیغات</h5> 
-                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">            
             </div>
 
             <div class="card default-card gray-card">
                 <h5 class="card-title">ویدیو</h5> 
-                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
+                <iframe src="https://www.youtube.com/embed/DTlK-Dzo-4Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>               
             </div>
 
              <div class="card default-card gray-card hidden">
@@ -315,7 +315,12 @@
                 <h5 class="card-title"> اعلامیه های مطبوعاتی</h5> 
                 <div class="card-body">
                     <p class="card-text">                        
-                        ها در مجلس نماینده‌گان تا تعیین س
+                        <?php
+                            foreach($presses as $press){ 
+                                $title = "pr_title_".$_SESSION['lang'];                      
+                                echo '<a class="col-sm-12" href="'.$url.'database/press_release/'.$press->pr_id.'"> - '.$press->$title.'</a>';
+                            }
+                        ?>                    
                     </p>
                 </div>
             </div>
@@ -327,7 +332,7 @@
                         <?php
                             foreach($reports as $report){ 
                                 $title = "rep_title_".$_SESSION['lang'];                      
-                                echo '<a class="col-sm-12" href="'.$url.'database/report/single/'.$report->rep_id.'">'.$report->$title.'</a>';
+                                echo '<a class="col-sm-12" href="'.$url.'database/report/single/'.$report->rep_id.'"> - '.$report->$title.'</a>';
                             }
                         ?>
                     </p>

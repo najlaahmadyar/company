@@ -868,11 +868,20 @@ ul.sub_sub_menu li:hover a{
     float:right;
     margin-bottom: 20px;
 }
+.press_card{
+    max-width: 30%;
+    height: 185px;
+}
+.press_file{
+    margin-top: 20px;
+}
+.press_upload_file{
+    padding-right: 0px;
+}
 
 .card{
     width:16rem;
 }
-
 .link-text{
     font-size:16px;
     list-style-type: none;
