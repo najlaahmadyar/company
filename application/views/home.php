@@ -42,7 +42,7 @@
                         $desc = 'n_desc_'.$_SESSION['lang'];
                         echo '    
                         <a href="'.$url.'database/news_single/'.$news[$i]->n_id.'" title="Click to view more">                
-                        <div class="col-sm-4 project-card">
+                        <div class="col-md-4 col-sm-6 project-card">
                             <div class="grad">
                                 <div class="border-white"></div>
                                 <h3 class="project-title">'.$news[$i]->$title.'</h3>
@@ -118,8 +118,8 @@
                     
                     <div class = "panel-body">
                         <span class="col-sm-12">
-                            <div class="graph">
-                                <img id="pro_image" src="" alt="...">  
+                            <div class="graph hidden-sm">
+                                <img id="pro_image" class="hidden-sm" src="" alt="...">  
                             </div>
                             <p class="latest_news_desc" id="pro_desc"></p>
                         </span>

@@ -6,14 +6,14 @@
             $text = 'n_desc_'.$_SESSION['lang'];
             echo '
                
-                <h2 class="title">'.$news->$title.'</h2>
-                <div class="news_council">'.show_date_time($news->n_datetime).'</div>
+                <h2 class="title">'.$s_news->$title.'</h2>
+                <div class="news_council">'.show_date_time($s_news->n_datetime).'</div>
                 <div class="col-sm-12 image">
-                    <img class="img img-responsive" src="'.$uploads.'news_image/'.$news->n_photo.'">
+                    <img class="img img-responsive" src="'.$uploads.'news_image/'.$s_news->n_photo.'">
                 </div>
                 <div class="clearfix"></div>
 
-                <div class="col-sm-12 description">'.html_entity_decode($news->$text).'</div>
+                <div class="col-sm-12 description">'.html_entity_decode($s_news->$text).'</div>
             ';
         ?>
     </div>

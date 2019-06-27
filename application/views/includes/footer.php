@@ -100,6 +100,7 @@
             $(document).ready(function(){
                 $(".submenu").hide();
                 $(".sub_sub_menu").hide();
+                $(".mobile-menu-bar").hide();
                 $(".menu-bar li:not(.dropdown)").click(function(){
                     _this = $(this);
                     menu = _this.find('a').attr('href');
@@ -107,29 +108,24 @@
                 });
 
                 $(".offices").mouseenter(function(){
-                    $("#offices_submenu").show();
+                    $(".offices_submenu").show();
                 });
 
                 $(".offices").mouseleave(function(){
-                    $("#offices_submenu").hide();
-                });
-
-                $(".execution").mouseenter(function(){
-                    $("#execution_submenu").show();
-                });
-
-                $(".execution").mouseleave(function(){
-                    $("#execution_submenu").hide();
+                    $(".offices_submenu").hide();
                 });
 
                 $(".execution_sub").mouseenter(function(){
                     exe_id = $(this).attr('exe_id');
-                    $("#pre_"+exe_id).show();
+                    $(".pre_"+exe_id).show();
                 });
 
                 $(".execution_sub").mouseleave(function(){
                     exe_id = $(this).attr('exe_id');
-                    $("#pre_"+exe_id).hide();
+                    $(".pre_"+exe_id).hide();
+                });
+                $(".menu-bar-icon").click(function(){
+                    $(".mobile-menu-bar").toggle();
                 });
             });
         </script>

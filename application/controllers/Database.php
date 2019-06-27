@@ -25,7 +25,7 @@ class Database extends Mudl_controller{
 
     public function news_single($n_id){
         $this->load->model('news_model');        
-		$this->data['news'] = $this->news_model->get($n_id);        
+		$this->data['s_news'] = $this->news_model->get($n_id);        
         
         $this->load->view('database/news/single', $this->data); 
     }

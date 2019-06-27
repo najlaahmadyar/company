@@ -38,18 +38,27 @@
                     background-size: cover;
                 }
             }
-            @media (min-width: 1024px){
+            @media (max-width: 1024px){
                 .logo-bar{
                     background-image: url(<?php echo $assets.'/images/banner_1024_'.$_SESSION['lang'].'.jpg'; ?>);
                     background-position: center;
                     background-size: cover;
                 }
             }
-            @media (min-width: 768px){
+            @media (max-width: 768px){
                 .logo-bar{
                     background-image: url(<?php echo $assets.'/images/banner_768_'.$_SESSION['lang'].'.jpg'; ?>);
                     background-position: center;
                     background-size: cover;
+                }
+            }
+            @media only screen and (max-width: 400px) {
+                .logo-bar {
+                    background-image: url(http://localhost/mudl/assets//images/banner_768_dari.jpg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 61px;
                 }
             }
         </style>
@@ -60,12 +69,12 @@
 
     <div class="social-media-bar">
         <div class="container">
-            <div class="col-sm-6">
-                <div class="col-sm-4 m_l_m_25">
+            <div class="col-md-6 col-sm-12">
+                <div class="col-sm-4 m_l_m_25 hidden-sm">
                     <span class="text"><?php echo $link->l_hr_phone; ?> </span> <span class="p-dash"> | </span>
                 </div>  
 
-                <div class="col-sm-4 m_l_m_25">
+                <div class="col-sm-4 m_l_m_25 hidden-sm">
                     <span class="text">
                         <a href="<?php echo $link->l_facebook; ?>"  class="la" target="_blank"><i class="fa fa-facebook-f"></i></a>
                         <a href="<?php echo $link->l_twitter; ?>"  class="la" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -84,7 +93,7 @@
                 
 
             </div>
-            <div class="col-sm-4 pull-right">
+            <div class="col-sm-4 pull-right hidden">
                 <input class="form-control search-form" type="text" placeholder="جستجو">
             </div>
         </div>
@@ -93,23 +102,22 @@
     <div class="logo-bar">
     </div>
 
-    <div class="menu-bar">
+    <div class="menu-bar" id="myTopnav">
         <div class="container">
-            <ul>
+            <ul class="web-menu hidden-sm">
                 <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
                 <li class="dropdown first <?php echo ($page == 'about') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
-                        <li class="execution"><a href="javascript:void(0);"><?php echo lang('m'); ?></a>
-                            <ul class="submenu" id="execution_submenu">
+                       
                                 <?php
                                     foreach($executions as $execution){
                                         $exe_title = 'exe_name_'.$_SESSION['lang'];
                                         echo '
                                             <li class="execution_sub" exe_id = "'.$execution->exe_id.'"><a href="javascript:void(0);">'.$execution->$exe_title.'</a>';
-                                                echo '<ul class="sub_sub_menu" id="pre_'.$execution->exe_id.'">';                                                
+                                                echo '<ul class="sub_sub_menu pre_'.$execution->exe_id.'">';                                                
                                                 foreach(get_presidency($execution->exe_id) as $pr) {
                                                     $title = 'pr_title_'.$_SESSION['lang'];
                                                     echo '<li><a href="'.$url.'about_us/presidency/'.$pr->pr_id.'">'.$pr->$title.'</a></li> ';
@@ -120,8 +128,6 @@
                                     }  
                                 ?>
 
-                            </ul>
-                        </li>
                         <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
                             <ul class="submenu" id="offices_submenu">
                                 <?php 
@@ -161,14 +167,80 @@
                 </li>
 
                 <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
-                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a target="_blank" href="<?php echo $url; ?>home/coming_soon"><?php echo lang('city_sector'); ?></a></span></li>
-                
-                
-
-
-            </ul>
-
+                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a href="javascript:void(0);"><?php echo lang('city_sector'); ?></a></span></li>
+            </ul>    
+            <i class="fa fa-bars menu-bar-icon"></i>
         </div>
+
+        <div class="mobile-menu-bar">
+            <ul>
+                <li><i  data-toggle="dropdown" class="fa fa-close menu-close" ></i></li>
+                <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
+                <li class="dropdown first <?php echo ($page == 'about') ? 'active': ''; ?>">
+                    <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
+                       
+                                <?php
+                                    foreach($executions as $execution){
+                                        $exe_title = 'exe_name_'.$_SESSION['lang'];
+                                        echo '
+                                            <li class="execution_sub" exe_id = "'.$execution->exe_id.'"><a href="javascript:void(0);">'.$execution->$exe_title.'</a>';
+                                                echo '<ul class="sub_sub_menu pre_'.$execution->exe_id.'">';                                                
+                                                foreach(get_presidency($execution->exe_id) as $pr) {
+                                                    $title = 'pr_title_'.$_SESSION['lang'];
+                                                    echo '<li><a href="'.$url.'about_us/presidency/'.$pr->pr_id.'">'.$pr->$title.'</a></li> ';
+                                                }
+                                      echo '
+                                                </ul>                                                
+                                            </li>';
+                                    }  
+                                ?>
+
+                        <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
+                            <ul class="submenu" id="offices_submenu">
+                                <?php 
+                                    foreach($offices as $office){
+                                        $name = 'off_title_'.$_SESSION['lang'];
+                                        echo '<li><a href="'.$url.'about_us/office/'.$office->off_id.'">'.$office->$name.'</a></li>';
+                                    }
+                                ?>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo $url.'about_us/provincial_profile'; ?>"><?php echo lang('rp'); ?></a></li>
+                        <li><a href="<?php echo $url.'about_us/organ_structure'; ?>"><?php echo lang('organ_structure'); ?></a></li>
+                    </ul>
+                </li>
+                <li  class="<?php echo ($page == 'councils') ? 'active': ''; ?>">
+                    <span><a href="<?php echo $url.'high_council_u_d'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
+                </li>
+
+                
+                <li class="<?php echo ($page == 'project') ? 'active': ''; ?>">
+                    <span><a href="<?php echo $url.'program_project'; ?>"><?php echo lang('ministry_project'); ?></a></span>
+                </li>
+
+                <li class="<?php echo ($page == 'document') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>gov_doc_m"><?php echo lang('gov_doc'); ?></a></span></li>
+
+                <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
+                    <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
+                        <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
+                        <li><a href="<?php echo $url; ?>database/report">گزارش</a></li>
+                        <li><a href="<?php echo $url; ?>database/success_story">قصه موفق</a></li>
+                        <li><a href="<?php echo $url; ?>database/journal">نشریه</a></li>
+                        <li><a href="<?php echo $url; ?>database/picture">عکس</a></li>
+                        <li><a href="<?php echo $url; ?>database/video">ویدیو</a></li>
+                    </ul>
+                </li>
+
+                <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
+                <li class="<?php echo ($page == 'sector') ? 'active': ''; ?>"><span><a href="javascript:void(0);"><?php echo lang('city_sector'); ?></a></span></li>
+            </ul>
+        </div>
+
     </div>
     <?php 
         $name = ($_SESSION['lang'] == 'eng') ? 'l_fullname_eng' : 'l_fullname_dari';
@@ -200,7 +272,7 @@
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
             </div>
 
-             <div class="card default-card gray-card">
+             <div class="card default-card gray-card hidden">
                 <h5 class="card-title">اعلان کاریابی</h5> 
                 <div class="card-body">
                     <ul>
@@ -208,16 +280,16 @@
                             echo '<li class="link-text">'.$job->ja_title.'</li>';
                         } ?>
                     </ul>
-
-                    <div class="row news_btn">
-                        <a class="load_btn" href="<?php echo $url.'database/news_single/'.$news[0]->n_id; ?>">
-                        <?php echo lang('load_more'); ?></a>
-                    </div>
-
+                    <?php if($job_anns){ ?>
+                        <div class="row news_btn">
+                            <a class="load_btn" href="<?php echo $url.'announcement/job' ?>">
+                            <?php echo lang('load_more'); ?></a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
             
-            <div class="card default-card gray-card">
+            <div class="card default-card gray-card hidden">
                 <h5 class="card-title">اعلان تدارکات</h5> 
                 <div class="card-body">
                     <ul>
@@ -227,7 +299,7 @@
                     </ul>
                     <?php if($pro_anns){ ?>
                         <div class="row news_btn">
-                            <a class="load_btn" href="<?php echo $url.'database/news_single/'.$news[0]->n_id; ?>">
+                            <a class="load_btn" href="<?php echo $url.'announcement/procurement' ?>">
                             <?php echo lang('load_more'); ?></a>
                         </div>
                     <?php } ?>
