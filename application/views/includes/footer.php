@@ -78,7 +78,7 @@
 
         <div class="">
             <div class="col-sm-12 footer-bottom">
-                <center>
+                <center  style="text-align: center;:center;">
                    <?php echo date('Y'); ?> - تمام حقوق مادی و معنوی برای وزارت شهر سازی و اراضی مصئون است.
                 </center>
             </div>
