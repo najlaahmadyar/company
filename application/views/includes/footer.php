@@ -9,7 +9,7 @@
         <div class="container">
             <div class="col-sm-12 footer-div">
                 <div class="col-sm-4">
-                    <h4 class="f_title">ادارت همکار</h4>
+                    <h4 class="f_title"><?php echo lang('partner_dp')?></h4>
                     <?php 
                         foreach($partners as $partner){
                             $name = 'po_name_'.$_SESSION['lang'];
@@ -22,7 +22,7 @@
                     ?>
                 </div>
                 <div class="col-sm-2">
-                    <h4 class="f_title">آخرین اخبار</h4>
+                    <h4 class="f_title"><?php echo lang('last_news')?></h4>
                     <?php foreach($news as $n){
                         $title = "n_title_".$_SESSION['lang'];
                         echo '<a class="news_link" href="'.$url.'database/news_single/'.$n->n_id.'" class="col-sm-12">'.$n->$title.'</a>';
@@ -30,44 +30,44 @@
                     ?>
                 </div>
                 <div class="col-sm-6">                    
-                    <h4 class="f_title">تماس با ما</h4>
+                    <h4 class="f_title"><?php echo lang('f_contact')?></h4>
                     
                     <div class="col-sm-4" style="padding:0px;">
-                        <p class="l_title"> تدارکات</p>
+                        <p class="l_title"><?php echo lang('tt')?></p>
                         <p>
-                            شماره تماس
+                            <?php echo lang('num')?>
                             <br><?php echo $link->l_npa_phone; ?>
                         </p>
                         <p>
-                            ایمیل<br>
+                            <?php echo lang('email')?><br>
                             <?php echo $link->l_npa_email; ?>
                         </p>
                     </div>
                     
                     <div class="col-sm-4" style="padding:0px;">
-                        <p class="l_title">منابع بشری</p>
+                        <p class="l_title"><?php echo lang('hr')?></p>
                         <p>
-                            شماره تماس
+                            <?php echo lang('num')?>
                             <br><?php echo $link->l_hr_phone; ?>
                         </p>
                         <p>
-                            ایمیل<br>
+                            <?php echo lang('email')?><br>
                             <?php echo $link->l_hr_email; ?>
                         </p>
                     </div>
                     <div class="col-sm-4" style="padding:0px;">
-                        <p class="l_title">دفتر سخنگوی:</p>
+                        <p class="l_title"><?php echo lang('office_s')?></p>
 
                         <p>
-                            شماره تماس
+                            <?php echo lang('num')?>
                             <br><?php echo $link->l_speaker_phone; ?>
                         </p>
                         <p>
-                            ایمیل<br>
+                            <?php echo lang('email')?><br>
                             <?php echo $link->l_speaker_email; ?>
                         </p>
                         <p style="width:500px;">
-                            مرکز معلومات و سمع شکایات<br>
+                            <?php echo lang('icc')?><br>
                             <?php echo $link->l_com_phone; ?>
                         </p>
                     </div>
@@ -79,12 +79,9 @@
 
         <div class="">
             <div class="col-sm-12 footer-bottom">
-                <div  style="text-align: center;:center;">
-                   <?php echo date('Y'); ?> - تمام حقوق مادی و معنوی برای وزارت شهر سازی و اراضی مصئون است.
-                </div>
-                <div  style="text-align: center;:center;">
-                    دیزاین و توسعه داده شده توسط 
-                </div>
+                <center  style="text-align: center;:center;">
+                   <?php echo date('Y'); ?> - <?php echo lang('b_footer')?>
+                </center>
             </div>
         </div>
 

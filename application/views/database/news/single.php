@@ -8,11 +8,11 @@
                 echo '
                 
                     <h2 class="title">'.$s_news->$title.'</h2>
-                    
-                  
-                    <div class="fb-share-button" data-href="'.$url.'database/news_single/'.$s_news->n_id.'" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F'.$url.'database/news_single/'.$s_news->n_id.'%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="col-sm-12">
+                        <div class="fb-share-button" data-href="http://ahuraentertainment.com/database/news_single/5" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fahuraentertainment.com%2Fdatabase%2Fnews_single%2F5&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
+                        <a style="padding-top:10px;" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                     <div class="news_council">'.show_date_time($s_news->n_datetime).'</div>
                     <div class="col-sm-12 image">
                         <img class="img img-responsive" src="'.$uploads.'news_image/'.$s_news->n_photo.'">

@@ -74,6 +74,13 @@
         width: 100%;
         height: auto;
     }
+    .major_work_panel {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        width: 100%;
+        margin: 1%;
+    }
+    
     .work_image img {
         width: 100%;
         height: auto;

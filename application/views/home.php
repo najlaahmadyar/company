@@ -6,7 +6,7 @@
             <span class="col-sm-7">
                 <div class="slider-img">
                     <img src="<?php echo $uploads.'news_image/'.$news[0]->n_photo; ?>" alt="...">                    
-                    <div class="news-icon">
+                    <div class="news-icon hidden">
                         <i class="fa fa-print"></i>
                         <i class="fa fa-share-alt"></i>
                     </div>
@@ -79,7 +79,7 @@
                         <div class="panel-heading" role="tab" id="headingOne2">
                             <h4 class="panel-title">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2"  aria-controls="collapseOne2">
-                                    برنامه/‍‍ پروژه های وزارت
+                                <?php echo lang('pro')?>
                                 </a>
                             </h4>
                         </div>
@@ -153,7 +153,7 @@
                                                     <h3 class="project-title">'.$work->$title.'</h3>
                                                 </div>
                                                 <img src="'.$uploads.'major_work_image/'.$work->mw_image.'" alt="works">
-                                            </div>
+                                            </div>  
                                         </a>
                                     </div>
                                 </div>
@@ -185,35 +185,29 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <input type="text" name="fullname" id="fullname"class="form-control" placeholder="اسم مکمل"/>
+                                            <input type="text" name="fullname" id="fullname"class="form-control" placeholder="<?php echo lang('f_name')?>"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <input type="text" name="province" id="province" class="form-control" placeholder="ولایت"/>
+                                            <input type="text" name="province" id="province" class="form-control" placeholder="<?php echo lang('prov')?>"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <input type="text" name="phone" id="phone"class="form-control" placeholder="شماره تماس"/>
+                                            <input type="text" name="phone" id="phone"class="form-control" placeholder="<?php echo lang('num')?>"/>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <input type="text" name="email" id="email"class="form-control" placeholder="ایمیل"/>
-                                        </div>
-                                    </div> 
                                 </div>
-
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <textarea name="message" id="message" class="form-control textarea-control" rows="4" placeholder="موضوع"></textarea>
+                                            <textarea name="message" id="message" class="form-control textarea-control" rows="4" placeholder="<?php echo lang('cmnt')?>"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="">
-                                    <input type="submit" class="btn btn-md btn-primary" value="ارسال">
+                                    <input type="submit" class="btn btn-md btn-primary" value="<?php echo lang('send')?>">
                                 </div>
                             </form>
                         </div>

@@ -24,7 +24,7 @@
 
     <div style="min-height:340px;" class="col-md-12">
         <h4 class="welcome">WELCOME TO:<h4>
-        <p class="text">MINISTRY OF URBAN AND LAND DEVELOPMENT ADMIN PANEL </p>  
+        <p class="text">MINISTRY OF URBAN DEVELOPMENT AND LAND  ADMIN PANEL </p>  
         <div class="login-logo">
             <a href="<?php echo $url; ?>">
                 <img class="align-content" src="<?php echo $assets; ?>images/logo.png" alt="">

@@ -1,6 +1,4 @@
-<?php 
-
-	
+<?php 	
 	$lang['MAIN'] = "صفحه اصلی";
 	$lang['ABOUT'] = "در باره ما";
 	$lang['ABOUT_MINISTRY'] = "معرفی وزارت";
@@ -36,3 +34,38 @@
 	$lang['instagram'] = "انستاگرام";
 	$lang['youtube'] = "یوتیوب";
 	$lang['load_more'] = "بیشتر";
+	$lang['pro'] = "برنامه/پروژه های وزارت";
+	$lang['b_footer'] = "تمام حقوق مادی و معنوی برای وزارت شهر سازی و اراضی مصئون است.";
+	$lang['f_name'] = "نام";
+	$lang['prov'] = "ولایت";
+	$lang['num'] = "نمبر تماس";
+	$lang['email'] = "ایمیل";
+	$lang['cmnt'] = "نظریه";
+	$lang['send'] = "ارسال";
+	$lang['icc'] = "مرکز معلومات و سمع شکایات";
+	$lang['aa'] = "اشتهارات و تبلیغات";
+	$lang['job'] = "اعلان کاریابی";
+	$lang['pn'] = "اعلان تدارکات";
+	$lang['budget'] = "بودجه سال 1398";
+	$lang['pr'] = "اعلامیه مطبوعاتی";
+	$lang['video'] = "ویدیو";
+	$lang['articles'] = "مقاله ها";
+	$lang['f_contact'] = "تماس با ما";
+	$lang['tt'] = "تدارکات";
+	$lang['hr'] = "منابع بشری";
+	$lang['office_s'] = "دفتر سخنگوی";
+	$lang['last_news'] = "آخرین اخبار";
+	$lang['partner_dp'] = "ادارت همکار";
+	$lang['news'] = "خبر";
+	$lang['press_release'] = "اعلامیه مطلوعاتی";
+	$lang['report'] = "گزارش";
+	$lang['success_story'] = "قصه موفق";
+	$lang['journal'] = "مجله";
+	$lang['picture'] = "عکس";
+	
+	
+	
+	
+
+	
+	
