@@ -12,9 +12,10 @@
                     <h4 class="f_title">ادارت همکار</h4>
                     <?php 
                         foreach($partners as $partner){
+                            $name = 'po_name_'.$_SESSION['lang'];
                             echo '
-                                <div class="partner_image">
-                                    <img src="'.$uploads.'partners_image/'.$partner->po_image.'">
+                                <div class="col-sm-4 partner-office-name">
+                                    <p>'.$partner->$name.'</p>
                                 </div>
                             ';
                         }
@@ -31,7 +32,7 @@
                 <div class="col-sm-6">                    
                     <h4 class="f_title">تماس با ما</h4>
                     
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" style="padding:0px;">
                         <p class="l_title"> تدارکات</p>
                         <p>
                             شماره تماس
@@ -43,7 +44,7 @@
                         </p>
                     </div>
                     
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" style="padding:0px;">
                         <p class="l_title">منابع بشری</p>
                         <p>
                             شماره تماس
@@ -54,8 +55,8 @@
                             <?php echo $link->l_hr_email; ?>
                         </p>
                     </div>
-                    <div class="col-sm-4">
-                        <p class="l_title">:دفتر سخنگوی</p>
+                    <div class="col-sm-4" style="padding:0px;">
+                        <p class="l_title">دفتر سخنگوی:</p>
 
                         <p>
                             شماره تماس
@@ -78,9 +79,12 @@
 
         <div class="">
             <div class="col-sm-12 footer-bottom">
-                <center  style="text-align: center;:center;">
+                <div  style="text-align: center;:center;">
                    <?php echo date('Y'); ?> - تمام حقوق مادی و معنوی برای وزارت شهر سازی و اراضی مصئون است.
-                </center>
+                </div>
+                <div  style="text-align: center;:center;">
+                    دیزاین و توسعه داده شده توسط 
+                </div>
             </div>
         </div>
 
@@ -98,7 +102,7 @@
 
         <script>
             $(document).ready(function(){
-                $(".submenu").hide();
+                $(".offices_submenu").hide();
                 $(".sub_sub_menu").hide();
                 $(".mobile-menu-bar").hide();
                 $(".menu-bar li:not(.dropdown)").click(function(){
@@ -126,6 +130,12 @@
                 });
                 $(".menu-bar-icon").click(function(){
                     $(".mobile-menu-bar").toggle();
+                });
+                $(".dropdown").mouseenter(function(){
+                    $(this).find(".dropdown-menu").show();
+                });
+                $(".dropdown").mouseleave(function(){
+                    $(this).find(".dropdown-menu").hide();
                 });
             });
         </script>

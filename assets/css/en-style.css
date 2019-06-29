@@ -5,16 +5,17 @@
 }
 .content{
     float:left;
-    margin-left:0;
 
 }
 .left-side-bar{
-    width: 20%;
     float: right;
+}
+.upload-text {
+    margin-top: -22px;
+    margin-left: 14px;
 }
 
 .wrapper{
-    margin-top:20px;
     width:100%;
     text-align: left !important;
     direction: ltr !important;
@@ -27,7 +28,23 @@
     text-align: right;
     direction: rtl;
 }
+.mudl-panel {
+    margin-right: 0px !important;
+    /* margin-left: 35px; */
+}
 
+p {
+    text-align: left;
+    direction: ltr;
+}
+
+.load_btn {
+    margin-right: 21px !important;
+    margin-left:0px !important;
+}
+.link-text {
+    margin-left: 13px;
+}
 .project-title {
     padding-left: 10px;
 }
@@ -167,4 +184,12 @@ ul.sub_sub_menu li {
 .m_l_m_25 {
     margin-left: 0px;
     margin-right: -20px;
+}
+
+.partner-office-name{
+    float:left;
+}
+.menu-bar>.container>ul>li.dropdown>.dropdown-menu {
+    left: 0px;
+    right: auto;
 }

@@ -5,7 +5,7 @@
             $description = 'rep_desc_'.$_SESSION['lang'];
             echo '
                 <a title="Click to view the full details of the story" href="'.$url.'database/single_report/'.$report->rep_id.'">
-                    <div class="row succes_row">
+                    <div class="col-sm-12 succes_row">
                         <div class="col-sm-4 img-figure">
                             <img src="'.$uploads.'report_images/'.$report->rep_image.'">
                         </div>

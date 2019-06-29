@@ -1,6 +1,6 @@
 <?php $this->load->view('includes/header'); ?>
-<div class="row about">
-    <div class="col-sm-12">
+<div class="col-sm-12">
+    <div class="about">
         <?php 
             $title = 'pr_title_'.$_SESSION['lang'];
             $text = 'pr_desc_'.$_SESSION['lang'];

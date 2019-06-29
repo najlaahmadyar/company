@@ -59,3 +59,32 @@ function show_date_time($date){
 
     }
 }
+
+function get_advertisement(){
+    $ci =& get_instance();
+
+    $ci->db->limit(1);
+    $ci->db->order_by('ad_id', 'desc');
+    $ads = $ci->db->get('advertisements')->row();
+
+    $ci->db->limit(1);
+    $ci->db->where('j_category = 1');
+    $ci->db->order_by('j_id', 'desc');
+    $weekly = $ci->db->get('journal')->row();
+
+    $ci->db->limit(1);
+    $ci->db->where('j_category = 2');
+    $ci->db->order_by('j_id', 'desc');
+    $monthly= $ci->db->get('journal')->row();
+
+    $ci->db->limit(1);
+    $ci->db->where('j_category = 3');
+    $ci->db->order_by('j_id', 'desc');
+    $seasonly = $ci->db->get('journal')->row();
+
+    $data["ads"] = $ads;
+    $data["week"] = $weekly;
+    $data["month"] = $monthly;
+    $data["season"] = $seasonly;
+    return $data;
+}

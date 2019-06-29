@@ -132,8 +132,8 @@
     <hr>
 
     <div class="row">
-        <div class="col-sm-12">
-            <h6 class="latest_news_title"><?php echo lang('major_work'); ?></h6>
+        <div class="col-sm-12" style="padding-left:20px;">
+            <h6 class="latest_news_title col-sm-12"><?php echo lang('major_work'); ?></h6>
 
             <div class="panel-group" id="accordion">
                 <?php 
@@ -142,19 +142,20 @@
                         $desc = 'mw_desc_'.$_SESSION['lang'];
                         $title = 'mw_title_'.$_SESSION['lang'];
                         echo '
-                            <div class="panel panel-default col-xs-6 col-md-6 col-sm-12">
+                            <div class="panel panel-default col-xs-6 col-md-6 col-sm-12 major_work_panel">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">
+                                    <div class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
-                                            <div class="work_grad">
-                                                <div class="border-white"></div>
-                                                <h3 class="project-title">'.$work->$title.'</h3>
-                                            </div>
+                                           
                                             <div class="work_image">
+                                                <div class="work_grad">
+                                                    <div class="border-white"></div>
+                                                    <h3 class="project-title">'.$work->$title.'</h3>
+                                                </div>
                                                 <img src="'.$uploads.'major_work_image/'.$work->mw_image.'" alt="works">
                                             </div>
                                         </a>
-                                    </h4>
+                                    </div>
                                 </div>
                                 <div id="collapse'.$i.'" class="panel-collapse collapse in">
                                     <div class="panel-body">
@@ -174,46 +175,48 @@
 
     <div class="row">
         <div class="col-sm-12">
-        <h6 class="latest_news_title"><?php echo lang('contact'); ?></h6>
+        <h6 class="latest_news_title col-sm-12"><?php echo lang('contact'); ?></h6>
+        <div class="clearfix"></div>
+            <div class="col-sm-12">  
+                <div class="mudl-panel">
+                    <div class = "panel panel-default">                    
+                        <div class = "panel-body">
+                            <form method="post" action="<?php echo $url.'home/send'; ?>">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <input type="text" name="fullname" id="fullname"class="form-control" placeholder="اسم مکمل"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <input type="text" name="province" id="province" class="form-control" placeholder="ولایت"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" id="phone"class="form-control" placeholder="شماره تماس"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <input type="text" name="email" id="email"class="form-control" placeholder="ایمیل"/>
+                                        </div>
+                                    </div> 
+                                </div>
 
-            <div class="mudl-panel">
-                <div class = "panel panel-default">                    
-                    <div class = "panel-body">
-                        <form method="post" action="<?php echo $url.'home/send'; ?>">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" name="fullname" id="fullname"class="form-control" placeholder="اسم مکمل"/>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" class="form-control textarea-control" rows="4" placeholder="موضوع"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" name="province" id="province" class="form-control" placeholder="ولایت"/>
-                                    </div>
+                                <div class="">
+                                    <input type="submit" class="btn btn-md btn-primary" value="ارسال">
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" name="phone" id="phone"class="form-control" placeholder="شماره تماس"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" name="email" id="email"class="form-control" placeholder="ایمیل"/>
-                                    </div>
-                                </div> 
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <textarea name="message" id="message" class="form-control textarea-control" rows="4" placeholder="موضوع"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <input type="submit" class="btn btn-md btn-primary" value="ارسال">
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

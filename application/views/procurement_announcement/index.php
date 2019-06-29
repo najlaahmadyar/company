@@ -1,6 +1,6 @@
 <?php $this->load->view('includes/header'); ?>
-<div class="row about">
-    <div class="col-sm-12">
+<div class="col-sm-12">
+    <div class="about">
         <table class="table">
            <thead>
                 <tr>

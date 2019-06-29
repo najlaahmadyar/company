@@ -3,7 +3,17 @@
 
     <head>
         <title>وزارت شهر سازی و اراضی</title>
-        <meta charset="UTF-8">
+        <?php if(isset($page_title) && $page_title == "single_news"){ ?>
+            <div id="fb-root"></div>                 
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3&appId=1971604619835199&autoLogAppEvents=1"></script>
+            <meta charset="UTF-8">
+            <meta property="og:url"           content="<?php echo $url.'database/news_single/'.$s_news->n_id; ?>" />
+            <meta property="og:type"          content="website" />
+            <meta property="og:title"         content="Your Website Title" />
+            <meta property="og:description"   content="Your description" />
+            <meta property="og:image"         content="<?php echo $uploads.'news_image/'.$s_news->n_photo; ?>" />
+        <?php } ?>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
    
@@ -106,8 +116,8 @@
         <div class="container">
             <ul class="web-menu hidden-sm">
                 <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
-                <li class="dropdown first <?php echo ($page == 'about') ? 'active': ''; ?>">
-                    <span data-toggle="dropdown"><?php echo lang('ABOUT'); ?></span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                <li class="dropdown <?php echo ($page == 'about') ? 'active': ''; ?>">
+                    <span ><?php echo lang('ABOUT'); ?></span><i class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="<?php echo $url.'about_us'; ?>"><?php echo lang('ABOUT_MINISTRY'); ?></a></li>
                         <li><a href="<?php echo $url.'about_us/leader_board'; ?>"><?php echo lang('LEADER_BOARD'); ?></a></li>
@@ -129,7 +139,7 @@
                                 ?>
 
                         <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
-                            <ul class="submenu" id="offices_submenu">
+                            <ul class="submenu offices_submenu">
                                 <?php 
                                     foreach($offices as $office){
                                         $name = 'off_title_'.$_SESSION['lang'];
@@ -143,7 +153,7 @@
                     </ul>
                 </li>
                 <li  class="<?php echo ($page == 'councils') ? 'active': ''; ?>">
-                    <span><a href="<?php echo $url.'high_council_u_d'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  data-toggle="dropdown"></i>  
+                    <span><a href="<?php echo $url.'high_council_u_d'; ?>"><?php echo lang('sh_a_t'); ?></a></span><i  ></i>  
                 </li>
 
                 
@@ -154,7 +164,7 @@
                 <li class="<?php echo ($page == 'document') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>gov_doc_m"><?php echo lang('gov_doc'); ?></a></span></li>
 
                 <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
-                    <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
+                    <span ><?php echo lang('info_database'); ?> </span><i class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
                         <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
@@ -199,7 +209,7 @@
                                 ?>
 
                         <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
-                            <ul class="submenu" id="offices_submenu">
+                            <ul class="submenu offices_submenu">
                                 <?php 
                                     foreach($offices as $office){
                                         $name = 'off_title_'.$_SESSION['lang'];
@@ -264,7 +274,44 @@
             
             <div class="card default-card gray-card">
                 <h5 class="card-title">اشتهارات و تبلیغات</h5> 
-                <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">            
+                <div class="">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="<?php echo $uploads.'advertisement_images/'.$ads['ads']->ad_image; ?>" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <a href="<?php echo $uploads.'journals/'.$ads['week']->j_file; ?>">
+                                <img class="d-block w-100" src="<?php echo $assets.'images/weekly.jpg';?>" alt="Second slide">
+                            </a>
+                            </div>
+                        <div class="carousel-item">
+                            <a href="<?php echo $uploads.'journals/'.$ads['month']->j_file; ?>">
+                                <img class="d-block w-100" src="<?php echo $assets.'images/monthly.jpg';?>" alt="Second slide">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="<?php echo $uploads.'journals/'.$ads['season']->j_file; ?>">
+                                <img class="d-block w-100" src="<?php echo $assets.'images/monthly.jpg';?>" alt="Second slide">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                </div>            
             </div>
 
             <div class="card default-card gray-card">
@@ -371,3 +418,4 @@
         </div>
             
         <div class="content">
+ 

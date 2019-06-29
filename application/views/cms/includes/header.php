@@ -97,6 +97,10 @@
                         <a href="<?php echo $url.'cms/contact_us'; ?>"><i class="menu-icon fa fa-commenting"></i>Contact Us Messages </a>
                     </li>
 
+                    <li class="<?php echo ($page == 'advertisement') ? 'active' : ''; ?>">
+                        <a href="<?php echo $url.'cms/advertisement'; ?>"><i class="menu-icon fa fa-adn"></i>Advertisements</a>
+                    </li>
+
                     <li class="<?php echo ($page == 'connection_link') ? 'active' : ''; ?>">
                         <a href="<?php echo $url.'cms/connection_links'; ?>"><i class="menu-icon fa fa-hashtag"></i>Website Connection Links</a>
                     </li>

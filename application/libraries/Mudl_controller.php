@@ -62,6 +62,8 @@ class Mudl_controller extends CI_Controller {
 		$this->load->model('press_release_model');
 		$this->data['presses'] = $this->press_release_model->get();
 
+		$this->data['ads'] = get_advertisement();
+
 		$lang = $this->session->userdata('lang');
 		
         $this->lang->load('home/index', $lang);
