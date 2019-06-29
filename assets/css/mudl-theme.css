@@ -48,11 +48,13 @@ hr{
     width: 257px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 15px;
 }
 .mid-image-div>img{
     height: auto;
     width: inherit;
     align-content: center;
+    border-radius: 15px;
 }
 .grad {
     position: absolute;
@@ -63,6 +65,7 @@ hr{
     background: -o-linear-gradient(#2555A1, transparent); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#2555A1, transparent); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#2555A1, transparent); /* Standard syntax */
+    border-radius: 15px;
 }
 
 a:hover, a:active, a:focus{

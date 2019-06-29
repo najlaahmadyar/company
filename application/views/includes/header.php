@@ -156,13 +156,13 @@
                 <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
-                        <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
-                        <li><a href="<?php echo $url; ?>database/report">گزارش</a></li>
-                        <li><a href="<?php echo $url; ?>database/success_story">قصه موفق</a></li>
-                        <li><a href="<?php echo $url; ?>database/journal">نشریه</a></li>
-                        <li><a href="<?php echo $url; ?>database/picture">عکس</a></li>
-                        <li><a href="<?php echo $url; ?>database/video">ویدیو</a></li>
+                        <li><a href="<?php echo $url; ?>database/news"><?php echo lang('news'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/press_release"><?php echo lang('press_release'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/report"><?php echo lang('report'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/success_story"><?php echo lang('success_story'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/journal"><?php echo lang('journal'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>"><?php echo lang('picture'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>"><?php echo lang('video'); ?></a></li>
                     </ul>
                 </li>
 
@@ -226,13 +226,13 @@
                 <li class="dropdown <?php echo ($page == 'database') ? 'active': ''; ?>">
                     <span data-toggle="dropdown"><?php echo lang('info_database'); ?> </span><i  data-toggle="dropdown" class="fa fa-plus" ></i>  
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo $url; ?>database/news">خبر</a></li>
-                        <li><a href="<?php echo $url; ?>database/press_release">اعلامیه مطبوعاتی</a></li>
-                        <li><a href="<?php echo $url; ?>database/report">گزارش</a></li>
-                        <li><a href="<?php echo $url; ?>database/success_story">قصه موفق</a></li>
-                        <li><a href="<?php echo $url; ?>database/journal">نشریه</a></li>
-                        <li><a href="<?php echo $url; ?>database/picture">عکس</a></li>
-                        <li><a href="<?php echo $url; ?>database/video">ویدیو</a></li>
+                        <li><a href="<?php echo $url; ?>database/news"><?php echo lang('news'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/press_release"><?php echo lang('press_release'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/report"><?php echo lang('report'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/success_story"><?php echo lang('success_story'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>database/journal"><?php echo lang('journal'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>"><?php echo lang('picture'); ?></a></li>
+                        <li><a href="<?php echo $url; ?>"><?php echo lang('video'); ?></a></li>
                     </ul>
                 </li>
 
@@ -258,22 +258,22 @@
                 </div>
             </div>
             <div class="card default-card gray-card">
-                <h5 class="card-title">مرکز معلومات و سمع شکایات</h5> 
+                <h5 class="card-title"><?php echo lang('icc'); ?></h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/complain-center.jpg" alt="Card image cap">                
             </div>
             
             <div class="card default-card gray-card">
-                <h5 class="card-title">اشتهارات و تبلیغات</h5> 
+                <h5 class="card-title"><?php echo lang('aa'); ?></h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">            
             </div>
 
             <div class="card default-card gray-card">
-                <h5 class="card-title">ویدیو</h5> 
+                <h5 class="card-title"><?php echo lang('video'); ?></h5> 
                 <iframe src="https://www.youtube.com/embed/DTlK-Dzo-4Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>               
             </div>
 
              <div class="card default-card gray-card">
-                <h5 class="card-title">اعلان کاریابی</h5> 
+                <h5 class="card-title"><?php echo lang('job'); ?></h5> 
                 <div class="card-body">
                     <ul>
                         <?php foreach($job_anns as $job){
@@ -290,7 +290,7 @@
             </div>
             
             <div class="card default-card gray-card">
-                <h5 class="card-title">اعلان تدارکات</h5> 
+                <h5 class="card-title"><?php echo lang('pn'); ?></h5> 
                 <div class="card-body">
                     <ul>
                         <?php foreach($pro_anns as $pro){
@@ -307,12 +307,12 @@
             </div>
 
             <div class="card default-card gray-card">
-                <h5 class="card-title">مصرف بودیجه سال ۱۳۹۸</h5> 
+                <h5 class="card-title"><?php echo lang('budget'); ?></h5> 
                 <img class="card-img-top" src="<?php echo $assets;?>images/feature1.jpg" alt="Card image cap">                
             </div>
 
             <div class="card default-card gray-card">
-                <h5 class="card-title"> اعلامیه های مطبوعاتی</h5> 
+                <h5 class="card-title"><?php echo lang('pr'); ?></h5> 
                 <div class="card-body">
                     <p class="card-text">                        
                         <?php
@@ -328,7 +328,7 @@
             </div>
 
             <div class="card default-card gray-card">
-                <h5 class="card-title">مقاله ها</h5> 
+                <h5 class="card-title"><?php echo lang('articles'); ?></h5> 
                 <div class="card-body">
                     <p class="card-text"> 
                         <?php
