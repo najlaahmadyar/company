@@ -999,3 +999,6 @@ ul.sub_sub_menu li:hover a{
     padding:2px;
     height: 23px;
 }
+.c_f_text{
+    direction: ltr;
+}

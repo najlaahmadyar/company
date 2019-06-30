@@ -198,6 +198,11 @@
                                             <input type="text" name="phone" id="phone"class="form-control" placeholder="<?php echo lang('num')?>"/>
                                         </div>
                                     </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <input type="text" name="email" id="email"class="form-control" placeholder="<?php echo lang('email');?>"/>
+                                        </div>
+                                    </div> 
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">

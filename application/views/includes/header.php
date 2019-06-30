@@ -163,8 +163,8 @@
                         <li><a href="<?php echo $url; ?>database/report"><?php echo lang('report'); ?></a></li>
                         <li><a href="<?php echo $url; ?>database/success_story"><?php echo lang('success_story'); ?></a></li>
                         <li><a href="<?php echo $url; ?>database/journal"><?php echo lang('journal'); ?></a></li>
-                        <li><a href="<?php echo $url; ?>"><?php echo lang('picture'); ?></a></li>
-                        <li><a href="<?php echo $url; ?>"><?php echo lang('video'); ?></a></li>
+                        <li><a href="<?php echo $link->l_instagram; ?>" target="_blank"><?php echo lang('picture'); ?></a></li>
+                        <li><a href="<?php echo $link->l_youtube; ?>" target="_blank"><?php echo lang('video'); ?></a></li>
                     </ul>
                 </li>
 
@@ -233,9 +233,9 @@
                         <li><a href="<?php echo $url; ?>database/report"><?php echo lang('report'); ?></a></li>
                         <li><a href="<?php echo $url; ?>database/success_story"><?php echo lang('success_story'); ?></a></li>
                         <li><a href="<?php echo $url; ?>database/journal"><?php echo lang('journal'); ?></a></li>
-                        <li><a href="<?php echo $url; ?>"><?php echo lang('picture'); ?></a></li>
-                        <li><a href="<?php echo $url; ?>"><?php echo lang('video'); ?></a></li>
-                    </ul>
+                        <li><a href="<?php echo $link->l_instagram; ?>" target="_blank"><?php echo lang('picture'); ?></a></li>
+                        <li><a href="<?php echo $link->l_youtube; ?>" target="_blank"><?php echo lang('video'); ?></a></li>
+                   </ul>
                 </li>
 
                 <li class="<?php echo ($page == 'contact') ? 'active': ''; ?>"><span><a href="<?php echo $url; ?>home/contact"><?php echo lang('contact'); ?></a></span></li>
