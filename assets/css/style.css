@@ -986,3 +986,6 @@ ul.sub_sub_menu li:hover a{
 .menu-bar-icon{
     display: none;
 }
+.c_f_text{
+    direction: ltr;
+}

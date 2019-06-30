@@ -1,6 +1,5 @@
 <?php 
 
-	
 	$lang['MAIN'] = "Home";
 	$lang['ABOUT'] = "About us";
 	$lang['ABOUT_MINISTRY'] = "About ministry";
@@ -10,7 +9,7 @@
 	$lang['ma'] = 'معینیت امور زمینداری';
 	$lang['mk'] = 'معینیت خصوصی سازی';
 	$lang['mp'] = 'معینیت پالیسی و پلان';
-
+	$lang['information_center_1012']= "Information Center 1012";	
 	$lang['Office'] = "Offices";
 	$lang['rp'] = "Provicial precidency";
 	$lang['organ_structure'] = "Organizational Structure";
@@ -61,6 +60,17 @@
 	$lang['last_news'] = "Latest News";
 	$lang['partner_dp'] = "Partner Department";
 	$lang['load_more'] = "More";
+	$lang['c_f_text'] = "The working hours of the Department of Urban Planning and Land are from Saturday to Wednesday from 8am to 4pm and on Thursdays from 8am to 1pm.";
+	$lang['c_s_text'] = "Information Center 1012 has been created for the purpose of providing information, complaints and addressing your problems, within the framework of the Ministry of Urban and Land Resources, and we will address and respond to your questions and complaints as soon as possible.
+	You can submit your questions and complaints in the field of urban planning and land here:";
+	$lang['c_t_text'] = "We consider the mass media to be good partners in informing the public and are always committed and committed to providing accurate, reliable and timely information on the functions, achievements and plans of the Ministry of Urban and Land Resources.";
+	$lang['c_v_text'] = "Journalists and media outlets can contact us in order to get information:";
+	$lang['c_name'] ="Hashmat Nasseri";
+	$lang['c_position'] = "Head of Information and Public Relations and Speaker";
+		
+	
+	
+
 	
 	
 	
