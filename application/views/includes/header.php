@@ -3,17 +3,9 @@
 
     <head>
         <title>وزارت شهر سازی و اراضی</title>
-        <?php if(isset($page_title) && $page_title == "single_news"){ ?>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3&appId=1971604619835199&autoLogAppEvents=1"></script>
-            <meta charset="UTF-8">
-            <meta property="og:url"           content="<?php echo $url.'database/news_single/'.$s_news->n_id; ?>" />
-            <meta property="og:type"          content="website" />
-            <meta property="og:title"         content="Your Website Title" />
-            <meta property="og:description"   content="Your description" />
-            <meta property="og:image"         content="<?php echo $uploads.'news_image/'.$s_news->n_photo; ?>" />
+        <?php if(isset($page_title) && $page_title == 'single_news'){ ?>
+             <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d17a2e15b5c0700129fbbb3&product='inline-share-buttons' async='async'></script>
         <?php } ?>
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
    
@@ -139,7 +131,7 @@
                                 ?>
 
                         <li class="offices"><a href="javascript:void(0);"><?php echo lang('Office'); ?></a>
-                            <ul class="submenu offices_submenu">
+                            <ul class="sub_sub_menu offices_submenu">
                                 <?php 
                                     foreach($offices as $office){
                                         $name = 'off_title_'.$_SESSION['lang'];
@@ -182,7 +174,7 @@
             <i class="fa fa-bars menu-bar-icon"></i>
         </div>
 
-        <div class="mobile-menu-bar">
+        <div class="mobile-menu-bar" style="display:none;">
             <ul>
                 <div style="height:40px;" class="hidden"><i  data-toggle="dropdown" class="fa fa-close menu-close" ></i></div>
                 <li class="<?php echo ($page == 'home') ? 'active': ''; ?>"><span><a href="<?php echo $url.'home'; ?>"><?php echo lang("MAIN"); ?></a></span></li>
@@ -325,7 +317,7 @@
                 <div class="card-body">
                     <ul>
                         <?php foreach($job_anns as $job){
-                            echo '<li class="link-text">'.$job->ja_title.'</li>';
+                            echo '<li class="link-text"><a href="'.$uploads.'procurement_announcement/'.$job->ja_attachment.'">'.$job->ja_title.'</a></li>';
                         } ?>
                     </ul>
                     <?php if($job_anns){ ?>
@@ -342,7 +334,7 @@
                 <div class="card-body">
                     <ul>
                         <?php foreach($pro_anns as $pro){
-                            echo '<li class="link-text">'.$pro->pa_subject.'</li>';
+                            echo '<li class="link-text"><a href="'.$uploads.'procurement_announcement/'.$pro->pa_attachment.'">'.$pro->pa_subject.'</a></li>';
                         } ?>
                     </ul>
                     <?php if($pro_anns){ ?>
@@ -362,15 +354,17 @@
             <div class="card default-card gray-card">
                 <h5 class="card-title"><?php echo lang('pr'); ?></h5> 
                 <div class="card-body">
-                    <p class="card-text">                        
-                        <?php
-                            if($presses){
-                                foreach($presses as $press){ 
-                                    $title = "pr_title_".$_SESSION['lang'];                      
-                                    echo '<a class="col-sm-12" href="'.$url.'database/press_release/'.$press->pr_id.'"> - '.$press->$title.'</a>';
+                    <p class="card-text">    
+                        <ul>                    
+                            <?php
+                                if($presses){
+                                    foreach($presses as $press){ 
+                                        $title = "pr_title_".$_SESSION['lang'];                      
+                                        echo '<li  class="link-text"><a href="'.$url.'database/press_release/'.$press->pr_id.'">'.$press->$title.'</a></li>';
+                                    }
                                 }
-                            }
-                        ?>                    
+                            ?>  
+                        </ul>                  
                     </p>
                 </div>
             </div>
@@ -378,13 +372,15 @@
             <div class="card default-card gray-card">
                 <h5 class="card-title"><?php echo lang('articles'); ?></h5> 
                 <div class="card-body">
-                    <p class="card-text"> 
-                        <?php
-                            foreach($reports as $report){ 
-                                $title = "rep_title_".$_SESSION['lang'];                      
-                                echo '<a class="col-sm-12" href="'.$url.'database/report/single/'.$report->rep_id.'"> - '.$report->$title.'</a>';
-                            }
-                        ?>
+                    <p class="card-text">
+                        <ul> 
+                            <?php
+                                foreach($reports as $report){ 
+                                    $title = "rep_title_".$_SESSION['lang'];                      
+                                    echo '<li  class="link-text"><a href="'.$url.'database/report/single/'.$report->rep_id.'">'.$report->$title.'</a></li>';
+                                }
+                            ?>
+                        </ul>
                     </p>
                 </div>
             </div>

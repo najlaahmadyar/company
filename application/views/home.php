@@ -108,7 +108,7 @@
         <hr>
 
         <div class="col-sm-12">
-            <div class="col-sm-11 mudl-panel">
+            <div class="col-sm-11 mudl-panel" style="margin-left: 36px;">
                 <div class = "panel panel-default">
                     <div class = "panel-heading">
                         <i class="fa fa-close close-panel"></i>

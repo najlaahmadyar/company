@@ -71,7 +71,8 @@ p {
     margin-left:10px;
 }
 .close-panel{
-    margin-top:-10px;
+    margin-top: -10px;
+    margin-left: 328px;
 }
 
 .graph{
@@ -115,14 +116,16 @@ ul.sub_sub_menu{
     text-align: left;
     left: 188px;
     right:auto;
-    bottom: 31px;
+    bottom: 30px;
 }
 
 ul.sub_sub_menu li {
     list-style-type: none;
     direction: rtl;
     text-align: left;
-    padding: 3px 7px;
+    padding: 6px;
+    margin: 0px;
+    padding-right: 5px;
 }
 
 .council_btn {
@@ -192,4 +195,14 @@ ul.sub_sub_menu li {
 .menu-bar>.container>ul>li.dropdown>.dropdown-menu {
     left: 0px;
     right: auto;
+}
+.social_media_link a {
+    color: #333;
+    text-align: left;
+    direction: ltr;
+}
+.icon {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left:0px;
 }

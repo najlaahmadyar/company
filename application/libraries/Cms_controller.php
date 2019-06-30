@@ -1,5 +1,5 @@
 <?php
-class Cms_controller extends Mudl_Controller {
+class Cms_controller extends Mudl_controller {
 
 	function __construct(){
         parent::__construct();

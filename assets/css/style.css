@@ -631,7 +631,7 @@ span.lang a{
     margin-bottom: 18px;
     padding-right: 15px;
     font-size: 12px;
-    margin-top: -8px;
+    margin-top: 0px;
 }
 .title_prov{
     margin-bottom: 0px;
@@ -729,7 +729,7 @@ span.lang a{
 
 .work_grad {
     position: absolute;
-    height: 100%;
+    height: 290px;
     width: 100%;
     background: #2555A1; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#2555A1, transparent); /* For Safari 5.1 to 6.0 */
@@ -774,7 +774,7 @@ p{
     text-align: right;
     direction: rtl;
 }
-ul.submenu{
+/* ul.submenu{
     padding: 0 !important;
     background-color: #ecebeb !important;
     margin: -5px;
@@ -782,7 +782,7 @@ ul.submenu{
     margin-bottom: -7px;
     border-top: 1px solid #cecdcd;
     border-bottom: 1px solid #cecdcd;
-}
+} */
 ul.submenu>li{
     list-style-type: none;
     direction: ltr;
@@ -810,7 +810,7 @@ ul.submenu li:hover{
     /* max-width:inherit; */
 }
 
-ul.sub_sub_menu{
+ul.sub_sub_menu, ul.submenu{
     position: relative;
     background-color: #ecebeb;
     right: 150px;
@@ -822,7 +822,7 @@ ul.sub_sub_menu li{
     list-style-type: none;
     direction: ltr;
     text-align: right;
-    padding: 7px;
+    padding: 6px;
     margin: 0px;
     padding-right: 5px;
 }
@@ -904,7 +904,7 @@ ul.sub_sub_menu li:hover a{
     color: #FFF !important;
 }
 
-.execution_sub{
+.execution_sub, .offices{
     height:37px;
 }
 
